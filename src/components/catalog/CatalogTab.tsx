@@ -1,8 +1,15 @@
-import { useState } from "react";
-import { ChevronDown, ChevronUp, Edit2, Save, X, Wrench, Gauge, DollarSign, Calendar } from "lucide-react";
+import { useState, useMemo } from "react";
+import { ChevronDown, ChevronUp, Edit2, Save, X, Wrench, Gauge, DollarSign, Calendar, Search, Filter } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 interface Machine {
   id: string;
@@ -92,6 +99,36 @@ const CatalogTab = ({ isAdmin }: CatalogTabProps) => {
   const [expandedId, setExpandedId] = useState<string | null>(null);
   const [editingId, setEditingId] = useState<string | null>(null);
   const [editData, setEditData] = useState<Partial<Machine>>({});
+  
+  // Search and filter state
+  const [searchQuery, setSearchQuery] = useState("");
+  const [categoryFilter, setCategoryFilter] = useState<string>("all");
+  const [statusFilter, setStatusFilter] = useState<string>("all");
+
+  // Get unique categories
+  const categories = useMemo(() => {
+    const cats = [...new Set(machines.map((m) => m.category))];
+    return cats.sort();
+  }, [machines]);
+
+  // Filtered machines
+  const filteredMachines = useMemo(() => {
+    return machines.filter((machine) => {
+      const matchesSearch =
+        searchQuery === "" ||
+        machine.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        machine.model.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        machine.category.toLowerCase().includes(searchQuery.toLowerCase());
+
+      const matchesCategory =
+        categoryFilter === "all" || machine.category === categoryFilter;
+
+      const matchesStatus =
+        statusFilter === "all" || machine.maintenanceStatus === statusFilter;
+
+      return matchesSearch && matchesCategory && matchesStatus;
+    });
+  }, [machines, searchQuery, categoryFilter, statusFilter]);
 
   const getStatusColor = (status: Machine["maintenanceStatus"]) => {
     switch (status) {
@@ -134,21 +171,108 @@ const CatalogTab = ({ isAdmin }: CatalogTabProps) => {
     setEditData({});
   };
 
+  const clearFilters = () => {
+    setSearchQuery("");
+    setCategoryFilter("all");
+    setStatusFilter("all");
+  };
+
+  const hasActiveFilters = searchQuery !== "" || categoryFilter !== "all" || statusFilter !== "all";
+
   return (
     <div className="h-full overflow-y-auto scrollbar-thin p-4">
       <div className="max-w-4xl mx-auto space-y-4">
         {/* Header */}
-        <div className="flex items-center justify-between mb-6">
-          <div>
-            <h2 className="text-2xl font-bold">Catálogo de Máquinas</h2>
-            <p className="text-sm text-muted-foreground">
-              {machines.length} equipamentos cadastrados
-            </p>
+        <div className="flex flex-col gap-4 mb-6">
+          <div className="flex items-center justify-between">
+            <div>
+              <h2 className="text-2xl font-bold">Catálogo de Máquinas</h2>
+              <p className="text-sm text-muted-foreground">
+                {filteredMachines.length} de {machines.length} equipamentos
+              </p>
+            </div>
+          </div>
+
+          {/* Search and Filters */}
+          <div className="glass-card p-4 space-y-3">
+            {/* Search Input */}
+            <div className="relative">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+              <Input
+                placeholder="Buscar por nome, modelo ou categoria..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="pl-10"
+              />
+            </div>
+
+            {/* Filter Row */}
+            <div className="flex flex-wrap gap-3 items-center">
+              <div className="flex items-center gap-2">
+                <Filter className="w-4 h-4 text-muted-foreground" />
+                <span className="text-sm text-muted-foreground">Filtros:</span>
+              </div>
+
+              {/* Category Filter */}
+              <Select value={categoryFilter} onValueChange={setCategoryFilter}>
+                <SelectTrigger className="w-[160px] h-9 bg-secondary/50">
+                  <SelectValue placeholder="Categoria" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="all">Todas categorias</SelectItem>
+                  {categories.map((cat) => (
+                    <SelectItem key={cat} value={cat}>
+                      {cat}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+
+              {/* Status Filter */}
+              <Select value={statusFilter} onValueChange={setStatusFilter}>
+                <SelectTrigger className="w-[160px] h-9 bg-secondary/50">
+                  <SelectValue placeholder="Status" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="all">Todos status</SelectItem>
+                  <SelectItem value="ok">Normal</SelectItem>
+                  <SelectItem value="attention">Atenção</SelectItem>
+                  <SelectItem value="critical">Crítico</SelectItem>
+                </SelectContent>
+              </Select>
+
+              {/* Clear Filters */}
+              {hasActiveFilters && (
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={clearFilters}
+                  className="h-9 text-xs"
+                >
+                  <X className="w-3 h-3 mr-1" />
+                  Limpar filtros
+                </Button>
+              )}
+            </div>
           </div>
         </div>
 
+        {/* No Results Message */}
+        {filteredMachines.length === 0 && (
+          <div className="glass-card p-8 text-center">
+            <Search className="w-12 h-12 mx-auto mb-4 text-muted-foreground/50" />
+            <p className="text-lg font-medium mb-2">Nenhuma máquina encontrada</p>
+            <p className="text-sm text-muted-foreground mb-4">
+              Tente ajustar os filtros ou a busca
+            </p>
+            <Button variant="outline" onClick={clearFilters}>
+              Limpar filtros
+            </Button>
+          </div>
+        )}
+
         {/* Machine Cards */}
-        {machines.map((machine, index) => {
+        {filteredMachines.map((machine, index) => {
           const isExpanded = expandedId === machine.id;
           const isEditing = editingId === machine.id;
 
