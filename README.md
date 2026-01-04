@@ -1,73 +1,92 @@
-# Welcome to your Lovable project
+# Tecfag Group - Industrial Intelligence Hub
 
-## Project info
+Sistema de Inteligência Artificial para Máquinas Industriais
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## Sobre o Projeto
 
-## How can I edit this code?
+O **Industrial Intelligence Hub** é uma plataforma desenvolvida pela Tecfag Group para fornecer suporte inteligente e gestão de máquinas industriais. O sistema integra chat com IA, catálogo de máquinas e dashboards administrativos.
 
-There are several ways of editing your application.
+## Desenvolvimento Local
 
-**Use Lovable**
+### Pré-requisitos
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+- Node.js (versão 18 ou superior)
+- npm ou yarn
 
-Changes made via Lovable will be committed automatically to this repo.
+### Instalação
 
-**Use your preferred IDE**
+```bash
+# Clone o repositório
+git clone <URL_DO_REPOSITORIO>
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+# Navegue até o diretório do projeto
+cd industrial-intelligence-hub
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+# Instale as dependências
+npm install
 
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+# Configure as variáveis de ambiente
+# Copie o arquivo .env.example e configure conforme necessário
 ```
 
-**Edit a file directly in GitHub**
+### Executando o Projeto
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```bash
+# Iniciar apenas o frontend
+npm run dev
 
-**Use GitHub Codespaces**
+# Iniciar apenas o backend
+npm run server
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+# Iniciar frontend e backend simultaneamente
+npm start
+```
 
-## What technologies are used for this project?
+O frontend estará disponível em `http://localhost:8080`
+O backend estará disponível em `http://localhost:3001`
 
-This project is built with:
+## Tecnologias Utilizadas
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- **Frontend:**
+  - Vite + React + TypeScript
+  - Tailwind CSS
+  - shadcn/ui (componentes)
+  - Lucide React (ícones)
+  - React Router (navegação)
 
-## How can I deploy this project?
+- **Backend:**
+  - Node.js + Express
+  - Prisma ORM
+  - PostgreSQL
+  - JWT (autenticação)
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+## Estrutura do Projeto
 
-## Can I connect a custom domain to my Lovable project?
+```
+industrial-intelligence-hub/
+├── src/                    # Código fonte do frontend
+│   ├── components/         # Componentes React
+│   ├── pages/             # Páginas da aplicação
+│   ├── contexts/          # Contextos React (Auth, etc)
+│   └── lib/               # Utilitários
+├── server/                # Código fonte do backend
+│   ├── src/
+│   │   ├── routes/        # Rotas da API
+│   │   ├── middleware/    # Middlewares
+│   │   └── services/      # Serviços
+│   └── prisma/            # Schema e migrações do banco
+└── public/                # Arquivos estáticos
 
-Yes, you can!
+```
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## Deploy
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Para fazer o deploy da aplicação:
+
+1. **Frontend:** Configure as variáveis de ambiente em sua plataforma (Vercel, Netlify, etc.)
+2. **Backend:** Deploy em plataforma Node.js (Railway, Heroku, etc.)
+3. Configure as variáveis de ambiente necessárias (DATABASE_URL, JWT_SECRET, etc.)
+
+## Licença
+
+© 2026 Tecfag Group - Todos os direitos reservados

@@ -1,0 +1,185 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id         String   @id @default(uuid())
+  email      String   @unique
+  password   String
+  name       String
+  role       String   @default("USER") // USER or ADMIN
+  lastActive DateTime @default(now())
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+  mustChangePassword Boolean @default(false)
+
+  chatMessages  ChatMessage[]
+  archivedChats ArchivedChat[]
+  chatFolders   ChatFolder[]
+}
+
+model Machine {
+  id                String   @id @default(uuid())
+  name              String
+  category          String
+  capacity          String
+  model             String
+  price             String
+  maintenanceStatus String   @default("ok") // ok, attention, critical
+  lastMaintenance   String
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  specifications MachineSpecification[]
+}
+
+model MachineSpecification {
+  id        String  @id @default(uuid())
+  machineId String
+  content   String
+  machine   Machine @relation(fields: [machineId], references: [id], onDelete: Cascade)
+}
+
+model MindMap {
+  id        String   @id @default(uuid())
+  name      String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  nodes MindMapNode[]
+}
+
+model MindMapNode {
+  id        String  @id @default(uuid())
+  mindMapId String
+  label     String
+  type      String  // machine, process, parameter
+  x         Float
+  y         Float
+  mindMap   MindMap @relation(fields: [mindMapId], references: [id], onDelete: Cascade)
+
+  // Connections from this node
+  connectionsFrom MindMapConnection[] @relation("FromNode")
+  // Connections to this node
+  connectionsTo   MindMapConnection[] @relation("ToNode")
+}
+
+model MindMapConnection {
+  id         String      @id @default(uuid())
+  fromNodeId String
+  toNodeId   String
+  fromNode   MindMapNode @relation("FromNode", fields: [fromNodeId], references: [id], onDelete: Cascade)
+  toNode     MindMapNode @relation("ToNode", fields: [toNodeId], references: [id], onDelete: Cascade)
+
+  @@unique([fromNodeId, toNodeId])
+}
+
+model ChatMessage {
+  id        String   @id @default(uuid())
+  userId    String
+  role      String   // user or assistant
+  content   String
+  createdAt DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model ArchivedChat {
+  id            String   @id @default(uuid())
+  userId        String
+  title         String
+  messagesCount Int
+  messages      String   // JSON string of messages array
+  createdAt     DateTime @default(now())
+  archivedAt    DateTime @default(now())
+  folderId      String?
+  isPinned      Boolean  @default(false)
+
+  user   User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  folder ChatFolder? @relation(fields: [folderId], references: [id], onDelete: SetNull)
+}
+
+model ChatFolder {
+  id        String   @id @default(uuid())
+  userId    String
+  name      String
+  isDefault Boolean  @default(false)
+  order     Int      @default(0)
+  createdAt DateTime @default(now())
+
+  user          User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+  archivedChats ArchivedChat[]
+}
+
+model CatalogItem {
+  id          String   @id @default(uuid())
+  code        String   @unique
+  name        String
+  category    String
+  description String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  documents Document[]
+}
+
+model Document {
+  id           String   @id @default(uuid())
+  catalogId    String
+  catalogItem  CatalogItem @relation(fields: [catalogId], references: [id], onDelete: Cascade)
+
+  // File information
+  fileName     String
+  fileType     String
+  fileSize     Int
+  filePath     String
+
+  // Processing status
+  indexed      Boolean  @default(false)
+  processingProgress Int @default(0)
+  processingError    String?
+
+  // Indexing metadata
+  chunkCount   Int?
+  totalTokens  Int?
+
+  // Audit
+  uploadedBy   String?
+  uploadedAt   DateTime @default(now())
+  indexedAt    DateTime?
+
+  // Version control
+  version      Int      @default(1)
+  previousVersionId String?
+
+  chunks       DocumentChunk[]
+}
+
+model DocumentChunk {
+  id         String   @id @default(uuid())
+  documentId String
+  document   Document @relation(fields: [documentId], references: [id], onDelete: Cascade)
+
+  // Chunk content
+  content    String
+  chunkIndex Int
+
+  // Embedding vector (stored as JSON array)
+  embedding  String
+
+  // Metadata
+  metadata   String?  // JSON string for flexible metadata
+
+  createdAt  DateTime @default(now())
+
+  @@index([documentId])
+}
+
