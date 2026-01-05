@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { Send, Bot, User, Loader2, Archive, History, ArrowLeft, BookOpen } from "lucide-react";
+import { Send, Bot, User, Loader2, Archive, History, ArrowLeft, BookOpen, Settings } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -18,6 +18,7 @@ import remarkGfm from "remark-gfm";
 import { ChatModeSelector, type ChatMode } from "./ChatModeSelector";
 import { ChatFunctionSelector, type ChatFunction } from "./ChatFunctionSelector";
 import { ChatSuggestions } from "./ChatSuggestions";
+import { AIPreferencesModal } from "./AIPreferencesModal";
 
 interface Message {
   id: string;
@@ -48,26 +49,35 @@ const getModeConfig = (mode: ChatMode) => {
   }
 };
 
+const getWelcomeMessage = (mode: ChatMode): string => {
+  switch (mode) {
+    case "direct":
+      return "Olá. Sou a Tec I.A. Pronta para resolver seus problemas com eficiência. O que precisamos fazer?";
+    case "casual":
+      return "Opa! Tec I.A na área. Tudo certo? Me conta, como eu posso te dar uma força hoje?";
+    case "educational":
+      return "Olá! Sou a Tec I.A. Estou aqui para explorarmos novos conhecimentos hoje. O que você gostaria de aprender?";
+    case "professional":
+      return "Olá. Sou a Tec I.A. Estou à disposição para oferecer suporte técnico e estratégico. Em que posso ser útil?";
+    default:
+      return "Olá! Sou a Tec I.A, sua assistente de inteligência artificial. Como posso ajudá-lo hoje?";
+  }
+};
+
 const ChatTab = () => {
   const { user } = useAuth();
   const { playSend, playReceive, startThinking, stopThinking } = useChatSound();
   const [viewMode, setViewMode] = useState<ViewMode>("active");
-  const [chatMode, setChatMode] = useState<ChatMode>("educational");
+  const [chatMode, setChatMode] = useState<ChatMode>("professional");
   const [functionMode, setFunctionMode] = useState<ChatFunction>("normal");
-  const [messages, setMessages] = useState<Message[]>([
-    {
-      id: "welcome",
-      role: "assistant",
-      content: `Olá! Sou a Tec I.A, sua assistente de inteligência artificial. Como posso ajudá-lo hoje?`,
-      timestamp: formatTime(new Date()),
-    },
-  ]);
+  const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [isLoadingHistory, setIsLoadingHistory] = useState(true);
   const [isArchiving, setIsArchiving] = useState(false);
   const [currentArchivedChatTitle, setCurrentArchivedChatTitle] = useState("");
   const [shouldLoadHistory, setShouldLoadHistory] = useState(true);
+  const [isPreferencesOpen, setIsPreferencesOpen] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const scrollToBottom = () => {
@@ -77,6 +87,20 @@ const ChatTab = () => {
   useEffect(() => {
     scrollToBottom();
   }, [messages]);
+
+  // Update welcome message when mode changes if it's the only message
+  useEffect(() => {
+    if (messages.length === 1 && messages[0].id === "welcome") {
+      setMessages([
+        {
+          id: "welcome",
+          role: "assistant",
+          content: getWelcomeMessage(chatMode),
+          timestamp: formatTime(new Date()),
+        }
+      ]);
+    }
+  }, [chatMode]);
 
   // Load chat history on mount
   useEffect(() => {
@@ -95,10 +119,29 @@ const ChatTab = () => {
             content: msg.content,
             timestamp: formatTime(new Date()),
           }));
-          setMessages((prev) => [...prev, ...historyMessages]);
+          setMessages(historyMessages);
+        } else {
+          // Only show welcome message if there is no history
+          setMessages([
+            {
+              id: "welcome",
+              role: "assistant",
+              content: getWelcomeMessage(chatMode),
+              timestamp: formatTime(new Date()),
+            },
+          ]);
         }
       } catch (error) {
         console.error("Error loading chat history:", error);
+        // Fallback to welcome message on error
+        setMessages([
+          {
+            id: "welcome",
+            role: "assistant",
+            content: getWelcomeMessage(chatMode),
+            timestamp: formatTime(new Date()),
+          },
+        ]);
       } finally {
         setIsLoadingHistory(false);
       }
@@ -228,7 +271,7 @@ const ChatTab = () => {
         {
           id: "welcome",
           role: "assistant",
-          content: `Olá! Sou a Tec I.A, sua assistente de inteligência artificial. Como posso ajudá-lo hoje?`,
+          content: getWelcomeMessage(chatMode),
           timestamp: formatTime(new Date()),
         },
       ]);
@@ -255,7 +298,7 @@ const ChatTab = () => {
       {
         id: "welcome",
         role: "assistant",
-        content: `Olá! Sou a Tec I.A, sua assistente de inteligência artificial. Como posso ajudá-lo hoje?`,
+        content: getWelcomeMessage(chatMode),
         timestamp: formatTime(new Date()),
       },
     ]);
@@ -398,9 +441,21 @@ const ChatTab = () => {
                 </Button>
               )}
               <div className="relative">
-                <div className={cn("w-10 h-10 rounded-full flex items-center justify-center transition-all duration-700", theme.iconBg)}>
-                  <Bot className={cn("w-5 h-5 transition-colors duration-700", theme.primary)} />
-                </div>
+                <button
+                  onClick={() => viewMode === "active" && setIsPreferencesOpen(true)}
+                  className={cn(
+                    "w-10 h-10 rounded-full flex items-center justify-center transition-all duration-700 hover:scale-105 active:scale-95 cursor-pointer group/bot",
+                    theme.iconBg
+                  )}
+                  title="Configurar Preferências da IA"
+                >
+                  <Bot className={cn("w-5 h-5 transition-colors duration-700 group-hover/bot:text-white", theme.primary)} />
+                  {viewMode === "active" && (
+                    <span className="absolute -bottom-1 -right-1 w-3 h-3 bg-primary rounded-full border-2 border-[#1a1a1a] flex items-center justify-center">
+                      <Settings className="w-1.5 h-1.5 text-black" />
+                    </span>
+                  )}
+                </button>
               </div>
               <div className="flex flex-col">
                 <span className="text-sm font-semibold text-white">
@@ -450,7 +505,7 @@ const ChatTab = () => {
 
             {messages.map((message, index) => (
               <div
-                key={message.id}
+                key={`${message.id}-${message.content.substring(0, 10)}`}
                 className={cn(
                   "flex gap-2.5 animate-fade-in",
                   message.role === "user" ? "flex-row-reverse" : "flex-row"
@@ -623,6 +678,11 @@ const ChatTab = () => {
           )}
         </motion.div>
       </motion.div>
+
+      <AIPreferencesModal
+        isOpen={isPreferencesOpen}
+        onClose={() => setIsPreferencesOpen(false)}
+      />
     </AnimatePresence>
   );
 };

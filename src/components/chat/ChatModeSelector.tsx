@@ -37,7 +37,7 @@ const modes: { id: ChatMode; label: string; icon: any; color: string; descriptio
         label: "Profissional",
         icon: Briefcase,
         color: "text-red-400",
-        description: "Tom formal e técnico"
+        description: "Vendedor Consultivo Sênior"
     },
 ];
 
@@ -114,6 +114,11 @@ export const ChatModeSelector = ({ currentMode, onModeChange }: ChatModeSelector
                                     <div className="flex-1 text-left">
                                         <div className={cn("text-sm font-medium flex items-center justify-between", mode.color)}>
                                             {mode.label}
+                                            {mode.id === "professional" && (
+                                                <span className="ml-2 text-[10px] bg-red-500/20 text-red-400 px-1.5 py-0.5 rounded border border-red-500/20 uppercase tracking-widest font-bold">
+                                                    Recomendado
+                                                </span>
+                                            )}
                                             {currentMode === mode.id && (
                                                 <motion.div
                                                     initial={{ scale: 0 }}

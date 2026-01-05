@@ -10,7 +10,11 @@ Seu conhecimento inclui:
 - Solução de problemas comuns
 - Integração entre diferentes equipamentos
 
-Responda de forma profissional, técnica mas acessível. Se não souber algo específico, indique que o usuário deve consultar o catálogo ou o suporte técnico.`;
+Responda de forma profissional, técnica mas acessível. 
+IMPORTANTE: Você está conversando com vendedores e funcionários da empresa Tecfag. NÃO trate o usuário como um cliente externo.
+O objetivo é dar suporte interno para que eles possam vender melhor ou operar melhor as máquinas.
+Seje direto e eficiente, mas mantenha a cordialidade de um colega de trabalho ou assistente especialista para a equipe interna.
+Se não souber algo específico, indique que o usuário deve consultar o catálogo ou o suporte técnico.`;
 
 // Fallback responses when AI is not available
 const FALLBACK_RESPONSES = [
@@ -39,6 +43,32 @@ export class AIService {
             take: 10,
         });
 
+        // Get user preferences
+        const user = await prisma.user.findUnique({
+            where: { id: userId },
+            select: {
+                jobTitle: true,
+                department: true,
+                technicalLevel: true,
+                communicationStyle: true,
+                name: true
+            }
+        });
+
+        let systemPromptWithContext = SYSTEM_PROMPT;
+        if (user) {
+            const contextParts = [];
+            if (user.name) contextParts.push(`Nome do Usuário: ${user.name}`);
+            if (user.jobTitle) contextParts.push(`Cargo: ${user.jobTitle}`);
+            if (user.department) contextParts.push(`Departamento: ${user.department}`);
+            if (user.technicalLevel) contextParts.push(`Nível Técnico: ${user.technicalLevel}`);
+            if (user.communicationStyle) contextParts.push(`Estilo Preferido de Resposta: ${user.communicationStyle}`);
+
+            if (contextParts.length > 0) {
+                systemPromptWithContext += `\n\nCONTEXTO DO USUÁRIO:\n${contextParts.join('\n')}\nUtilize estas informações para personalizar suas respostas.`;
+            }
+        }
+
         // Build conversation history
         const history = recentMessages.reverse().map((msg) => ({
             role: msg.role as 'user' | 'model',
@@ -61,7 +91,7 @@ export class AIService {
                     },
                 });
 
-                const result = await chat.sendMessage(`${SYSTEM_PROMPT}\n\nUsuário: ${userMessage}`);
+                const result = await chat.sendMessage(`${systemPromptWithContext}\n\nUsuário: ${userMessage}`);
                 return result.response.text();
             } catch (error) {
                 console.error('❌ Error generating AI response:', error);

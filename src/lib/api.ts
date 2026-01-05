@@ -268,6 +268,12 @@ export const authApi = {
         apiFetch<{ success: boolean }>('/api/auth/heartbeat', {
             method: 'PUT',
         }),
+
+    updateProfile: (data: { name?: string; jobTitle?: string; department?: string; technicalLevel?: string; communicationStyle?: string }) =>
+        apiFetch<{ user: any }>('/api/auth/profile', {
+            method: 'PUT',
+            body: JSON.stringify(data),
+        }),
 };
 
 // ============ MONITORING API ============

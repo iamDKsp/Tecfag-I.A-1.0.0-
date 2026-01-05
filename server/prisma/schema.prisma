@@ -21,6 +21,12 @@ model User {
   updatedAt  DateTime @updatedAt
   mustChangePassword Boolean @default(false)
 
+  // AI Preferences
+  jobTitle           String?
+  department         String?
+  technicalLevel     String?
+  communicationStyle String?
+
   chatMessages  ChatMessage[]
   archivedChats ArchivedChat[]
   chatFolders   ChatFolder[]

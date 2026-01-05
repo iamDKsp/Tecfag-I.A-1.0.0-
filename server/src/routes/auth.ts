@@ -151,6 +151,47 @@ authRouter.post('/change-password', authenticate, async (req: AuthRequest, res: 
     }
 });
 
+// Update Profile Schema
+const updateProfileSchema = z.object({
+    name: z.string().min(2, 'Nome deve ter no mínimo 2 caracteres').optional(),
+    jobTitle: z.string().optional(),
+    department: z.string().optional(),
+    technicalLevel: z.string().optional(),
+    communicationStyle: z.string().optional(),
+});
+
+// Update Profile
+authRouter.put('/profile', authenticate, async (req: AuthRequest, res: Response) => {
+    try {
+        const userId = req.user!.id;
+        const data = updateProfileSchema.parse(req.body);
+
+        const user = await prisma.user.update({
+            where: { id: userId },
+            data,
+            select: {
+                id: true,
+                email: true,
+                name: true,
+                role: true,
+                jobTitle: true,
+                department: true,
+                technicalLevel: true,
+                communicationStyle: true,
+            }
+        });
+
+        res.json({ user });
+    } catch (error) {
+        if (error instanceof z.ZodError) {
+            res.status(400).json({ error: error.errors[0].message });
+            return;
+        }
+        console.error('Update profile error:', error);
+        res.status(500).json({ error: 'Erro ao atualizar perfil' });
+    }
+});
+
 // Get current user
 authRouter.get('/me', authenticate, async (req: AuthRequest, res: Response) => {
     res.json({ user: req.user });

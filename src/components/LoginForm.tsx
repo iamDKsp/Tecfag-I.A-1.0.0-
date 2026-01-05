@@ -140,9 +140,16 @@ const LoginForm = () => {
                                 Lembrar-me
                             </span>
                         </label>
-                        <a href="#" className="text-sm text-primary hover:text-primary/80 transition-colors font-medium">
+                        <button
+                            type="button"
+                            onClick={(e) => {
+                                e.preventDefault();
+                                alert("Por favor, entre em contato com a equipe de Tecnologia da Informação (T.I.) para solicitar a redefinição de sua senha.");
+                            }}
+                            className="text-sm text-primary hover:text-primary/80 transition-colors font-medium cursor-pointer"
+                        >
                             Esqueceu a senha?
-                        </a>
+                        </button>
                     </div>
                 )}
 
@@ -168,18 +175,22 @@ const LoginForm = () => {
 
             {/* Toggle Login/Register */}
             <div className="mt-6 text-center">
-                <button
-                    type="button"
-                    onClick={() => {
-                        setIsLogin(!isLogin);
-                        setError("");
-                    }}
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                >
-                    {isLogin
-                        ? "Não tem conta? Criar uma"
-                        : "Já tem conta? Entrar"}
-                </button>
+                {isLogin ? (
+                    <span className="text-sm text-muted-foreground cursor-default">
+                        É um prazer te ver aqui <span className="text-red-500 font-medium">novamente</span>
+                    </span>
+                ) : (
+                    <button
+                        type="button"
+                        onClick={() => {
+                            setIsLogin(!isLogin);
+                            setError("");
+                        }}
+                        className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                    >
+                        Já tem conta? Entrar
+                    </button>
+                )}
             </div>
 
             {/* Test credentials hint - Only for Login */}
