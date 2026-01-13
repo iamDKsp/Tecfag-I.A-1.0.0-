@@ -1,0 +1,110 @@
+// Adicionar estas funções ao CatalogTab.tsx
+
+// Substitua a função handleSave existente por esta versão:
+const handleSave = async () => {
+  if (!editingId || !editData) return;
+  
+  try {
+    // Find the existing machine to check if it's new or existing
+    const existingMachine = machines.find(m => m.id === editingId);
+    
+    // Prepare catalog item data for backend
+    const catalogItemData = {
+      id: editingId,
+      code: editData.model || existingMachine?.model || `CODE-${editingId}`,
+      name: editData.name || existingMachine?.name || 'Nova Máquina',
+      category: editData.category || existingMachine?.category || 'Geral',
+      description: `${editData.model || ''} - ${editData.price || ''}`
+    };
+
+    // Check if item exists in backend
+    const checkResponse = await fetch(`/api/catalog/${editingId}`);
+    
+    if (checkResponse.ok) {
+      // Item exists, update it
+      await fetch(`/api/catalog/${editingId}`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(catalogItemData)
+      });
+      console.log('[Catalog] Updated item in database');
+    } else {
+      // Item doesn't exist, create it
+      await fetch('/api/catalog', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(catalogItemData)
+      });
+      console.log('[Catalog] Created item in database');
+    }
+
+    // Update local state
+    setMachines((prev) =>
+      prev.map((m) => {
+        if (m.id === editingId) {
+          return {
+            ...m,
+            ...editData,
+            specifications: editData.specifications || m.specifications,
+            images: editData.images || m.images,
+            tags: editData.tags || m.tags,
+            stockStatus: editData.stockStatus || m.stockStatus,
+            next: editData.next !== undefined ? editData.next : m.next
+          } as Machine;
+        }
+        return m;
+      })
+    );
+    
+    setEditingId(null);
+    setEditData({});
+  } catch (error) {
+    console.error('[Catalog] Error saving to database:', error);
+    alert('Erro ao sincronizar com o banco de dados. A máquina foi salva localmente.');
+    
+    // Still update local state even if API fails
+    setMachines((prev) =>
+      prev.map((m) => {
+        if (m.id === editingId) {
+          return {
+            ...m,
+            ...editData,
+            specifications: editData.specifications || m.specifications,
+            images: editData.images || m.images,
+            tags: editData.tags || m.tags,
+            stockStatus: editData.stockStatus || m.stockStatus,
+            next: editData.next !== undefined ? editData.next : m.next
+          } as Machine;
+        }
+        return m;
+      })
+    );
+    setEditingId(null);
+    setEditData({});
+  }
+};
+
+// Substitua a função confirmDelete existente por esta versão:
+const confirmDelete = async () => {
+  if (deleteConfirmationId) {
+    try {
+      // Try to delete from backend
+      await fetch(`/api/catalog/${deleteConfirmationId}`, {
+        method: 'DELETE'
+      });
+      console.log('[Catalog] Deleted item from database');
+    } catch (error) {
+      console.error('[Catalog] Error deleting from database:', error);
+      // Continue anyway to delete from local state
+    }
+    
+    setMachines(prev => prev.filter(m => m.id !== deleteConfirmationId));
+    if (expandedId === deleteConfirmationId) setExpandedId(null);
+    if (editingId === deleteConfirmationId) setEditingId(null);
+    setDeleteConfirmationId(null);
+  }
+};

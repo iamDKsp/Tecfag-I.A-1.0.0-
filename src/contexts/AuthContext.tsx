@@ -19,6 +19,7 @@ interface AuthContextType {
     register: (email: string, password: string, name: string) => Promise<void>;
     logout: () => void;
     hideWelcomeAnimation: () => void;
+    refreshUser: () => Promise<void>;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -123,6 +124,12 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         setShowWelcomeAnimation(false);
     }, []);
 
+    const refreshUser = useCallback(async () => {
+        if (token) {
+            await fetchCurrentUser(token);
+        }
+    }, [token]);
+
     const value = {
         user,
         token,
@@ -133,6 +140,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         register,
         logout,
         hideWelcomeAnimation,
+        refreshUser,
     };
 
     return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;

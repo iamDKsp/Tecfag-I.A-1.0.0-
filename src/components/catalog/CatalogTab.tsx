@@ -1,5 +1,5 @@
 import { useState, useMemo, useEffect } from "react";
-import { ChevronDown, ChevronUp, Edit2, Save, X, Wrench, DollarSign, Calendar, Search, Filter, Image as ImageIcon, Youtube, Plus, Trash2, Upload, Tag as TagIcon, Box, Maximize2, FileText } from "lucide-react";
+import { ChevronDown, ChevronUp, Edit2, Save, X, Wrench, DollarSign, Calendar, Search, Filter, Image as ImageIcon, Youtube, Plus, Trash2, Upload, Tag as TagIcon, Box, Maximize2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
@@ -19,8 +19,6 @@ import {
   DialogFooter,
 } from "@/components/ui/dialog";
 import { Badge } from "@/components/ui/badge";
-import { DocumentUpload } from "@/components/ai/DocumentUpload";
-import { DocumentList } from "@/components/ai/DocumentList";
 
 interface Specification {
   label: string;
@@ -283,77 +281,6 @@ const CatalogTab = ({ isAdmin }: CatalogTabProps) => {
   const [isTagsDialogOpen, setIsTagsDialogOpen] = useState(false);
   const [newTagInput, setNewTagInput] = useState("");
 
-  // --- DOCUMENTS (RAG) ---
-  const [isDocumentsDialogOpen, setIsDocumentsDialogOpen] = useState(false);
-  const [selectedMachineId, setSelectedMachineId] = useState<string | null>(null);
-  const [documents, setDocuments] = useState<any[]>([]);
-
-  const fetchDocuments = async (machineId: string) => {
-    try {
-      // In a real app, you would use a proper API client or axios
-      // Assuming a generic endpoint for getting documents by catalog ID
-      // This part might need adjustment based on the actual backend route structure
-      // For now, using the guide's suggested path
-      const response = await fetch(`/api/documents/catalog/${machineId}`);
-      if (response.ok) {
-        const data = await response.json();
-        setDocuments(data);
-      } else {
-        console.error("Failed to fetch documents");
-        setDocuments([]);
-      }
-    } catch (error) {
-      console.error("Error fetching documents:", error);
-      setDocuments([]);
-    }
-  };
-
-  const handleOpenDocuments = (machineId: string) => {
-    setSelectedMachineId(machineId);
-    setDocuments([]); // Clear previous
-    setIsDocumentsDialogOpen(true);
-    fetchDocuments(machineId);
-  };
-
-  const handleDeleteDocument = async (docId: string) => {
-    try {
-      const response = await fetch(`/api/documents/${docId}`, {
-        method: 'DELETE',
-        // headers: { 'Authorization': `Bearer ${token}` } // Add auth token if needed via context
-      });
-
-      if (response.ok) {
-        if (selectedMachineId) fetchDocuments(selectedMachineId);
-      } else {
-        alert("Erro ao excluir documento");
-      }
-    } catch (error) {
-      console.error("Error deleting document:", error);
-      alert("Erro ao excluir documento");
-    }
-  };
-
-  const handleReindexDocument = async (docId: string) => {
-    try {
-      const response = await fetch(`/api/documents/${docId}/reindex`, {
-        method: 'POST',
-        // headers: { 'Authorization': `Bearer ${token}` }
-      });
-
-      if (response.ok) {
-        // Poll for update or just refresh after a delay
-        setTimeout(() => {
-          if (selectedMachineId) fetchDocuments(selectedMachineId);
-        }, 2000);
-      } else {
-        alert("Erro ao reindexar documento");
-      }
-    } catch (error) {
-      console.error("Error reindexing document:", error);
-      alert("Erro ao reindexar documento");
-    }
-  };
-
   // --- PERSISTENCE ---
   useEffect(() => {
     try {
@@ -498,8 +425,15 @@ const CatalogTab = ({ isAdmin }: CatalogTabProps) => {
     setDeleteConfirmationId(id);
   };
 
-  const confirmDelete = () => {
+  const confirmDelete = async () => {
     if (deleteConfirmationId) {
+      try {
+        await fetch(`/api/catalog/${deleteConfirmationId}`, { method: 'DELETE' });
+        console.log('[Catalog] Deleted from database');
+      } catch (error) {
+        console.error('[Catalog] Error deleting from database:', error);
+      }
+
       setMachines(prev => prev.filter(m => m.id !== deleteConfirmationId));
       if (expandedId === deleteConfirmationId) setExpandedId(null);
       if (editingId === deleteConfirmationId) setEditingId(null);
@@ -512,8 +446,40 @@ const CatalogTab = ({ isAdmin }: CatalogTabProps) => {
     setEditData(JSON.parse(JSON.stringify(machine)));
   };
 
-  const handleSave = () => {
+  const handleSave = async () => {
     if (!editingId || !editData) return;
+
+    try {
+      const existingMachine = machines.find(m => m.id === editingId);
+      const catalogItemData = {
+        id: editingId,
+        code: editData.model || existingMachine?.model || `CODE-${editingId}`,
+        name: editData.name || existingMachine?.name || 'Nova Máquina',
+        category: editData.category || existingMachine?.category || 'Geral',
+        description: `${editData.model || ''} - ${editData.price || ''}`
+      };
+
+      const checkResponse = await fetch(`/api/catalog/${editingId}`);
+
+      if (checkResponse.ok) {
+        await fetch(`/api/catalog/${editingId}`, {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(catalogItemData)
+        });
+        console.log('[Catalog] Updated in database');
+      } else {
+        await fetch('/api/catalog', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(catalogItemData)
+        });
+        console.log('[Catalog] Created in database');
+      }
+    } catch (error) {
+      console.error('[Catalog] Error syncing to database:', error);
+    }
+
     setMachines((prev) =>
       prev.map((m) => {
         if (m.id === editingId) {
@@ -656,32 +622,6 @@ const CatalogTab = ({ isAdmin }: CatalogTabProps) => {
                     </div>
                   </DialogContent>
                 </Dialog>
-
-                {/* Documents Dialog - Rendered once at the top level */}
-                <Dialog open={isDocumentsDialogOpen} onOpenChange={setIsDocumentsDialogOpen}>
-                  <DialogContent className="max-w-3xl max-h-[80vh] overflow-y-auto">
-                    <DialogHeader>
-                      <DialogTitle>
-                        Documentos IA - {machines.find(m => m.id === selectedMachineId)?.name}
-                      </DialogTitle>
-                    </DialogHeader>
-                    <div className="space-y-6">
-                      {selectedMachineId && (
-                        <>
-                          <DocumentUpload
-                            catalogId={selectedMachineId}
-                            onUploadComplete={() => fetchDocuments(selectedMachineId)}
-                          />
-                          <DocumentList
-                            documents={documents}
-                            onDelete={handleDeleteDocument}
-                            onReindex={handleReindexDocument}
-                          />
-                        </>
-                      )}
-                    </div>
-                  </DialogContent>
-                </Dialog>
               </div>
             )}
           </div>
@@ -811,9 +751,6 @@ const CatalogTab = ({ isAdmin }: CatalogTabProps) => {
                   <div className="flex items-center gap-2">
                     {isAdmin && !isEditing && (
                       <>
-                        <Button variant="ghost" size="icon" className="h-8 w-8 text-muted-foreground hover:text-primary" onClick={(e) => { e.stopPropagation(); handleOpenDocuments(machine.id); }} title="Documentos IA">
-                          <FileText className="w-4 h-4" />
-                        </Button>
                         <Button variant="ghost" size="icon" className="h-8 w-8 text-muted-foreground hover:text-primary" onClick={(e) => { e.stopPropagation(); handleEdit(machine); if (!isExpanded) setExpandedId(machine.id); }}>
                           <Edit2 className="w-4 h-4" />
                         </Button>
@@ -958,56 +895,73 @@ const CatalogTab = ({ isAdmin }: CatalogTabProps) => {
                             Galeria
                           </h4>
                           <div className="grid grid-cols-3 gap-2 mb-4">
-                            {(isEditing ? editData.images : machine.images)?.map((img, i) => (
-                              <div key={i}
-                                className={cn(
-                                  "aspect-square bg-secondary/30 rounded-md overflow-hidden relative group border border-border/50",
-                                  img && !isEditing && "cursor-zoom-in"
-                                )}
-                                onClick={() => img && !isEditing && setFullscreenImage(img)}
-                              >
-                                {img ? (
-                                  <img src={img} alt="" className="w-full h-full object-cover" />
-                                ) : (
-                                  <div className="w-full h-full flex items-center justify-center text-muted-foreground/30">
-                                    <ImageIcon className="w-6 h-6" />
-                                  </div>
-                                )}
+                            {(() => {
+                              const currentImages = isEditing ? (editData.images || []) : (machine.images || []);
+                              let displayImages = [...currentImages];
 
-                                {/* Upload Overlay */}
-                                {isEditing && (
-                                  <div
-                                    className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-2 cursor-pointer"
-                                    onClick={() => document.getElementById(`file-upload-${machine.id}-${i}`)?.click()}
-                                  >
-                                    <Upload className="w-6 h-6 text-white mb-1" />
-                                    <span className="text-[10px] text-white">Upload</span>
-                                    <input
-                                      id={`file-upload-${machine.id}-${i}`}
-                                      type="file"
-                                      accept="image/*"
-                                      className="hidden"
-                                      onChange={(e) => handleImageUpload(e, i)}
-                                    />
-                                  </div>
-                                )}
+                              // Se estiver editando, garante que sempre existam 3 slots
+                              if (isEditing) {
+                                while (displayImages.length < 3) {
+                                  displayImages.push("");
+                                }
+                                // Limita a 3 slots
+                                displayImages = displayImages.slice(0, 3);
+                              } else if (displayImages.length === 0) {
+                                // Se não estiver editando e não tiver imagens, não mostra nada (ou array vazio)
+                                displayImages = [];
+                              }
 
-                                {/* Clear Button */}
-                                {isEditing && img && (
-                                  <Button
-                                    variant="destructive" size="icon" className="absolute top-1 right-1 h-5 w-5 opacity-0 group-hover:opacity-100"
-                                    onClick={(e) => {
-                                      e.stopPropagation();
-                                      const newImages = [...(editData.images || [])];
-                                      newImages[i] = "";
-                                      setEditData(prev => ({ ...prev, images: newImages }));
-                                    }}
-                                  >
-                                    <X className="w-3 h-3" />
-                                  </Button>
-                                )}
-                              </div>
-                            ))}
+                              return displayImages.map((img, i) => (
+                                <div key={i}
+                                  className={cn(
+                                    "aspect-square bg-secondary/30 rounded-md overflow-hidden relative group border border-border/50",
+                                    img && !isEditing && "cursor-zoom-in"
+                                  )}
+                                  onClick={() => img && !isEditing && setFullscreenImage(img)}
+                                >
+                                  {img ? (
+                                    <img src={img} alt="" className="w-full h-full object-cover" />
+                                  ) : (
+                                    <div className="w-full h-full flex items-center justify-center text-muted-foreground/30">
+                                      <ImageIcon className="w-6 h-6" />
+                                    </div>
+                                  )}
+
+                                  {/* Upload Overlay */}
+                                  {isEditing && (
+                                    <div
+                                      className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-2 cursor-pointer"
+                                      onClick={() => document.getElementById(`file-upload-${machine.id}-${i}`)?.click()}
+                                    >
+                                      <Upload className="w-6 h-6 text-white mb-1" />
+                                      <span className="text-[10px] text-white">Upload</span>
+                                      <input
+                                        id={`file-upload-${machine.id}-${i}`}
+                                        type="file"
+                                        accept="image/*"
+                                        className="hidden"
+                                        onChange={(e) => handleImageUpload(e, i)}
+                                      />
+                                    </div>
+                                  )}
+
+                                  {/* Clear Button */}
+                                  {isEditing && img && (
+                                    <Button
+                                      variant="destructive" size="icon" className="absolute top-1 right-1 h-5 w-5 opacity-0 group-hover:opacity-100"
+                                      onClick={(e) => {
+                                        e.stopPropagation();
+                                        const newImages = [...(editData.images || [])];
+                                        newImages[i] = "";
+                                        setEditData(prev => ({ ...prev, images: newImages }));
+                                      }}
+                                    >
+                                      <X className="w-3 h-3" />
+                                    </Button>
+                                  )}
+                                </div>
+                              ))
+                            })()}
                           </div>
                         </div>
 

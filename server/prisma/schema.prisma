@@ -137,10 +137,23 @@ model CatalogItem {
   documents Document[]
 }
 
+model DocumentFolder {
+  id        String   @id @default(uuid())
+  name      String
+  order     Int      @default(0)
+  createdAt DateTime @default(now())
+
+  documents Document[]
+}
+
 model Document {
   id           String   @id @default(uuid())
-  catalogId    String
-  catalogItem  CatalogItem @relation(fields: [catalogId], references: [id], onDelete: Cascade)
+  catalogId    String?  // Tornando opcional para documentos globais
+  catalogItem  CatalogItem? @relation(fields: [catalogId], references: [id], onDelete: SetNull)
+  
+  // Folder organization
+  folderId     String?
+  folder       DocumentFolder? @relation(fields: [folderId], references: [id], onDelete: SetNull)
 
   // File information
   fileName     String
@@ -152,6 +165,9 @@ model Document {
   indexed      Boolean  @default(false)
   processingProgress Int @default(0)
   processingError    String?
+
+  // Controle de ativação
+  isActive     Boolean  @default(true)  // Permite desativar sem deletar
 
   // Indexing metadata
   chunkCount   Int?

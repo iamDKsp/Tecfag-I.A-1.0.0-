@@ -1,0 +1,96 @@
+[
+  {
+    "planilha": "ENCAPSULADORAS SEMIAUTOMÁTICAS",
+    "dados": [
+      {
+        "ENCAPSULADORAS SEMIAUTOMÁTICA": NaN,
+        "Unnamed: 1": NaN,
+        "Unnamed: 2": NaN,
+        "Unnamed: 3": NaN,
+        "Unnamed: 4": NaN
+      },
+      {
+        "ENCAPSULADORAS SEMIAUTOMÁTICA": "Código",
+        "Unnamed: 1": "Descrição da Máquina",
+        "Unnamed: 2": "Tipo de Produto",
+        "Unnamed: 3": "Produtividade",
+        "Unnamed: 4": "Tipo de Máquina"
+      },
+      {
+        "ENCAPSULADORAS SEMIAUTOMÁTICA": "PAMQSLSA018",
+        "Unnamed: 1": "UNION - ENCAPSULADORA SEMI-AUTOM. P/ PO  PAINEL ANALOG. E DESC. SEMI AUT.",
+        "Unnamed: 2": "Cápsulas #000, 00L#, 00#, 0L#, 0#, 1#, 2#, 3#, 4#, 5#",
+        "Unnamed: 3": "25000 cápsulas/hora",
+        "Unnamed: 4": "Automática"
+      },
+      {
+        "ENCAPSULADORAS SEMIAUTOMÁTICA": "PAMQSLSA033",
+        "Unnamed: 1": "UNION PLUS - ENCAPSULADORA SEMI-AUTOM. P/ PO C/ CLP E DESC. AUTOMATICA",
+        "Unnamed: 2": "Cápsulas #000, 00L#, 00#, 0L#, 0#, 1#, 2#, 3#, 4#, 5#",
+        "Unnamed: 3": "25000 cápsulas/hora",
+        "Unnamed: 4": "Automática"
+      },
+      {
+        "ENCAPSULADORAS SEMIAUTOMÁTICA": "PAMQSLSA017",
+        "Unnamed: 1": "UNION PLUS/II - ENCAPSULADORA SEMI-AUTOM. P/ PO C/ CLP E DESC. AUTOMATICA",
+        "Unnamed: 2": "Cápsulas #000, 00L#, 00#, 0L#, 0#, 1#, 2#, 3#, 4#, 5#",
+        "Unnamed: 3": "25000 cápsulas/hora",
+        "Unnamed: 4": "Automática"
+      }
+    ]
+  },
+  {
+    "planilha": "ENCAPSULADORAS AUTOMÁTICAS",
+    "dados": [
+      {
+        "ENCAPSULADORAS AUTOMÁTICA": NaN,
+        "Unnamed: 1": NaN,
+        "Unnamed: 2": NaN,
+        "Unnamed: 3": NaN,
+        "Unnamed: 4": NaN
+      },
+      {
+        "ENCAPSULADORAS AUTOMÁTICA": "Código",
+        "Unnamed: 1": "Descrição da Máquina",
+        "Unnamed: 2": "Tipo de Produto",
+        "Unnamed: 3": "Produtividade",
+        "Unnamed: 4": "Tipo de Máquina"
+      },
+      {
+        "ENCAPSULADORAS AUTOMÁTICA": "PAMQSLSA018",
+        "Unnamed: 1": "FUSION 400 - ENCAPSULADORA AUTOMATICA ",
+        "Unnamed: 2": "Cápsulas 00L#, 00#, 0L#, 0#, 1#, 2#, 3#, 4#, 5#",
+        "Unnamed: 3": "400 cápsulas/min",
+        "Unnamed: 4": "Automática"
+      },
+      {
+        "ENCAPSULADORAS AUTOMÁTICA": "PAMQSLSA033",
+        "Unnamed: 1": "FUSION 800 - ENCAPSULADORA AUTOMATICA",
+        "Unnamed: 2": "Cápsulas 00L#, 00#, 0L#, 0#, 1#, 2#, 3#, 4#, 5#",
+        "Unnamed: 3": "800 cápsulas/min",
+        "Unnamed: 4": "Automática"
+      },
+      {
+        "ENCAPSULADORAS AUTOMÁTICA": "PAMQSLSA017",
+        "Unnamed: 1": "FUSION 1200 - ENCAPSULADORA AUTOMATICA",
+        "Unnamed: 2": "Cápsulas 00L#, 00#, 0L#, 0#, 1#, 2#, 3#, 4#, 5#",
+        "Unnamed: 3": "1200 cápsulas/min",
+        "Unnamed: 4": "Automática"
+      },
+      {
+        "ENCAPSULADORAS AUTOMÁTICA": "PAMQSLSA025",
+        "Unnamed: 1": "FUSION 2500 - ENCAPSULADORA AUTOMATICA",
+        "Unnamed: 2": "Cápsulas 00L#, 00#, 0L#, 0#, 1#, 2#, 3#, 4#, 5#",
+        "Unnamed: 3": "2500 cápsulas/min",
+        "Unnamed: 4": "Automática"
+      },
+      {
+        "ENCAPSULADORAS AUTOMÁTICA": "PAMQSLSA039",
+        "Unnamed: 1": "FUSION 3500 - ENCAPSULADORA AUTOMATICA",
+        "Unnamed: 2": "Cápsulas 00L#, 00#, 0L#, 0#, 1#, 2#, 3#, 4#, 5#",
+        "Unnamed: 3": "3500 cápsulas/min",
+        "Unnamed: 4": "Automática"
+      }
+    ]
+  }
+]

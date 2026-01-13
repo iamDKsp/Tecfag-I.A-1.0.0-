@@ -312,3 +312,88 @@ export const monitoringApi = {
         apiFetch<QuestionStatistics>('/api/monitoring/statistics'),
 };
 
+// ============ DOCUMENTS API ============
+
+export interface Document {
+    id: string;
+    fileName: string;
+    fileType: string;
+    fileSize: number;
+    indexed: boolean;
+    processingProgress: number;
+    processingError?: string | null;
+    chunkCount?: number | null;
+    totalTokens?: number | null;
+    uploadedAt: string;
+    indexedAt?: string | null;
+    folderId?: string | null;
+    catalogItem?: {
+        code: string;
+        name: string;
+        category: string;
+    } | null;
+}
+
+export interface DocumentFolder {
+    id: string;
+    name: string;
+    order: number;
+    documentCount: number;
+    createdAt: string;
+}
+
+export interface DocumentFoldersResponse {
+    folders: DocumentFolder[];
+}
+
+export const documentsApi = {
+    getAll: () => apiFetch<Document[]>('/api/documents/all'),
+
+    delete: (id: string) =>
+        apiFetch<{ success: boolean; message: string }>(`/api/documents/${id}`, {
+            method: 'DELETE',
+        }),
+
+    reindex: (id: string) =>
+        apiFetch<{ success: boolean; message: string }>(`/api/documents/${id}/reindex`, {
+            method: 'POST',
+        }),
+
+    getStatus: (id: string) =>
+        apiFetch<{
+            id: string;
+            indexed: boolean;
+            processingProgress: number;
+            processingError?: string | null;
+            chunkCount?: number | null;
+            totalTokens?: number | null;
+        }>(`/api/documents/${id}/status`),
+
+    // Folder management
+    createFolder: (name: string) =>
+        apiFetch<DocumentFolder>('/api/documents/folders', {
+            method: 'POST',
+            body: JSON.stringify({ name }),
+        }),
+
+    getFolders: () =>
+        apiFetch<DocumentFoldersResponse>('/api/documents/folders'),
+
+    renameFolder: (id: string, name: string) =>
+        apiFetch<DocumentFolder>(`/api/documents/folders/${id}`, {
+            method: 'PUT',
+            body: JSON.stringify({ name }),
+        }),
+
+    deleteFolder: (id: string) =>
+        apiFetch<{ success: boolean; message: string }>(`/api/documents/folders/${id}`, {
+            method: 'DELETE',
+        }),
+
+    moveDocument: (documentId: string, folderId: string | null) =>
+        apiFetch<{ id: string; folderId: string | null }>(`/api/documents/${documentId}/move`, {
+            method: 'PUT',
+            body: JSON.stringify({ folderId }),
+        }),
+};
+

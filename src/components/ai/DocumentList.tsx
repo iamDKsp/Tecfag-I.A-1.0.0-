@@ -1,11 +1,12 @@
 import React from 'react';
-import { FileText, Trash2, RefreshCw } from 'lucide-react';
+import { FileText, Trash2, RefreshCw, Download } from 'lucide-react';
 
 interface Document {
     id: string;
     fileName: string;
     fileType: string;
     fileSize: number;
+    filePath?: string;  // Caminho do arquivo para download
     indexed: boolean;
     processingProgress: number;
     processingError?: string | null;
@@ -19,13 +20,21 @@ interface DocumentListProps {
     documents: Document[];
     onDelete: (documentId: string) => void;
     onReindex: (documentId: string) => void;
+    onDownload?: (documentId: string, fileName: string) => void;
+    renderExtraActions?: (doc: Document) => React.ReactNode;
 }
 
-export function DocumentList({ documents, onDelete, onReindex }: DocumentListProps) {
+export function DocumentList({ documents, onDelete, onReindex, onDownload, renderExtraActions }: DocumentListProps) {
     const formatFileSize = (bytes: number) => {
         if (bytes < 1024) return bytes + ' B';
         if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(1) + ' KB';
         return (bytes / (1024 * 1024)).toFixed(1) + ' MB';
+    };
+
+    const handleDownload = async (docId: string, fileName: string) => {
+        if (onDownload) {
+            onDownload(docId, fileName);
+        }
     };
 
     const getFileIcon = (fileType: string) => {
@@ -86,6 +95,16 @@ export function DocumentList({ documents, onDelete, onReindex }: DocumentListPro
 
                         {/* Actions */}
                         <div className="flex items-center gap-2 ml-4">
+                            {/* Extra Actions (e.g., Move to Folder) */}
+                            {renderExtraActions && renderExtraActions(doc)}
+                            {/* Download Button */}
+                            <button
+                                onClick={() => handleDownload(doc.id, doc.fileName)}
+                                className="p-2 text-gray-500 hover:text-green-600 dark:hover:text-green-400 transition-colors"
+                                title="Baixar documento"
+                            >
+                                <Download className="w-4 h-4" />
+                            </button>
                             {doc.indexed && (
                                 <button
                                     onClick={() => onReindex(doc.id)}

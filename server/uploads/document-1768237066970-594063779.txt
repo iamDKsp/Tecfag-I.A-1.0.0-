@@ -1,0 +1,43 @@
+[
+  {
+    "planilha": "ABASTECEDOR AUTOMÁTICO",
+    "dados": [
+      {
+        "ABASTECEDOR AUTOMÁTICO": NaN,
+        "Unnamed: 1": NaN,
+        "Unnamed: 2": NaN,
+        "Unnamed: 3": NaN,
+        "Unnamed: 4": NaN,
+        "Unnamed: 5": NaN,
+        "Unnamed: 6": NaN,
+        "Unnamed: 7": NaN,
+        "Unnamed: 8": NaN,
+        "Unnamed: 9": NaN
+      },
+      {
+        "ABASTECEDOR AUTOMÁTICO": "Código",
+        "Unnamed: 1": "Descrição da Máquina",
+        "Unnamed: 2": "Potência\n(W)",
+        "Unnamed: 3": "Potência de Resfriamento\n(W)",
+        "Unnamed: 4": "Potência do Bombeamento Interno\n(W)",
+        "Unnamed: 5": "BTU/hora",
+        "Unnamed: 6": "Volume - Evaporador\n(L)",
+        "Unnamed: 7": "Fluxo de Ar Resfriado\n(m³/h)",
+        "Unnamed: 8": "Fluxo de Fluído Refrigerado\n(m³/h)",
+        "Unnamed: 9": "Tipo de Máquina"
+      },
+      {
+        "ABASTECEDOR AUTOMÁTICO": "PAMQLQAU035",
+        "Unnamed: 1": "QE-A - UNIDADE RESFRIADORA/REFRIGERADORA PARA AGUA GELADA",
+        "Unnamed: 2": 2270,
+        "Unnamed: 3": 7200,
+        "Unnamed: 4": 370,
+        "Unnamed: 5": 18000,
+        "Unnamed: 6": 27,
+        "Unnamed: 7": 2000,
+        "Unnamed: 8": "0.91",
+        "Unnamed: 9": "Automática"
+      }
+    ]
+  }
+]

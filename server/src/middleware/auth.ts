@@ -8,6 +8,10 @@ export interface AuthRequest extends Request {
         email: string;
         name: string;
         role: string;
+        jobTitle?: string | null;
+        department?: string | null;
+        technicalLevel?: string | null;
+        communicationStyle?: string | null;
     };
 }
 
@@ -31,7 +35,16 @@ export const authenticate = async (
 
         const user = await prisma.user.findUnique({
             where: { id: decoded.userId },
-            select: { id: true, email: true, name: true, role: true },
+            select: {
+                id: true,
+                email: true,
+                name: true,
+                role: true,
+                jobTitle: true,
+                department: true,
+                technicalLevel: true,
+                communicationStyle: true
+            },
         });
 
         if (!user) {

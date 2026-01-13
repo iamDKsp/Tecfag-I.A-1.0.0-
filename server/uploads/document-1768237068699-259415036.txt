@@ -1,0 +1,59 @@
+[
+  {
+    "planilha": "FLOW PACK",
+    "dados": [
+      {
+        "FLOW PACK": NaN,
+        "Unnamed: 1": NaN,
+        "Unnamed: 2": NaN,
+        "Unnamed: 3": NaN,
+        "Unnamed: 4": NaN,
+        "Unnamed: 5": NaN,
+        "Unnamed: 6": NaN,
+        "Unnamed: 7": NaN,
+        "Unnamed: 8": NaN,
+        "Unnamed: 9": NaN,
+        "Unnamed: 10": NaN
+      },
+      {
+        "FLOW PACK": "Código",
+        "Unnamed: 1": "Descrição da Máquina",
+        "Unnamed: 2": "Embalagem",
+        "Unnamed: 3": "Material da Embalagem",
+        "Unnamed: 4": "Comprimento da Embalagem\n(mm)",
+        "Unnamed: 5": "Largura da embalagem\n(mm)",
+        "Unnamed: 6": "Altura Máxima do Produto\n(mm)",
+        "Unnamed: 7": "Largura Máxima do Filme\n(mm)",
+        "Unnamed: 8": "Diâmetro Máximo do Rolo de Filme\n(mm)",
+        "Unnamed: 9": "Produtividade",
+        "Unnamed: 10": "Tipo de Máquina"
+      },
+      {
+        "FLOW PACK": "PAMQFPAU032",
+        "Unnamed: 1": "DXDZ-250B - FLOW PACK CONVENCIONAL",
+        "Unnamed: 2": "Embalagens Plásticas",
+        "Unnamed: 3": "BOPP",
+        "Unnamed: 4": "65-190 / 120-280",
+        "Unnamed: 5": "30-110",
+        "Unnamed: 6": 40,
+        "Unnamed: 7": 250,
+        "Unnamed: 8": "Ø320",
+        "Unnamed: 9": "40-230 embalagens/min",
+        "Unnamed: 10": "Automática"
+      },
+      {
+        "FLOW PACK": "PAMQFPAU033",
+        "Unnamed: 1": "DXDZ-250X - FLOW PACK INVERTIDA",
+        "Unnamed: 2": "Embalagens Plásticas",
+        "Unnamed: 3": "BOPP",
+        "Unnamed: 4": "65-190 / 120-280",
+        "Unnamed: 5": "30-110",
+        "Unnamed: 6": 40,
+        "Unnamed: 7": 250,
+        "Unnamed: 8": "Ø320",
+        "Unnamed: 9": "40-230 embalagens/min",
+        "Unnamed: 10": "Automática"
+      }
+    ]
+  }
+]

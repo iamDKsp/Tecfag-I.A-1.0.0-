@@ -1,5 +1,9 @@
 import { useState, useRef, useEffect } from "react";
-import { Send, Bot, User, Loader2, Archive, History, ArrowLeft, BookOpen, Settings } from "lucide-react";
+import { Send, Bot, User, Loader2, Archive, History, ArrowLeft, BookOpen, Settings, Maximize2, Minimize2 } from "lucide-react";
+
+// Storage keys for persisting settings
+const CHAT_MODE_KEY = "tecfag_chat_mode";
+const CHAT_FUNCTION_KEY = "tecfag_chat_function";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -68,8 +72,15 @@ const ChatTab = () => {
   const { user } = useAuth();
   const { playSend, playReceive, startThinking, stopThinking } = useChatSound();
   const [viewMode, setViewMode] = useState<ViewMode>("active");
-  const [chatMode, setChatMode] = useState<ChatMode>("professional");
-  const [functionMode, setFunctionMode] = useState<ChatFunction>("normal");
+  const [isFullscreen, setIsFullscreen] = useState(false);
+  const [chatMode, setChatMode] = useState<ChatMode>(() => {
+    const saved = localStorage.getItem(CHAT_MODE_KEY);
+    return (saved as ChatMode) || "professional";
+  });
+  const [functionMode, setFunctionMode] = useState<ChatFunction>(() => {
+    const saved = localStorage.getItem(CHAT_FUNCTION_KEY);
+    return (saved as ChatFunction) || "normal";
+  });
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -101,6 +112,16 @@ const ChatTab = () => {
       ]);
     }
   }, [chatMode]);
+
+  // Persist chatMode to localStorage
+  useEffect(() => {
+    localStorage.setItem(CHAT_MODE_KEY, chatMode);
+  }, [chatMode]);
+
+  // Persist functionMode to localStorage
+  useEffect(() => {
+    localStorage.setItem(CHAT_FUNCTION_KEY, functionMode);
+  }, [functionMode]);
 
   // Load chat history on mount
   useEffect(() => {
@@ -414,15 +435,19 @@ const ChatTab = () => {
         animate={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 0.95 }}
         transition={{ duration: 0.3, ease: "easeInOut" }}
-        className="flex items-center justify-center h-full bg-[#0d0d0d] p-4"
+        className={cn(
+          "flex items-center justify-center h-full bg-[#0d0d0d]",
+          isFullscreen ? "p-0 fixed inset-0 z-50" : "p-4"
+        )}
       >
         <motion.div
           layout
           className={cn(
-            "flex flex-col h-full w-full max-w-[95%] rounded-xl overflow-hidden shadow-2xl transition-all duration-700",
+            "flex flex-col h-full w-full overflow-hidden shadow-2xl transition-all duration-700",
             "bg-[#1a1a1a]",
             theme.border,
-            theme.glow
+            theme.glow,
+            isFullscreen ? "rounded-none max-w-none" : "rounded-xl max-w-[95%]"
           )}
           style={{ borderWidth: "1px" }}
         >
@@ -476,6 +501,19 @@ const ChatTab = () => {
                   title="Ver chats arquivados"
                 >
                   <History className="w-5 h-5" />
+                </Button>
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  onClick={() => setIsFullscreen(!isFullscreen)}
+                  className="text-white/60 hover:text-white hover:bg-white/10"
+                  title={isFullscreen ? "Sair da tela cheia" : "Tela cheia"}
+                >
+                  {isFullscreen ? (
+                    <Minimize2 className="w-5 h-5" />
+                  ) : (
+                    <Maximize2 className="w-5 h-5" />
+                  )}
                 </Button>
                 <Button
                   variant="ghost"
@@ -571,12 +609,54 @@ const ChatTab = () => {
                           th: ({ node, ...props }) => <th className="px-4 py-3 font-medium border-b border-white/10" {...props} />,
                           td: ({ node, ...props }) => <td className="px-4 py-3 text-white/70" {...props} />,
                           p: ({ node, ...props }) => <p className="mb-2 last:mb-0" {...props} />,
-                          ul: ({ node, ...props }) => <ul className="list-disc pl-4 mb-2 space-y-1" {...props} />,
-                          ol: ({ node, ...props }) => <ol className="list-decimal pl-4 mb-2 space-y-1" {...props} />,
+                          ul: ({ node, ...props }) => <ul className="list-disc pl-4 mb-2 space-y-1 marker:text-white/40" {...props} />,
+                          ol: ({ node, ...props }) => <ol className="list-decimal pl-4 mb-2 space-y-1 marker:text-white/40" {...props} />,
                           li: ({ node, ...props }) => <li className="text-white/80" {...props} />,
-                          strong: ({ node, ...props }) => <strong className={cn("font-bold transition-colors duration-700", theme.primary)} {...props} />,
-                          h3: ({ node, ...props }) => <h3 className={cn("text-base font-bold mt-4 mb-2 border-b pb-1 transition-colors duration-700", theme.primary, theme.border)} {...props} />,
-                          code: ({ node, ...props }) => <code className={cn("bg-black/30 px-1.5 py-0.5 rounded text-xs font-mono transition-colors duration-700", theme.primary)} {...props} />,
+                          strong: ({ node, ...props }) => (
+                            <strong
+                              className={cn(
+                                "font-extrabold px-1 rounded-sm mx-0.5 transition-colors duration-700",
+                                theme.primary,
+                                theme.bgFull // Use the subtle background from the theme
+                              )}
+                              {...props}
+                            />
+                          ),
+                          a: ({ node, ...props }) => (
+                            <a
+                              className={cn(
+                                "font-medium underline underline-offset-4 decoration-2 transition-colors duration-700 hover:opacity-80",
+                                theme.primary
+                              )}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              {...props}
+                            />
+                          ),
+                          blockquote: ({ node, ...props }) => (
+                            <blockquote
+                              className={cn(
+                                "border-l-4 pl-4 py-1 my-4 italic transition-colors duration-700 bg-white/5 rounded-r-lg",
+                                theme.border
+                              )}
+                              {...props}
+                            />
+                          ),
+                          h3: ({ node, ...props }) => <h3 className={cn("text-lg font-bold mt-6 mb-3 border-b pb-2 transition-colors duration-700", theme.primary, theme.border)} {...props} />,
+                          code: ({ node, ...props }) => (
+                            <code
+                              className={cn(
+                                "px-1.5 py-0.5 rounded text-sm font-bold font-mono transition-colors duration-700 border",
+                                theme.primary,
+                                theme.bgFull,
+                                theme.border
+                              )}
+                              {...props}
+                            />
+                          ),
+                          pre: ({ node, ...props }) => (
+                            <pre className="!bg-[#0d0d0d]/50 !p-0 rounded-lg overflow-hidden border border-white/10 my-4" {...props} />
+                          ),
                         }}
                       >
                         {message.content}

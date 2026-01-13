@@ -1,0 +1,107 @@
+[
+  {
+    "planilha": "APLICADOR MANUAL DE STRETCH",
+    "dados": [
+      {
+        "APLICADOR MANUAL DE STRETCH": NaN,
+        "Unnamed: 1": NaN,
+        "Unnamed: 2": NaN,
+        "Unnamed: 3": NaN,
+        "Unnamed: 4": NaN,
+        "Unnamed: 5": NaN,
+        "Unnamed: 6": NaN,
+        "Unnamed: 7": NaN
+      },
+      {
+        "APLICADOR MANUAL DE STRETCH": "Código",
+        "Unnamed: 1": "Descrição da Máquina",
+        "Unnamed: 2": "Tipo de Produto",
+        "Unnamed: 3": "Diâmetro Interno Mínimo da Bobina de Filme\n(mm)",
+        "Unnamed: 4": "Diâmetro Externo Máximo da Bobina de Filme\n(mm)",
+        "Unnamed: 5": "Comprimento da Bobina de Filme\n(mm)",
+        "Unnamed: 6": "Produtividade",
+        "Unnamed: 7": "Tipo de Máquina"
+      },
+      {
+        "APLICADOR MANUAL DE STRETCH": "PAMQSLMN024",
+        "Unnamed: 1": "E610 - APLICADOR MANUAL DE FILME STRETCH",
+        "Unnamed: 2": "Filme Stretch",
+        "Unnamed: 3": "Ø38",
+        "Unnamed: 4": "\tØ76",
+        "Unnamed: 5": "300-500",
+        "Unnamed: 6": "A depender da velocidade de operação",
+        "Unnamed: 7": "Manual"
+      }
+    ]
+  },
+  {
+    "planilha": "APLICADOR AUTOMATICO DE STRETCH",
+    "dados": [
+      {
+        "APLICADOR AUTOMATICO DE STRETCH": NaN,
+        "Unnamed: 1": NaN,
+        "Unnamed: 2": NaN,
+        "Unnamed: 3": NaN,
+        "Unnamed: 4": NaN,
+        "Unnamed: 5": NaN,
+        "Unnamed: 6": NaN,
+        "Unnamed: 7": NaN,
+        "Unnamed: 8": NaN,
+        "Unnamed: 9": NaN,
+        "Unnamed: 10": NaN
+      },
+      {
+        "APLICADOR AUTOMATICO DE STRETCH": "Código",
+        "Unnamed: 1": "Descrição da Máquina",
+        "Unnamed: 2": "Tipo de Produto",
+        "Unnamed: 3": "Diâmetro Interno Mínimo da Bobina de Filme\n(mm)",
+        "Unnamed: 4": "Diâmetro Externo Máximo da Bobina de Filme\n(mm)",
+        "Unnamed: 5": "Comprimento da Bobina de Filme\n(mm)",
+        "Unnamed: 6": "Área útil\n(Diâmetro da Plataforma Giratória)\n(mm)",
+        "Unnamed: 7": "Altura do Palete\n(mm)",
+        "Unnamed: 8": "Peso máximo do Palete\n(kg)",
+        "Unnamed: 9": "Produtividade",
+        "Unnamed: 10": "Tipo de Máquina"
+      },
+      {
+        "APLICADOR AUTOMATICO DE STRETCH": "PAMQSLAU058",
+        "Unnamed: 1": "BL2000A - STRECHADEIRA AUTOMATICA DE PALETES",
+        "Unnamed: 2": "Filme Stretch",
+        "Unnamed: 3": NaN,
+        "Unnamed: 4": NaN,
+        "Unnamed: 5": 500,
+        "Unnamed: 6": "Ø1500 (personalizada para 1650, 1800 ou 2000)",
+        "Unnamed: 7": 2100,
+        "Unnamed: 8": 2000,
+        "Unnamed: 9": "15-140 paletes/hora",
+        "Unnamed: 10": "Automática"
+      },
+      {
+        "APLICADOR AUTOMATICO DE STRETCH": "PAMQSLAU033",
+        "Unnamed: 1": "BL2000B - STRECHADEIRA AUTOMATICA DE PALETES",
+        "Unnamed: 2": "Filme Stretch",
+        "Unnamed: 3": NaN,
+        "Unnamed: 4": NaN,
+        "Unnamed: 5": "500",
+        "Unnamed: 6": "Ø1500 (personalizada para 1650, 1800 ou 2000)",
+        "Unnamed: 7": "2100",
+        "Unnamed: 8": "2000",
+        "Unnamed: 9": "15-140 paletes/hora",
+        "Unnamed: 10": "Automática"
+      },
+      {
+        "APLICADOR AUTOMATICO DE STRETCH": "PAMQSLAU056",
+        "Unnamed: 1": "BL2000P - STRECHADEIRA AUTOMATICA DE PALETES",
+        "Unnamed: 2": "Filme Stretch",
+        "Unnamed: 3": NaN,
+        "Unnamed: 4": NaN,
+        "Unnamed: 5": 500,
+        "Unnamed: 6": "Ø1500 (personalizada para 1650, 1800 ou 2000)",
+        "Unnamed: 7": "1800",
+        "Unnamed: 8": 2000,
+        "Unnamed: 9": "15-140 paletes/hora",
+        "Unnamed: 10": "Automática"
+      }
+    ]
+  }
+]

@@ -1,0 +1,217 @@
+[
+  {
+    "planilha": "DOSADORA",
+    "dados": [
+      {
+        "DOSADORA": NaN,
+        "Unnamed: 1": NaN,
+        "Unnamed: 2": NaN,
+        "Unnamed: 3": NaN,
+        "Unnamed: 4": NaN,
+        "Unnamed: 5": NaN,
+        "Unnamed: 6": NaN,
+        "Unnamed: 7": NaN
+      },
+      {
+        "DOSADORA": "Código",
+        "Unnamed: 1": "Descrição da Máquina",
+        "Unnamed: 2": "Tipo de Produto",
+        "Unnamed: 3": "Fluidez",
+        "Unnamed: 4": "Observação do Produto",
+        "Unnamed: 5": "Dosagem",
+        "Unnamed: 6": "Produtividade",
+        "Unnamed: 7": "Tipo de Máquina"
+      },
+      {
+        "DOSADORA": "PAMQSLSA124",
+        "Unnamed: 1": "DM1000F - DOSADORA C/ BALANCA ELETR. P/ POS BX FLUIDEZ 100~1000/GRAMAS",
+        "Unnamed: 2": "Pós",
+        "Unnamed: 3": "Baixa Fluidez",
+        "Unnamed: 4": "IMPORTANTE TESTAR O PRODUTO DO CLIENTE NA MÁQUINA PARA UM RESULTADO MAIS ASSERTIVO",
+        "Unnamed: 5": "100-1000 g",
+        "Unnamed: 6": "10-20 embalagens/min",
+        "Unnamed: 7": "Semiautomática"
+      },
+      {
+        "DOSADORA": "PAMQSLSA122",
+        "Unnamed: 1": "DM1000S - DOSADORA C/ BALANCA ELETR. P/ GRANULADOS 100~1000/GRAMAS",
+        "Unnamed: 2": "Granulados",
+        "Unnamed: 3": "Alta Fluidez",
+        "Unnamed: 4": "IMPORTANTE TESTAR O PRODUTO DO CLIENTE NA MÁQUINA PARA UM RESULTADO MAIS ASSERTIVO",
+        "Unnamed: 5": "100-1000 g",
+        "Unnamed: 6": "10-20 embalagens/min",
+        "Unnamed: 7": "Semiautomática"
+      },
+      {
+        "DOSADORA": "PAMQSLSA125",
+        "Unnamed: 1": "DM5000F - DOSADORA C/ BALANCA ELETR. P/ POS BX FLUIDEZ 200~5000/GRAMAS",
+        "Unnamed: 2": "Pós",
+        "Unnamed: 3": "Baixa Fluidez",
+        "Unnamed: 4": "IMPORTANTE TESTAR O PRODUTO DO CLIENTE NA MÁQUINA PARA UM RESULTADO MAIS ASSERTIVO",
+        "Unnamed: 5": "200-5000 g",
+        "Unnamed: 6": "10-20 embalagens/min",
+        "Unnamed: 7": "Semiautomática"
+      },
+      {
+        "DOSADORA": "PAMQSLSA123",
+        "Unnamed: 1": "DM5000S - DOSADORA C/ BALANCA ELETR. P/ GRANULADOS 200~5000/GRAMAS",
+        "Unnamed: 2": "Granulados",
+        "Unnamed: 3": "Alta Fluidez",
+        "Unnamed: 4": "IMPORTANTE TESTAR O PRODUTO DO CLIENTE NA MÁQUINA PARA UM RESULTADO MAIS ASSERTIVO",
+        "Unnamed: 5": "200-5000 g",
+        "Unnamed: 6": "10-20 embalagens/min",
+        "Unnamed: 7": "Semiautomática"
+      },
+      {
+        "DOSADORA": "PAMQEVSA001",
+        "Unnamed: 1": "KFG1000-MAQUINA SEMI-AUT. P/ ENCHIM. GRAOS E FARELOS(220V)",
+        "Unnamed: 2": "Grãos e Farelos",
+        "Unnamed: 3": "Baixa/Alta Fluidez",
+        "Unnamed: 4": "IMPORTANTE TESTAR O PRODUTO DO CLIENTE NA MÁQUINA PARA UM RESULTADO MAIS ASSERTIVO",
+        "Unnamed: 5": "500-1000 ml",
+        "Unnamed: 6": "5-30 embalagens/min",
+        "Unnamed: 7": "Semiautomática"
+      },
+      {
+        "DOSADORA": "PAMQCCSA003",
+        "Unnamed: 1": "KFG250-MAQUINA SEMI-AUT. P/ ENCHIM. GRAOS E FARELOS(220V)",
+        "Unnamed: 2": "Grãos e Farelos",
+        "Unnamed: 3": "Baixa/Alta Fluidez",
+        "Unnamed: 4": "IMPORTANTE TESTAR O PRODUTO DO CLIENTE NA MÁQUINA PARA UM RESULTADO MAIS ASSERTIVO",
+        "Unnamed: 5": "50-250 ml",
+        "Unnamed: 6": "5-30 embalagens/min",
+        "Unnamed: 7": "Semiautomática"
+      },
+      {
+        "DOSADORA": "PAMQGPSA001",
+        "Unnamed: 1": "KFG500-MAQUINA SEMI-AUT. P/ ENCHIM. GRAOS E FARELOS(220V)",
+        "Unnamed: 2": "Grãos e Farelos",
+        "Unnamed: 3": "Baixa/Alta Fluidez",
+        "Unnamed: 4": "IMPORTANTE TESTAR O PRODUTO DO CLIENTE NA MÁQUINA PARA UM RESULTADO MAIS ASSERTIVO",
+        "Unnamed: 5": "250-500 ml",
+        "Unnamed: 6": "5-30 embalagens/min",
+        "Unnamed: 7": "Semiautomática"
+      },
+      {
+        "DOSADORA": "PAMQSLSA120",
+        "Unnamed: 1": "TDM100F - DOSADORA C/ BALANCA ELETR. BANCADA P/ POS BX FLUIDEZ 10~100/GRAMAS",
+        "Unnamed: 2": "Pós",
+        "Unnamed: 3": "Baixa Fluidez",
+        "Unnamed: 4": "IMPORTANTE TESTAR O PRODUTO DO CLIENTE NA MÁQUINA PARA UM RESULTADO MAIS ASSERTIVO",
+        "Unnamed: 5": "10-100 g",
+        "Unnamed: 6": "10-20 embalagens/min",
+        "Unnamed: 7": "Semiautomática"
+      },
+      {
+        "DOSADORA": "PAMQSLSA111",
+        "Unnamed: 1": "TDM100G - DOSADORA C/ BALANCA ELETR. BANCADA P/ GRAOS 10~100/GRAMAS",
+        "Unnamed: 2": "Grãos",
+        "Unnamed: 3": "Alta Fluidez",
+        "Unnamed: 4": "IMPORTANTE TESTAR O PRODUTO DO CLIENTE NA MÁQUINA PARA UM RESULTADO MAIS ASSERTIVO",
+        "Unnamed: 5": "10-100 g",
+        "Unnamed: 6": "10-20 embalagens/min",
+        "Unnamed: 7": "Semiautomática"
+      },
+      {
+        "DOSADORA": "PAMQSLSA114",
+        "Unnamed: 1": "TDM100P - DOSADORA C/ BALANCA ELETR. BANCADA P/ POS 10~100/GRAMAS",
+        "Unnamed: 2": "Pós",
+        "Unnamed: 3": "Alta Fluidez",
+        "Unnamed: 4": "IMPORTANTE TESTAR O PRODUTO DO CLIENTE NA MÁQUINA PARA UM RESULTADO MAIS ASSERTIVO",
+        "Unnamed: 5": "10-100 g",
+        "Unnamed: 6": "10-20 embalagens/min",
+        "Unnamed: 7": "Semiautomática"
+      },
+      {
+        "DOSADORA": "PAMQSLSA117",
+        "Unnamed: 1": "TDM100S - DOSADORA C/ BALANCA ELETR. BANCADA P/ GRANULADOS 10~100/GRAMAS",
+        "Unnamed: 2": "Granulados",
+        "Unnamed: 3": "Alta Fluidez",
+        "Unnamed: 4": "IMPORTANTE TESTAR O PRODUTO DO CLIENTE NA MÁQUINA PARA UM RESULTADO MAIS ASSERTIVO",
+        "Unnamed: 5": "10-100 g",
+        "Unnamed: 6": "10-20 embalagens/min",
+        "Unnamed: 7": "Semiautomática"
+      },
+      {
+        "DOSADORA": "PAMQSLSA112",
+        "Unnamed: 1": "TDM200G - DOSADORA C/ BALANCA ELETR. BANCADA P/ GRAOS 20~200/GRAMAS",
+        "Unnamed: 2": "Grãos",
+        "Unnamed: 3": "Alta Fluidez",
+        "Unnamed: 4": "IMPORTANTE TESTAR O PRODUTO DO CLIENTE NA MÁQUINA PARA UM RESULTADO MAIS ASSERTIVO",
+        "Unnamed: 5": "20-200 g",
+        "Unnamed: 6": "10-20 embalagens/min",
+        "Unnamed: 7": "Semiautomática"
+      },
+      {
+        "DOSADORA": "PAMQSLSA115",
+        "Unnamed: 1": "TDM200P - DOSADORA C/ BALANCA ELETR. BANCADA P/ POS 20~200/GRAMAS",
+        "Unnamed: 2": "Dosadora",
+        "Unnamed: 3": "Alta Fluidez",
+        "Unnamed: 4": "IMPORTANTE TESTAR O PRODUTO DO CLIENTE NA MÁQUINA PARA UM RESULTADO MAIS ASSERTIVO",
+        "Unnamed: 5": "20-200 g",
+        "Unnamed: 6": "10-20 embalagens/min",
+        "Unnamed: 7": "Semiautomática"
+      },
+      {
+        "DOSADORA": "PAMQSLSA119",
+        "Unnamed: 1": "TDM25F - DOSADORA C/ BALANCA ELETR. BANCADA P/ POS BX FLUIDEZ 1~25/GRAMAS",
+        "Unnamed: 2": "Dosadora",
+        "Unnamed: 3": "Baixa Fluidez",
+        "Unnamed: 4": "IMPORTANTE TESTAR O PRODUTO DO CLIENTE NA MÁQUINA PARA UM RESULTADO MAIS ASSERTIVO",
+        "Unnamed: 5": "1-25 g",
+        "Unnamed: 6": "10-20 embalagens/min",
+        "Unnamed: 7": "Semiautomática"
+      },
+      {
+        "DOSADORA": "PAMQSLSA110",
+        "Unnamed: 1": "TDM25G - DOSADORA C/ BALANCA ELETR. BANCADA P/ GRAOS 1~25/GRAMAS",
+        "Unnamed: 2": "Grãos",
+        "Unnamed: 3": "Alta Fluidez",
+        "Unnamed: 4": "IMPORTANTE TESTAR O PRODUTO DO CLIENTE NA MÁQUINA PARA UM RESULTADO MAIS ASSERTIVO",
+        "Unnamed: 5": "1-25 g",
+        "Unnamed: 6": "10-20 embalagens/min",
+        "Unnamed: 7": "Semiautomática"
+      },
+      {
+        "DOSADORA": "PAMQSLSA113",
+        "Unnamed: 1": "TDM25P - DOSADORA C/ BALANCA ELETR. BANCADA P/ POS 1~25/GRAMAS",
+        "Unnamed: 2": "Pós",
+        "Unnamed: 3": "Alta Fluidez",
+        "Unnamed: 4": "IMPORTANTE TESTAR O PRODUTO DO CLIENTE NA MÁQUINA PARA UM RESULTADO MAIS ASSERTIVO",
+        "Unnamed: 5": "1-25 g",
+        "Unnamed: 6": "10-20 embalagens/min",
+        "Unnamed: 7": "Semiautomática"
+      },
+      {
+        "DOSADORA": "PAMQSLSA116",
+        "Unnamed: 1": "TDM25S - DOSADORA C/ BALANCA ELETR. BANCADA P/ GRANULADOS 1~25/GRAMAS",
+        "Unnamed: 2": "Granulados",
+        "Unnamed: 3": "Alta Fluidez",
+        "Unnamed: 4": "IMPORTANTE TESTAR O PRODUTO DO CLIENTE NA MÁQUINA PARA UM RESULTADO MAIS ASSERTIVO",
+        "Unnamed: 5": "1-25 g",
+        "Unnamed: 6": "10-20 embalagens/min",
+        "Unnamed: 7": "Semiautomática"
+      },
+      {
+        "DOSADORA": "PAMQSLSA121",
+        "Unnamed: 1": "TDM500F DOSADORA C/ BALANCA ELETR. BANCADA P/ POS BX FLUIDEZ 50~500/GRAMAS",
+        "Unnamed: 2": "Pós",
+        "Unnamed: 3": "Baixa Fluidez",
+        "Unnamed: 4": "IMPORTANTE TESTAR O PRODUTO DO CLIENTE NA MÁQUINA PARA UM RESULTADO MAIS ASSERTIVO",
+        "Unnamed: 5": "50-500 g",
+        "Unnamed: 6": "10-20 embalagens/min",
+        "Unnamed: 7": "Semiautomática"
+      },
+      {
+        "DOSADORA": "PAMQSLSA118",
+        "Unnamed: 1": "TDM500S - DOSADORA C/ BALANCA ELETR. BANCADA P/ GRANULADOS 50~500/GRAMAS",
+        "Unnamed: 2": "Granulados",
+        "Unnamed: 3": "Alta Fluidez",
+        "Unnamed: 4": "IMPORTANTE TESTAR O PRODUTO DO CLIENTE NA MÁQUINA PARA UM RESULTADO MAIS ASSERTIVO",
+        "Unnamed: 5": "50-500 g",
+        "Unnamed: 6": "10-20 embalagens/min",
+        "Unnamed: 7": "Semiautomática"
+      }
+    ]
+  }
+]

@@ -7,9 +7,10 @@ import MindMapTab from "@/components/mindmap/MindMapTab";
 import CatalogTab from "@/components/catalog/CatalogTab";
 import UsersTab from "@/components/users/UsersTab";
 import MonitoringTab from "@/components/monitoring/MonitoringTab";
+import DocumentsTab from "@/components/documents/DocumentsTab";
 import { useAuth } from "@/contexts/AuthContext";
 
-type TabType = "chat" | "mindmap" | "catalog" | "users" | "monitoring";
+type TabType = "chat" | "mindmap" | "catalog" | "users" | "monitoring" | "documents";
 
 const Index = () => {
   const [activeTab, setActiveTab] = useState<TabType>("chat");
@@ -93,6 +94,18 @@ const Index = () => {
                 className="h-full"
               >
                 <MonitoringTab />
+              </motion.div>
+            )}
+            {activeTab === "documents" && isAdmin && (
+              <motion.div
+                key="documents"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.3 }}
+                className="h-full"
+              >
+                <DocumentsTab />
               </motion.div>
             )}
           </AnimatePresence>

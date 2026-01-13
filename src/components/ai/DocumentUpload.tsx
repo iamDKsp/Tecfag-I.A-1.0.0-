@@ -3,7 +3,7 @@ import { useDropzone } from 'react-dropzone';
 import { Upload, FileText, Loader2, CheckCircle2, AlertCircle } from 'lucide-react';
 
 interface DocumentUploadProps {
-    catalogId: string;
+    catalogId?: string;  // Agora opcional para suportar documentos globais
     onUploadComplete?: () => void;
 }
 
@@ -31,12 +31,16 @@ export function DocumentUpload({ catalogId, onUploadComplete }: DocumentUploadPr
                 // Upload file
                 const formData = new FormData();
                 formData.append('file', file);
-                formData.append('catalogId', catalogId);
+
+                // Adicionar catalogId apenas se fornecido
+                if (catalogId) {
+                    formData.append('catalogId', catalogId);
+                }
 
                 const response = await fetch('/api/documents/upload', {
                     method: 'POST',
                     headers: {
-                        'Authorization': `Bearer ${localStorage.getItem('token')}`
+                        'Authorization': `Bearer ${localStorage.getItem('auth_token')}`
                     },
                     body: formData
                 });
@@ -73,7 +77,7 @@ export function DocumentUpload({ catalogId, onUploadComplete }: DocumentUploadPr
             try {
                 const response = await fetch(`/api/documents/${documentId}/status`, {
                     headers: {
-                        'Authorization': `Bearer ${localStorage.getItem('token')}`
+                        'Authorization': `Bearer ${localStorage.getItem('auth_token')}`
                     }
                 });
 
@@ -183,8 +187,8 @@ export function DocumentUpload({ catalogId, onUploadComplete }: DocumentUploadPr
                                 <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
                                     <div
                                         className={`h-2 rounded-full transition-all duration-300 ${file.status === 'complete'
-                                                ? 'bg-green-500'
-                                                : 'bg-blue-500'
+                                            ? 'bg-green-500'
+                                            : 'bg-blue-500'
                                             }`}
                                         style={{ width: `${file.progress}%` }}
                                     />

@@ -1,0 +1,43 @@
+[
+  {
+    "planilha": "MOINHO TRITURADOR",
+    "dados": [
+      {
+        "MOINHO TRITURADOR": NaN,
+        "Unnamed: 1": NaN,
+        "Unnamed: 2": NaN,
+        "Unnamed: 3": NaN,
+        "Unnamed: 4": NaN,
+        "Unnamed: 5": NaN,
+        "Unnamed: 6": NaN
+      },
+      {
+        "MOINHO TRITURADOR": "Código",
+        "Unnamed: 1": "Descrição da Máquina",
+        "Unnamed: 2": "Tipo de Produto",
+        "Unnamed: 3": "Espessura do Produto\n(μm - mícron)",
+        "Unnamed: 4": "Volume do Funil (L)",
+        "Unnamed: 5": "Produtividade",
+        "Unnamed: 6": "Tipo de Máquina"
+      },
+      {
+        "MOINHO TRITURADOR": "PAMQGPAU065",
+        "Unnamed: 1": "MC50 - MOINHO COLOIDAL",
+        "Unnamed: 2": "Pós e grãos",
+        "Unnamed: 3": "2-50 μm",
+        "Unnamed: 4": "3 L",
+        "Unnamed: 5": "10-15 kg/h",
+        "Unnamed: 6": "Semiautomática"
+      },
+      {
+        "MOINHO TRITURADOR": "PAMQGPAU066",
+        "Unnamed: 1": "MC80 - MOINHO COLOIDAL",
+        "Unnamed: 2": "Pós e grãos",
+        "Unnamed: 3": "2-50 μm",
+        "Unnamed: 4": "8 L",
+        "Unnamed: 5": "50-70 kg/h",
+        "Unnamed: 6": "Semiautomática"
+      }
+    ]
+  }
+]

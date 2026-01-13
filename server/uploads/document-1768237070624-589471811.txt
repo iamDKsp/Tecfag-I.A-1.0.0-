@@ -1,0 +1,111 @@
+[
+  {
+    "planilha": "TERMOFORMADORA AUTO DE BLISTER",
+    "dados": [
+      {
+        "TERMOFORMADORA AUTOMÁTICA DE BLISTER": NaN,
+        "Unnamed: 1": NaN,
+        "Unnamed: 2": NaN,
+        "Unnamed: 3": NaN,
+        "Unnamed: 4": NaN,
+        "Unnamed: 5": NaN,
+        "Unnamed: 6": NaN,
+        "Unnamed: 7": NaN,
+        "Unnamed: 8": NaN,
+        "Unnamed: 9": NaN,
+        "Unnamed: 10": NaN
+      },
+      {
+        "TERMOFORMADORA AUTOMÁTICA DE BLISTER": "Código",
+        "Unnamed: 1": "Descrição da Máquina",
+        "Unnamed: 2": "Embalagem",
+        "Unnamed: 3": "Material da Embalagem",
+        "Unnamed: 4": "Tipo de Material",
+        "Unnamed: 5": "Largura da Bobina\n(mm)",
+        "Unnamed: 6": "Área Máxima de Formação",
+        "Unnamed: 7": "Profundidade Máxima de Formação\n(mm)",
+        "Unnamed: 8": "Dimensão de Cada Cavidade\n(mm)",
+        "Unnamed: 9": "Produtividade",
+        "Unnamed: 10": "Tipo de Máquina"
+      },
+      {
+        "TERMOFORMADORA AUTOMÁTICA DE BLISTER": "PAMQSLSA008",
+        "Unnamed: 1": "EVOLUTION 140 - FORMADORA E SELADORA DE BLISTER",
+        "Unnamed: 2": "Blister",
+        "Unnamed: 3": "Alumínio-Plastico ou Alumínio-Alumínio",
+        "Unnamed: 4": NaN,
+        "Unnamed: 5": NaN,
+        "Unnamed: 6": NaN,
+        "Unnamed: 7": NaN,
+        "Unnamed: 8": NaN,
+        "Unnamed: 9": NaN,
+        "Unnamed: 10": "Automática"
+      },
+      {
+        "TERMOFORMADORA AUTOMÁTICA DE BLISTER": "PAMQSLSA044",
+        "Unnamed: 1": "EVOLUTION 150 - TERMOFORMADORA AUTOMATICA DE BLISTER",
+        "Unnamed: 2": "Blister",
+        "Unnamed: 3": "Alumínio-Plastico ou Alumínio-Alumínio",
+        "Unnamed: 4": NaN,
+        "Unnamed: 5": NaN,
+        "Unnamed: 6": NaN,
+        "Unnamed: 7": NaN,
+        "Unnamed: 8": NaN,
+        "Unnamed: 9": NaN,
+        "Unnamed: 10": "Automática"
+      },
+      {
+        "TERMOFORMADORA AUTOMÁTICA DE BLISTER": "PAMQSLSA024",
+        "Unnamed: 1": "EVOLUTION 250 ALU-PVC TERMOFORMADORA DE BLISTER AUTOMATICA",
+        "Unnamed: 2": "Blister",
+        "Unnamed: 3": "Alumínio-Plastico ou Alumínio-Alumínio",
+        "Unnamed: 4": NaN,
+        "Unnamed: 5": NaN,
+        "Unnamed: 6": NaN,
+        "Unnamed: 7": NaN,
+        "Unnamed: 8": NaN,
+        "Unnamed: 9": NaN,
+        "Unnamed: 10": "Automática"
+      },
+      {
+        "TERMOFORMADORA AUTOMÁTICA DE BLISTER": "PAMQSLSA026",
+        "Unnamed: 1": "EVOLUTION 260H - TERMOFORMADORA AUTOMATICA DE BLISTER",
+        "Unnamed: 2": "Blister",
+        "Unnamed: 3": "Alumínio-Plastico ou Alumínio-Alumínio",
+        "Unnamed: 4": NaN,
+        "Unnamed: 5": NaN,
+        "Unnamed: 6": NaN,
+        "Unnamed: 7": NaN,
+        "Unnamed: 8": NaN,
+        "Unnamed: 9": NaN,
+        "Unnamed: 10": "Automática"
+      },
+      {
+        "TERMOFORMADORA AUTOMÁTICA DE BLISTER": "PAMQSLSA005",
+        "Unnamed: 1": "EVOLUTION 80 - TERMOFORMADORA E SELADORA DE BLISTER",
+        "Unnamed: 2": "Blister",
+        "Unnamed: 3": "Alumínio-Plastico ou Alumínio-Alumínio",
+        "Unnamed: 4": NaN,
+        "Unnamed: 5": NaN,
+        "Unnamed: 6": NaN,
+        "Unnamed: 7": NaN,
+        "Unnamed: 8": NaN,
+        "Unnamed: 9": NaN,
+        "Unnamed: 10": "Automática"
+      },
+      {
+        "TERMOFORMADORA AUTOMÁTICA DE BLISTER": "PAMQSLSA105",
+        "Unnamed: 1": "EVOLUTION260 - TERMOFORMADORA AUTOMATICA DE BLISTER-SERVO MOTOR",
+        "Unnamed: 2": "Blister",
+        "Unnamed: 3": "Alumínio-Plastico ou Alumínio-Alumínio",
+        "Unnamed: 4": "Folha rígida PVC: 0,25-0,5 mm (espessura) x 260 mm (largura)\nFolha de Alumínio PTP: 0,02 - 0,035 mm (espessura) x 260 mm (largura)\nPapel de Diálise: 50-100 g/m² x 250 mm (largura)",
+        "Unnamed: 5": 330,
+        "Unnamed: 6": "C 240 x L 150 mm",
+        "Unnamed: 7": 14,
+        "Unnamed: 8": "C 80 x L 57 mm",
+        "Unnamed: 9": "Alumínio-Plástico: ≤ 300.000 unidades/h\nAlumínio-Alumínio: ≤ 100.000 unidades/h",
+        "Unnamed: 10": "Automática"
+      }
+    ]
+  }
+]

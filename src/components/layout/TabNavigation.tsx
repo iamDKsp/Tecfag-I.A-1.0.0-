@@ -1,8 +1,8 @@
-import { MessageSquare, Network, Package, Users, Activity } from "lucide-react";
+import { MessageSquare, Network, Package, Users, Activity, FileStack } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
-type TabType = "chat" | "mindmap" | "catalog" | "users" | "monitoring";
+type TabType = "chat" | "mindmap" | "catalog" | "users" | "monitoring" | "documents";
 
 interface TabNavigationProps {
   activeTab: TabType;
@@ -16,6 +16,7 @@ const tabs = [
   { id: "catalog" as const, label: "Catálogo", icon: Package, adminOnly: false },
   { id: "users" as const, label: "Usuários", icon: Users, adminOnly: true },
   { id: "monitoring" as const, label: "Monitoramento", icon: Activity, adminOnly: true },
+  { id: "documents" as const, label: "Documentos I.A", icon: FileStack, adminOnly: true },
 ];
 
 const TabNavigation = ({ activeTab, onTabChange, isAdmin = false }: TabNavigationProps) => {

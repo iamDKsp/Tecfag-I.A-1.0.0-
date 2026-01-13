@@ -13,7 +13,8 @@ const suggestions = [
     "Como posso usar a técnica spiced para vender mais?",
     "Por que devo oferecer manutenção preventiva?",
     "Quais são os tipos e modelos de seladoras?",
-    "Gere uma tabela com todas as maquinas!"
+    "Gere uma tabela com todas as maquinas!",
+    "Qual a realidade da importação direta?"
 ];
 
 const getModeColors = (mode: ChatMode) => {

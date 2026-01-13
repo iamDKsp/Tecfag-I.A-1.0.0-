@@ -1,0 +1,77 @@
+[
+  {
+    "planilha": "Montadora Automáticas de Caixas",
+    "dados": [
+      {
+        "MONTADORA AUTOMÁTICAS DE CAIXAS": NaN,
+        "Unnamed: 1": NaN,
+        "Unnamed: 2": NaN,
+        "Unnamed: 3": NaN,
+        "Unnamed: 4": NaN,
+        "Unnamed: 5": NaN,
+        "Unnamed: 6": NaN,
+        "Unnamed: 7": NaN
+      },
+      {
+        "MONTADORA AUTOMÁTICAS DE CAIXAS": "Código",
+        "Unnamed: 1": "Descrição da Máquina",
+        "Unnamed: 2": "Produto",
+        "Unnamed: 3": "Tamanho Mínimo da Caixa\n(mm)",
+        "Unnamed: 4": "Tamanho Máxima da Caixa\n(mm)",
+        "Unnamed: 5": "Largura da Fita\n(mm)",
+        "Unnamed: 6": "Produtividade",
+        "Unnamed: 7": "Tipo de Máquina"
+      },
+      {
+        "MONTADORA AUTOMÁTICAS DE CAIXAS": "PAMQCCAU007",
+        "Unnamed: 1": "CE16 - MONTADORA AUTOMATICA DE CAIXAS",
+        "Unnamed: 2": "Caixa de Papelão Desmontada",
+        "Unnamed: 3": "C 200 x L 200 x A 140",
+        "Unnamed: 4": "C 500 x L 400 x A 350\nCaixa montada: C + L < 900\nCaixa desmontada: Metade de L + A < 500",
+        "Unnamed: 5": "-",
+        "Unnamed: 6": "6-15 caixas/min",
+        "Unnamed: 7": "Automática"
+      },
+      {
+        "MONTADORA AUTOMÁTICAS DE CAIXAS": "PAMQCCAU008",
+        "Unnamed: 1": "CES4035N/A MONTADORA DE CAIXAS C/ ALIM. PNEUMATICA",
+        "Unnamed: 2": "Caixa de Papelão Desmontada",
+        "Unnamed: 3": "C 200 x L 150 x A 100",
+        "Unnamed: 4": "C 500 x L 390 x A 350",
+        "Unnamed: 5": "48, 60 ou 75",
+        "Unnamed: 6": "10-14 caixas/min",
+        "Unnamed: 7": "Automática"
+      },
+      {
+        "MONTADORA AUTOMÁTICAS DE CAIXAS": "PAMQCCAU004",
+        "Unnamed: 1": "CES4530N - MONTADORA AUTOMATICA DE CAIXAS DE PAPELAO",
+        "Unnamed: 2": "Caixa de Papelão Desmontada",
+        "Unnamed: 3": "C 200 x L 150 x A 100",
+        "Unnamed: 4": "C 500 x L 390 x A 350",
+        "Unnamed: 5": "50, 60 ou 75",
+        "Unnamed: 6": "10-14 caixas/min",
+        "Unnamed: 7": "Automática"
+      },
+      {
+        "MONTADORA AUTOMÁTICAS DE CAIXAS": "PAMQCCAU023",
+        "Unnamed: 1": "CES5040V/A - MONTADORA AUTOMATICA DE CAIXAS DER PAPELAO",
+        "Unnamed: 2": "Caixa de Papelão Desmontada",
+        "Unnamed: 3": NaN,
+        "Unnamed: 4": NaN,
+        "Unnamed: 5": NaN,
+        "Unnamed: 6": NaN,
+        "Unnamed: 7": "Automática"
+      },
+      {
+        "MONTADORA AUTOMÁTICAS DE CAIXAS": "PAMQCCAU011",
+        "Unnamed: 1": "MONTADORA DE CAIXAS - CONJ. CE16+AS323 - AUTOMATICO",
+        "Unnamed: 2": "Caixa de Papelão Desmontada",
+        "Unnamed: 3": "CE16: C 200 x L 200 x A 140\nAS323: C 200 x L 150 x A 100\n\nConsiderar medida para o conjunto: C 200 x L 200 A 140",
+        "Unnamed: 4": "CE16: C 500 x L 400 x A 350\nAS323: C 600 x L 500 x A 600\n\nConsiderar medida para o conjunto: C 500 x L 400 x A 350",
+        "Unnamed: 5": "36, 48, 50 ou 60",
+        "Unnamed: 6": "6-15 caixas/min",
+        "Unnamed: 7": "Automática"
+      }
+    ]
+  }
+]

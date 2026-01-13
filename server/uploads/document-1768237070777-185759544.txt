@@ -1,0 +1,238 @@
+[
+  {
+    "planilha": "TÚNEL DE ENCOLHIMENTO",
+    "dados": [
+      {
+        "TÚNEL DE ENCOLHIMENTO": NaN,
+        "Unnamed: 1": NaN,
+        "Unnamed: 2": NaN,
+        "Unnamed: 3": NaN,
+        "Unnamed: 4": NaN,
+        "Unnamed: 5": NaN,
+        "Unnamed: 6": NaN,
+        "Unnamed: 7": NaN,
+        "Unnamed: 8": NaN
+      },
+      {
+        "TÚNEL DE ENCOLHIMENTO": "Código",
+        "Unnamed: 1": "Descrição da Máquina",
+        "Unnamed: 2": "Tipo de Plástico",
+        "Unnamed: 3": "Material da Embalagem",
+        "Unnamed: 4": "Largura Máxima do Produto\n(mm)",
+        "Unnamed: 5": "Altura Máxima do Produto\n(mm)",
+        "Unnamed: 6": "Peso máximo de carga",
+        "Unnamed: 7": "Produtividade",
+        "Unnamed: 8": "Tipo de Máquina"
+      },
+      {
+        "TÚNEL DE ENCOLHIMENTO": "PAMQSLTU087",
+        "Unnamed: 1": "BS-20 - TUNEL DE ENCOLHIMENTO 220V/60HZ,1 FASE",
+        "Unnamed: 2": "Plásticos termoencolhíveis",
+        "Unnamed: 3": "PVC/PP/POF/OUTROS",
+        "Unnamed: 4": 150,
+        "Unnamed: 5": 100,
+        "Unnamed: 6": "5 kg",
+        "Unnamed: 7": "9 m/min",
+        "Unnamed: 8": "Automática"
+      },
+      {
+        "TÚNEL DE ENCOLHIMENTO": "PAMQSLTU073",
+        "Unnamed: 1": "BS-8030L TUNEL DE ENCOLHIMENTO P/ EMBALAR 220V/60HZ/3F",
+        "Unnamed: 2": "Plásticos termoencolhíveis",
+        "Unnamed: 3": "PVC/PP/POF/OUTROS",
+        "Unnamed: 4": 650,
+        "Unnamed: 5": 230,
+        "Unnamed: 6": "80 kg",
+        "Unnamed: 7": "10 m/min",
+        "Unnamed: 8": "Automática"
+      },
+      {
+        "TÚNEL DE ENCOLHIMENTO": "PAMQSLTU072",
+        "Unnamed: 1": "BS-8030L TUNEL DE ENCOLHIMENTO P/ EMBALAR 380V/60HZ/3F",
+        "Unnamed: 2": "Plásticos termoencolhíveis",
+        "Unnamed: 3": "PVC/PP/POF/OUTROS",
+        "Unnamed: 4": 650,
+        "Unnamed: 5": 230,
+        "Unnamed: 6": "80 kg",
+        "Unnamed: 7": "10 m/min",
+        "Unnamed: 8": "Automática"
+      },
+      {
+        "TÚNEL DE ENCOLHIMENTO": "PAMQSLTU070",
+        "Unnamed: 1": "BS-4535LA TUNEL DE ENCOLH. C/ ESTEIRA EM ROLOS - 380V/60HZ,3F",
+        "Unnamed: 2": "Plásticos termoencolhíveis",
+        "Unnamed: 3": "PVC/PP/POF/OUTROS",
+        "Unnamed: 4": 400,
+        "Unnamed: 5": 300,
+        "Unnamed: 6": "10 kg",
+        "Unnamed: 7": "0- 10 m/min",
+        "Unnamed: 8": "Automática"
+      },
+      {
+        "TÚNEL DE ENCOLHIMENTO": "PAMQSLTU069",
+        "Unnamed: 1": "BS-6535LA TUNEL DE ENCOLH. C/ ESTEIRA EM ROLOS - 380V/60HZ,3F",
+        "Unnamed: 2": "Plásticos termoencolhíveis",
+        "Unnamed: 3": "PVC/PP/POF/OUTROS",
+        "Unnamed: 4": 600,
+        "Unnamed: 5": 300,
+        "Unnamed: 6": "30 kg",
+        "Unnamed: 7": "0-10 m/min",
+        "Unnamed: 8": "Automática"
+      },
+      {
+        "TÚNEL DE ENCOLHIMENTO": "PAMQSLTU057",
+        "Unnamed: 1": "BS2450S- PLUS - TUNEL PARA SLEEVE A VAPOR EM ACO INOX",
+        "Unnamed: 2": "Sleeve termoencolhíveis",
+        "Unnamed: 3": "PVC/PET/OPS",
+        "Unnamed: 4": 240,
+        "Unnamed: 5": 450,
+        "Unnamed: 6": "10 kg",
+        "Unnamed: 7": "3000 frascos/hora",
+        "Unnamed: 8": "Automática"
+      },
+      {
+        "TÚNEL DE ENCOLHIMENTO": "PAMQSLTU035",
+        "Unnamed: 1": "BS-6535LA TUNEL DE ENCOLH. C/ ESTEIRA EM ROLOS - 220V/60HZ,3F",
+        "Unnamed: 2": "Plásticos termoencolhíveis",
+        "Unnamed: 3": "PVC/PP/POF/OUTROS",
+        "Unnamed: 4": 600,
+        "Unnamed: 5": 300,
+        "Unnamed: 6": "30 kg",
+        "Unnamed: 7": "0-10 m/min",
+        "Unnamed: 8": "Automática"
+      },
+      {
+        "TÚNEL DE ENCOLHIMENTO": "PAMQSLTU034",
+        "Unnamed: 1": "BS-4535LA TUNEL DE ENCOLH. C/ ESTEIRA EM ROLOS - 220V/60HZ,3F",
+        "Unnamed: 2": "Plásticos termoencolhíveis",
+        "Unnamed: 3": "PVC/PP/POF/OUTROS",
+        "Unnamed: 4": 400,
+        "Unnamed: 5": 300,
+        "Unnamed: 6": "10 kg",
+        "Unnamed: 7": "0- 10 m/min",
+        "Unnamed: 8": "Automática"
+      },
+      {
+        "TÚNEL DE ENCOLHIMENTO": "PAMQSLTU033",
+        "Unnamed: 1": "BS-4525A TUNEL DE ENCOLH. C/ ESTEIRA EM ROLOS - 220V/60HZ,1F",
+        "Unnamed: 2": "Plásticos termoencolhíveis",
+        "Unnamed: 3": "PVC/PP/POF/OUTROS",
+        "Unnamed: 4": 400,
+        "Unnamed: 5": 200,
+        "Unnamed: 6": "10 kg",
+        "Unnamed: 7": "0- 10 m/min",
+        "Unnamed: 8": "Automática"
+      },
+      {
+        "TÚNEL DE ENCOLHIMENTO": "PAMQSLTU032",
+        "Unnamed: 1": "BS-3020A TUNEL DE ENCOLH. C/ ESTEIRA EM ROLOS - 220V/60HZ,1F",
+        "Unnamed: 2": "Plásticos termoencolhíveis",
+        "Unnamed: 3": "PVC/PP/POF/OUTROS",
+        "Unnamed: 4": 250,
+        "Unnamed: 5": 150,
+        "Unnamed: 6": "10 kg",
+        "Unnamed: 7": "0-10 m/min",
+        "Unnamed: 8": "Automática"
+      },
+      {
+        "TÚNEL DE ENCOLHIMENTO": "PAMQSLTU031",
+        "Unnamed: 1": "BSD450B - TUNEL DE ENCOLHIMENTO P/ EMBALAR - 380V",
+        "Unnamed: 2": "Plásticos termoencolhíveis",
+        "Unnamed: 3": "PVC/PP/POF/OUTROS",
+        "Unnamed: 4": 400,
+        "Unnamed: 5": 200,
+        "Unnamed: 6": "10 kg",
+        "Unnamed: 7": "0-10 m/min",
+        "Unnamed: 8": "Automática"
+      },
+      {
+        "TÚNEL DE ENCOLHIMENTO": "PAMQSLTU028",
+        "Unnamed: 1": "BSD1535P - TUNEL DE ENCOLHIMENTO P/ ROTULOS(220V) (PINTADO)",
+        "Unnamed: 2": "Sleeve termoencolhíveis",
+        "Unnamed: 3": "PVC/PET/OPS",
+        "Unnamed: 4": 150,
+        "Unnamed: 5": 300,
+        "Unnamed: 6": "5 kg",
+        "Unnamed: 7": "0-4 m/min",
+        "Unnamed: 8": "Automática"
+      },
+      {
+        "TÚNEL DE ENCOLHIMENTO": "PAMQSLTU027",
+        "Unnamed: 1": "BSD1535ST- TUNEL DE ENCOLHIMENTO A VAPOR P/ ROTULOS SLEEV",
+        "Unnamed: 2": "Sleeve termoencolhíveis",
+        "Unnamed: 3": "PVC/PET/OPS",
+        "Unnamed: 4": 100,
+        "Unnamed: 5": 300,
+        "Unnamed: 6": "5 kg",
+        "Unnamed: 7": "30 m/min",
+        "Unnamed: 8": "Automática"
+      },
+      {
+        "TÚNEL DE ENCOLHIMENTO": "PAMQSLTU018",
+        "Unnamed: 1": "BSD450B - TUNEL DE ENCOLHIMENTO P/ EMBALAR(220V)",
+        "Unnamed: 2": "Plásticos termoencolhíveis",
+        "Unnamed: 3": "PVC/PP/POF/OUTROS",
+        "Unnamed: 4": 400,
+        "Unnamed: 5": 200,
+        "Unnamed: 6": "10 kg",
+        "Unnamed: 7": "0-10 m/min",
+        "Unnamed: 8": "Automática"
+      },
+      {
+        "TÚNEL DE ENCOLHIMENTO": "PAMQSLTU017",
+        "Unnamed: 1": "BSD400B - TUNEL DE ENCOLHIMENTO P/ EMBALAR(220V)",
+        "Unnamed: 2": "Plásticos termoencolhíveis",
+        "Unnamed: 3": "PVC/PP/POF/OUTROS",
+        "Unnamed: 4": 350,
+        "Unnamed: 5": 150,
+        "Unnamed: 6": "5 kg",
+        "Unnamed: 7": "0-10 m/min",
+        "Unnamed: 8": "Automática"
+      },
+      {
+        "TÚNEL DE ENCOLHIMENTO": "PAMQSLTU016",
+        "Unnamed: 1": "BSD350B- TUNEL DE ENCOLHIMENTO P/ EMBALAR(220V)",
+        "Unnamed: 2": "Plásticos termoencolhíveis",
+        "Unnamed: 3": "PVC/PP/POF/OUTROS",
+        "Unnamed: 4": 300,
+        "Unnamed: 5": 100,
+        "Unnamed: 6": "5 kg",
+        "Unnamed: 7": "0-10 m/min",
+        "Unnamed: 8": "Automática"
+      },
+      {
+        "TÚNEL DE ENCOLHIMENTO": "PAMQSLTU012",
+        "Unnamed: 1": "BSD4525A-TUNEL DE ENCOLHIMENTO P/ EMBALAR(220/380V)",
+        "Unnamed: 2": "Plásticos termoencolhíveis",
+        "Unnamed: 3": "PVC/PP/POF/OUTROS",
+        "Unnamed: 4": 400,
+        "Unnamed: 5": 200,
+        "Unnamed: 6": "25 kg",
+        "Unnamed: 7": "0-15 m/min",
+        "Unnamed: 8": "Automática"
+      },
+      {
+        "TÚNEL DE ENCOLHIMENTO": "PAMQSLTU011",
+        "Unnamed: 1": "BSD4020A-TUNEL DE ENCOLHIMENTO P/ EMBALAR(380/220V)",
+        "Unnamed: 2": "Plásticos termoencolhíveis",
+        "Unnamed: 3": "PVC/PP/POF/OUTROS",
+        "Unnamed: 4": 350,
+        "Unnamed: 5": 160,
+        "Unnamed: 6": "25 kg",
+        "Unnamed: 7": "0-15 m/min",
+        "Unnamed: 8": "Automática"
+      },
+      {
+        "TÚNEL DE ENCOLHIMENTO": "PAMQSLTU010",
+        "Unnamed: 1": "BSD1535S-TUNEL DE ENCOLHIMENTO P/ROTULOS(220V) (INOX)",
+        "Unnamed: 2": "Sleeve termoencolhíveis",
+        "Unnamed: 3": "PVC/PET/OPS",
+        "Unnamed: 4": 150,
+        "Unnamed: 5": 300,
+        "Unnamed: 6": "5 kg",
+        "Unnamed: 7": "0-4 m/min",
+        "Unnamed: 8": "Automática"
+      }
+    ]
+  }
+]

@@ -1,0 +1,79 @@
+[
+  {
+    "planilha": "Mixer Rotativo",
+    "dados": [
+      {
+        "MIXER ROTATIVO": NaN,
+        "Unnamed: 1": NaN,
+        "Unnamed: 2": NaN,
+        "Unnamed: 3": NaN,
+        "Unnamed: 4": NaN,
+        "Unnamed: 5": NaN
+      },
+      {
+        "MIXER ROTATIVO": "Código",
+        "Unnamed: 1": "Descrição da Máquina",
+        "Unnamed: 2": "Tipo de Produto",
+        "Unnamed: 3": "Volume (L)",
+        "Unnamed: 4": "Produtividade",
+        "Unnamed: 5": "Tipo de Máquina"
+      },
+      {
+        "MIXER ROTATIVO": "PAMQSLSA027",
+        "Unnamed: 1": "MOTION V-100 - MIXER MODELO \"V\" PARA 100 LITROS",
+        "Unnamed: 2": "Pós secos e Grânulos secos",
+        "Unnamed: 3": 100,
+        "Unnamed: 4": "A depender da receita",
+        "Unnamed: 5": "Automática"
+      },
+      {
+        "MIXER ROTATIVO": "PAMQSLSA130",
+        "Unnamed: 1": "MOTION V-1000 - MIXER “V” 1000 LITROS (INOX 316L PARTES DE CONTATO)",
+        "Unnamed: 2": "Pós secos e Grânulos secos",
+        "Unnamed: 3": 1000,
+        "Unnamed: 4": "A depender da receita",
+        "Unnamed: 5": "Automática"
+      },
+      {
+        "MIXER ROTATIVO": "PAMQSLSA036",
+        "Unnamed: 1": "MOTION V-15 - MIXER MODELO \"V\" PARA 15 LITROS",
+        "Unnamed: 2": "Pós secos e Grânulos secos",
+        "Unnamed: 3": "15",
+        "Unnamed: 4": "A depender da receita",
+        "Unnamed: 5": "Automática"
+      },
+      {
+        "MIXER ROTATIVO": "PAMQSLSA196",
+        "Unnamed: 1": "MOTION V-300 - MIXER MODELO \"V\" PARA 300 LITROS ",
+        "Unnamed: 2": "Pós secos e Grânulos secos",
+        "Unnamed: 3": "300",
+        "Unnamed: 4": "A depender da receita",
+        "Unnamed: 5": "Automática"
+      },
+      {
+        "MIXER ROTATIVO": "PAMQSLSA086",
+        "Unnamed: 1": "MOTION V-500 - MIXER MODELO \"V\" PARA 500 LITROS",
+        "Unnamed: 2": "Pós secos e Grânulos secos",
+        "Unnamed: 3": 500,
+        "Unnamed: 4": "A depender da receita",
+        "Unnamed: 5": "Automática"
+      },
+      {
+        "MIXER ROTATIVO": "PAMQSLSA126",
+        "Unnamed: 1": "TANQUE 500 LITROS C/ MIXER E SIST. DE VACUO P/ MISTURA HOMOGENIA",
+        "Unnamed: 2": "Pastosos",
+        "Unnamed: 3": 500,
+        "Unnamed: 4": "A depender da receita",
+        "Unnamed: 5": "Automática"
+      },
+      {
+        "MIXER ROTATIVO": "PAMQSLSA099",
+        "Unnamed: 1": "TANQUE REATOR ABERTO ENCAMISADO 50L C/ MIXER E  CONTROLE DE INCLINACAO",
+        "Unnamed: 2": "Pastosos",
+        "Unnamed: 3": 50,
+        "Unnamed: 4": "A depender da receita",
+        "Unnamed: 5": "Automática"
+      }
+    ]
+  }
+]

@@ -1,0 +1,37 @@
+[
+  {
+    "planilha": "ENCARTUCHADEIRA ROTATIVA AUTO",
+    "dados": [
+      {
+        "ENCARTUCHADEIRA ROTATIVA AUTOMÁTICA": NaN,
+        "Unnamed: 1": NaN,
+        "Unnamed: 2": NaN,
+        "Unnamed: 3": NaN,
+        "Unnamed: 4": NaN,
+        "Unnamed: 5": NaN,
+        "Unnamed: 6": NaN,
+        "Unnamed: 7": NaN
+      },
+      {
+        "ENCARTUCHADEIRA ROTATIVA AUTOMÁTICA": "Código",
+        "Unnamed: 1": "Descrição da Máquina",
+        "Unnamed: 2": "Produto",
+        "Unnamed: 3": "Embalagem",
+        "Unnamed: 4": "Tamanho Mínimo da Caixa\n(mm)",
+        "Unnamed: 5": "Tamanho Máxima da Caixa\n(mm)",
+        "Unnamed: 6": "Produtividade",
+        "Unnamed: 7": "Tipo de Máquina"
+      },
+      {
+        "ENCARTUCHADEIRA ROTATIVA AUTOMÁTICA": "PAMQCCAU007",
+        "Unnamed: 1": "ZH-50 - ENCARTUCHADEIRA ROTATIVA VERTICAL",
+        "Unnamed: 2": "Frasco",
+        "Unnamed: 3": "Caixa",
+        "Unnamed: 4": "C 60 x L 20 x A 20",
+        "Unnamed: 5": "C 200 x L 80 x A 80",
+        "Unnamed: 6": "20-50 caixas/min",
+        "Unnamed: 7": "Automática"
+      }
+    ]
+  }
+]

@@ -1,0 +1,147 @@
+[
+  {
+    "planilha": "Prensa Rotativa para Comprimido",
+    "dados": [
+      {
+        "Prensa Rotativa para Comprimidos": NaN,
+        "Unnamed: 1": NaN,
+        "Unnamed: 2": NaN,
+        "Unnamed: 3": NaN,
+        "Unnamed: 4": NaN,
+        "Unnamed: 5": NaN,
+        "Unnamed: 6": NaN,
+        "Unnamed: 7": NaN
+      },
+      {
+        "Prensa Rotativa para Comprimidos": "Código",
+        "Unnamed: 1": "Descrição da Máquina",
+        "Unnamed: 2": "Tipo de Produto",
+        "Unnamed: 3": "Tamanho Máximo do Comprimido\n(mm)",
+        "Unnamed: 4": "Espessura Máxima do Comprimido\n(mm)",
+        "Unnamed: 5": "Profundidade Máxima de Enchimento",
+        "Unnamed: 6": "Produtividade",
+        "Unnamed: 7": "Tipo de Máquina"
+      },
+      {
+        "Prensa Rotativa para Comprimidos": "PAMQSLSA131",
+        "Unnamed: 1": "FS 10 P - PRENSA AUTOMATICA ROTATIVA PARA COMPRIMIDOS",
+        "Unnamed: 2": "Pós secos",
+        "Unnamed: 3": NaN,
+        "Unnamed: 4": NaN,
+        "Unnamed: 5": NaN,
+        "Unnamed: 6": NaN,
+        "Unnamed: 7": "Automática"
+      },
+      {
+        "Prensa Rotativa para Comprimidos": "PAMQSLSA022",
+        "Unnamed: 1": "FS 15 M - PRENSA AUTOMATICA ROTATIVA PARA COMPRIMIDOS",
+        "Unnamed: 2": "Pós secos",
+        "Unnamed: 3": "Ø25",
+        "Unnamed: 4": 6,
+        "Unnamed: 5": 15,
+        "Unnamed: 6": "27.000 comprimidos/hora",
+        "Unnamed: 7": "Automática"
+      },
+      {
+        "Prensa Rotativa para Comprimidos": "PAMQSLSA051",
+        "Unnamed: 1": "FS 17M(F) - PRENSA ROTATIVA DE COMPRIMIDOS C/ SIST. ALIM. FORCADA",
+        "Unnamed: 2": "Pós secos",
+        "Unnamed: 3": "Ø20",
+        "Unnamed: 4": 6,
+        "Unnamed: 5": 15,
+        "Unnamed: 6": "40.000 comprimidos/hora",
+        "Unnamed: 7": "Automática"
+      },
+      {
+        "Prensa Rotativa para Comprimidos": "PAMQSLSA050",
+        "Unnamed: 1": "FS 23 GE PRO - COMPRESSORA PARA COMPRIMIDOS EFERVESCENTES",
+        "Unnamed: 2": "Pós secos (Comprimidos Efervescentes)",
+        "Unnamed: 3": "Ø27",
+        "Unnamed: 4": 7,
+        "Unnamed: 5": 17,
+        "Unnamed: 6": "85.000 comprimidos/hora",
+        "Unnamed: 7": "Automática"
+      },
+      {
+        "Prensa Rotativa para Comprimidos": "PAMQSLSA029",
+        "Unnamed: 1": "FS 5 P- PRENSA AUTOMATICA ROTATIVA PARA COMPRIMIDOS",
+        "Unnamed: 2": "Pós secos",
+        "Unnamed: 3": "Ø13",
+        "Unnamed: 4": 6,
+        "Unnamed: 5": 5,
+        "Unnamed: 6": "9.600 comprimidos/hora",
+        "Unnamed: 7": "Automática"
+      },
+      {
+        "Prensa Rotativa para Comprimidos": "PAMQSLSA037",
+        "Unnamed: 1": "FS 9 P- PRENSA AUTOMATICA ROTATIVA PARA COMPRIMIDOS",
+        "Unnamed: 2": "Pós secos",
+        "Unnamed: 3": "Ø13",
+        "Unnamed: 4": 6,
+        "Unnamed: 5": 15,
+        "Unnamed: 6": "17.280 comprimidos/hora",
+        "Unnamed: 7": "Automática"
+      },
+      {
+        "Prensa Rotativa para Comprimidos": "PAMQSLSA031",
+        "Unnamed: 1": "FS T420-31D PRENSA ROTATIVA AUT. P/ COMPRIMIDOS DUPLA COR",
+        "Unnamed: 2": "Pós secos (Comprimidos uma cor ou dupla cor)",
+        "Unnamed: 3": "Ø25",
+        "Unnamed: 4": 6,
+        "Unnamed: 5": 15,
+        "Unnamed: 6": "130.000 comprimidos/hora\n65.000 comprimidos/hora (dupla cor)",
+        "Unnamed: 7": "Automática"
+      },
+      {
+        "Prensa Rotativa para Comprimidos": "PAMQSLSA030",
+        "Unnamed: 1": "FS T420-31D PRENSA ROTATIVA AUTOMATICA PARA COMPRIMIDOS",
+        "Unnamed: 2": "Pós secos",
+        "Unnamed: 3": "Ø25",
+        "Unnamed: 4": 6,
+        "Unnamed: 5": 15,
+        "Unnamed: 6": "130.000 comprimidos/hora",
+        "Unnamed: 7": "Automática"
+      },
+      {
+        "Prensa Rotativa para Comprimidos": "PAMQSLSA127",
+        "Unnamed: 1": "FS420-29G PRENSA ROTATIVA AUTOMATICA P/ COMPRIMIDOS P/ ALTA COMPACTACAO",
+        "Unnamed: 2": "Pós secos",
+        "Unnamed: 3": "Ø20",
+        "Unnamed: 4": 12,
+        "Unnamed: 5": NaN,
+        "Unnamed: 6": "60.900 comprimidos/hora",
+        "Unnamed: 7": "Automática"
+      },
+      {
+        "Prensa Rotativa para Comprimidos": "PAMQSLSA172",
+        "Unnamed: 1": "FS550-39G  PRENSA ROTATIVA AUTOMATICA P/ COMPRIMIDOS P/ ALTA COMPACTACAO",
+        "Unnamed: 2": "Pós secos",
+        "Unnamed: 3": "Ø24,8",
+        "Unnamed: 4": 8,
+        "Unnamed: 5": 18,
+        "Unnamed: 6": "150.000 comprimidos/hora",
+        "Unnamed: 7": "Automática"
+      },
+      {
+        "Prensa Rotativa para Comprimidos": "PAMQSLSA085",
+        "Unnamed: 1": "UHTF230 - POLIDORA E DESEMPOEIRADORA VERTICAL",
+        "Unnamed: 2": "Comprimidos",
+        "Unnamed: 3": "Ø3-Ø25",
+        "Unnamed: 4": "-",
+        "Unnamed: 5": "-",
+        "Unnamed: 6": "800.000 comprimidos/hora",
+        "Unnamed: 7": "Automática"
+      },
+      {
+        "Prensa Rotativa para Comprimidos": "PAMQSLSA097",
+        "Unnamed: 1": "UHTF30 - POLIDORA E DESEMPOEIRADORA DE COMPRIMIDOS",
+        "Unnamed: 2": "Comprimidos",
+        "Unnamed: 3": "Ø3-Ø10",
+        "Unnamed: 4": "-",
+        "Unnamed: 5": "-",
+        "Unnamed: 6": "55.000 comprimidos/hora",
+        "Unnamed: 7": "Automática"
+      }
+    ]
+  }
+]

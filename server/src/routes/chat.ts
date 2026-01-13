@@ -625,13 +625,32 @@ chatRouter.post('/rag', authenticate, async (req: AuthRequest, res: Response) =>
             content: msg.content
         }));
 
+        // Fetch full user profile for context
+        const user = await prisma.user.findUnique({
+            where: { id: userId },
+            select: {
+                name: true,
+                jobTitle: true,
+                department: true,
+                technicalLevel: true,
+                communicationStyle: true,
+            }
+        });
+
         // Generate RAG response
         const { response, sources } = await answerQuestion(
             content,
             catalogId,
             chatHistory,
             mode,
-            isTableMode
+            isTableMode,
+            user ? {
+                name: user.name,
+                jobTitle: user.jobTitle || undefined,
+                department: user.department || undefined,
+                technicalLevel: user.technicalLevel || undefined,
+                communicationStyle: user.communicationStyle || undefined,
+            } : undefined
         );
 
         // Save user message

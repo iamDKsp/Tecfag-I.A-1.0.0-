@@ -1,18 +1,26 @@
 import { GoogleGenerativeAI } from '@google/generative-ai';
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || '');
+// const groq = new Groq({ apiKey: process.env.GROQ_API_KEY || 'dummy' }); // Keep if needed later
 
 /**
- * Generate embeddings for text using Gemini's text-embedding-004 model
+ * Generate embeddings for text using Gemini API
  */
 export async function generateEmbedding(text: string): Promise<number[]> {
     try {
-        const model = genAI.getGenerativeModel({ model: 'text-embedding-004' });
+        const model = genAI.getGenerativeModel({ model: "text-embedding-004" });
+
         const result = await model.embedContent(text);
-        return result.embedding.values;
-    } catch (error) {
+        const embedding = result.embedding;
+
+        if (!embedding || !embedding.values) {
+            throw new Error("Empty embedding returned");
+        }
+
+        return embedding.values;
+    } catch (error: any) {
         console.error('Error generating embedding:', error);
-        throw new Error('Failed to generate embedding');
+        throw new Error(`Failed to generate embedding: ${error.message}`);
     }
 }
 

@@ -1,0 +1,315 @@
+[
+  {
+    "planilha": "ROSQUEADORA",
+    "dados": [
+      {
+        "ROSQUEADORA SEMIAUTOMÁTICA": NaN,
+        "Unnamed: 1": NaN,
+        "Unnamed: 2": NaN,
+        "Unnamed: 3": NaN,
+        "Unnamed: 4": NaN,
+        "Unnamed: 5": NaN,
+        "Unnamed: 6": NaN,
+        "Unnamed: 7": NaN,
+        "Unnamed: 8": NaN
+      },
+      {
+        "ROSQUEADORA SEMIAUTOMÁTICA": "Código",
+        "Unnamed: 1": "Descrição da Máquina",
+        "Unnamed: 2": "Tipo de Produto",
+        "Unnamed: 3": "Embalagem",
+        "Unnamed: 4": "Diâmetro da Tampa\n(mm)",
+        "Unnamed: 5": "Diâmetro do Frasco\n(mm)",
+        "Unnamed: 6": "Altura do Frasco\n(mm)",
+        "Unnamed: 7": "Produtividade",
+        "Unnamed: 8": "Tipo de Máquina"
+      },
+      {
+        "ROSQUEADORA SEMIAUTOMÁTICA": "PAMQRSSA004",
+        "Unnamed: 1": "ADC50 - ROSQUEADEIRA AUTOMATICA DE TAMPAS TIPO \"BICO DE PATO\"",
+        "Unnamed: 2": "Tampas Bico de Pato",
+        "Unnamed: 3": "Frascos",
+        "Unnamed: 4": "até Ø50",
+        "Unnamed: 5": "Ø20-Ø100",
+        "Unnamed: 6": "50 - 320",
+        "Unnamed: 7": "30-60 frascos/min",
+        "Unnamed: 8": "Automática"
+      },
+      {
+        "ROSQUEADORA SEMIAUTOMÁTICA": "PAACSLAU414",
+        "Unnamed: 1": "ADC50/M - ROSQUEADEIRA AUT. DE BANCADA TIPO BICO DE PATO",
+        "Unnamed: 2": "Tampas Bico de Pato",
+        "Unnamed: 3": "Frascos",
+        "Unnamed: 4": "Ø30-Ø60",
+        "Unnamed: 5": "Ø40-Ø80\nØ50-Ø80 (Fornecedor)",
+        "Unnamed: 6": "60-220\n40-200 (Fornecedor)",
+        "Unnamed: 7": "15-20 frascos/min",
+        "Unnamed: 8": "Automática"
+      },
+      {
+        "ROSQUEADORA SEMIAUTOMÁTICA": "PAACSLAU523",
+        "Unnamed: 1": "ADC50/MII - ROSQUEADEIRA AUT. DE BANCADA TIPO BICO DE PATO",
+        "Unnamed: 2": "Tampas Bico de Pato",
+        "Unnamed: 3": "Frascos",
+        "Unnamed: 4": "Ø20-Ø50",
+        "Unnamed: 5": "Ø30-Ø110",
+        "Unnamed: 6": "80-310",
+        "Unnamed: 7": "10-30 frascos/min",
+        "Unnamed: 8": "Automática"
+      },
+      {
+        "ROSQUEADORA SEMIAUTOMÁTICA": "PAMQRSSA029",
+        "Unnamed: 1": "ADC50/SII - ROSQUEADEIRA DE TAMPAS SEMI AUTOMATICA",
+        "Unnamed: 2": "Tampas Bico de Pato",
+        "Unnamed: 3": "Frascos",
+        "Unnamed: 4": "Ø20-Ø50",
+        "Unnamed: 5": "Ø30-Ø110",
+        "Unnamed: 6": "80-310",
+        "Unnamed: 7": "30-40 frascos/min",
+        "Unnamed: 8": "Semiautomática"
+      },
+      {
+        "ROSQUEADORA SEMIAUTOMÁTICA": "PAMQRSSA033",
+        "Unnamed: 1": "ADC70 - ROSQUEADORA AUT. C/ ALIMENTACAO DE TAMPAS POR ESTEIRA",
+        "Unnamed: 2": "Tampas Bico de Pato",
+        "Unnamed: 3": "Frascos",
+        "Unnamed: 4": "Ø20-Ø50",
+        "Unnamed: 5": "Ø20-Ø115",
+        "Unnamed: 6": "70-250",
+        "Unnamed: 7": "25-60 frascos/min",
+        "Unnamed: 8": "Automática"
+      },
+      {
+        "ROSQUEADORA SEMIAUTOMÁTICA": "PAMQRSSA012",
+        "Unnamed: 1": "DHZ450A - ROSQUEADORA SEMI AUTOMATICA DE TAMPAS",
+        "Unnamed: 2": NaN,
+        "Unnamed: 3": "Frascos",
+        "Unnamed: 4": "Ø30-Ø50",
+        "Unnamed: 5": NaN,
+        "Unnamed: 6": "40-200",
+        "Unnamed: 7": "30-45 frascos/min",
+        "Unnamed: 8": "Semiautomática"
+      },
+      {
+        "ROSQUEADORA SEMIAUTOMÁTICA": "PAMQRSSA030",
+        "Unnamed: 1": "DHZ450AII - ROSQUEADORA SEMI AUTOMATICA DE TAMPAS",
+        "Unnamed: 2": NaN,
+        "Unnamed: 3": "Frascos",
+        "Unnamed: 4": "Ø10-Ø50",
+        "Unnamed: 5": "Ø10-Ø50",
+        "Unnamed: 6": "50-350",
+        "Unnamed: 7": NaN,
+        "Unnamed: 8": "Semiautomática"
+      },
+      {
+        "ROSQUEADORA SEMIAUTOMÁTICA": "PAMQRSSA019",
+        "Unnamed: 1": "DHZ450B - ROSQUEADORA SEMI AUTOMATICA DE TAMPAS",
+        "Unnamed: 2": NaN,
+        "Unnamed: 3": "Frascos",
+        "Unnamed: 4": "Ø50-Ø90\nØ30-Ø80 (Fornecedor)",
+        "Unnamed: 5": NaN,
+        "Unnamed: 6": "40-200",
+        "Unnamed: 7": "30-45 frascos/min",
+        "Unnamed: 8": "Semiautomática"
+      },
+      {
+        "ROSQUEADORA SEMIAUTOMÁTICA": "PAMQRSSA031",
+        "Unnamed: 1": "DHZ450BII - ROSQUEADORA SEMI AUTOMATICA DE TAMPAS",
+        "Unnamed: 2": NaN,
+        "Unnamed: 3": "Frascos",
+        "Unnamed: 4": "Ø20-Ø60",
+        "Unnamed: 5": NaN,
+        "Unnamed: 6": "40-300",
+        "Unnamed: 7": "15-20 frascos/min",
+        "Unnamed: 8": "Semiautomática"
+      },
+      {
+        "ROSQUEADORA SEMIAUTOMÁTICA": "PAMQRSSA018",
+        "Unnamed: 1": "DHZ550B - ROSQUEADORA BICO DE PATO SEMI AUTOMATICA DE TAMPAS",
+        "Unnamed: 2": NaN,
+        "Unnamed: 3": "Frascos",
+        "Unnamed: 4": "Ø32-Ø80\nØ25-Ø60 (Fornecedor)",
+        "Unnamed: 5": NaN,
+        "Unnamed: 6": "32-300",
+        "Unnamed: 7": "30-45 frascos/min\n20-30 frascos/min",
+        "Unnamed: 8": "Semiautomática"
+      },
+      {
+        "ROSQUEADORA SEMIAUTOMÁTICA": "PAMQRSSA032",
+        "Unnamed: 1": "DHZ550BII - ROSQUEADORA BICO DE PATO SEMI AUTOMATICA DE TAMPAS",
+        "Unnamed: 2": NaN,
+        "Unnamed: 3": "Frascos",
+        "Unnamed: 4": "Ø20-Ø50",
+        "Unnamed: 5": "Ø110",
+        "Unnamed: 6": "50-300",
+        "Unnamed: 7": "20-30 frascos/min",
+        "Unnamed: 8": "Semiautomática"
+      },
+      {
+        "ROSQUEADORA SEMIAUTOMÁTICA": "PAMQRSSA002",
+        "Unnamed: 1": "DK-50D - ROSQUEADEIRA SEMI-AUTOM. P/ TAMPAS DE METAL",
+        "Unnamed: 2": "Tampas de Metal",
+        "Unnamed: 3": "Frascos",
+        "Unnamed: 4": "Ø25-Ø36 x A 7-35\nØ20-Ø40 (Fornecedor diferente",
+        "Unnamed: 5": NaN,
+        "Unnamed: 6": "50-300\n100-300 (Fornecedor diferente",
+        "Unnamed: 7": "15-20 frascos/min",
+        "Unnamed: 8": "Semiautomática"
+      },
+      {
+        "ROSQUEADORA SEMIAUTOMÁTICA": "PAMQRSSA001",
+        "Unnamed: 1": "DK-50Z - ROSQUEADEIRA SEMI-AUTOM. P/ TAMPAS PLASTICAS",
+        "Unnamed: 2": "Tampas de Plásticos",
+        "Unnamed: 3": "Frascos",
+        "Unnamed: 4": "Ø20-Ø40 x A 15-50",
+        "Unnamed: 5": "Ø20-Ø90",
+        "Unnamed: 6": "200-320",
+        "Unnamed: 7": "15-20 frascos/min",
+        "Unnamed: 8": "Semiautomática"
+      },
+      {
+        "ROSQUEADORA SEMIAUTOMÁTICA": "PAMQRSSA021",
+        "Unnamed: 1": "EC80 - ROSQUEADORA ELETRICA MANUAL",
+        "Unnamed: 2": NaN,
+        "Unnamed: 3": "Frascos",
+        "Unnamed: 4": "Ø10-Ø50",
+        "Unnamed: 5": "-",
+        "Unnamed: 6": "-",
+        "Unnamed: 7": "15-30 frascos/min",
+        "Unnamed: 8": "Manual"
+      },
+      {
+        "ROSQUEADORA SEMIAUTOMÁTICA": "PAMQRSSA005",
+        "Unnamed: 1": "EC90 - ROSQUEADEIRA ELETRICA MANUAL P/ TAMPAS (10MM~30MM)",
+        "Unnamed: 2": NaN,
+        "Unnamed: 3": "Frascos",
+        "Unnamed: 4": "Ø10-Ø30",
+        "Unnamed: 5": "-",
+        "Unnamed: 6": "-",
+        "Unnamed: 7": "30-90 frascos/min",
+        "Unnamed: 8": "Manual"
+      },
+      {
+        "ROSQUEADORA SEMIAUTOMÁTICA": "PAACRSMN019",
+        "Unnamed: 1": "EC90 - ROSQUEADEIRA ELETRICA MANUAL P/ TAMPAS (10MM~40MM)",
+        "Unnamed: 2": NaN,
+        "Unnamed: 3": "Frascos",
+        "Unnamed: 4": "Ø10-Ø40",
+        "Unnamed: 5": "-",
+        "Unnamed: 6": "-",
+        "Unnamed: 7": "30-90 frascos/min",
+        "Unnamed: 8": "Manual"
+      },
+      {
+        "ROSQUEADORA SEMIAUTOMÁTICA": "PAMQRSSA007",
+        "Unnamed: 1": "EC90 - ROSQUEADEIRA ELETRICA MANUAL P/ TAMPAS (10MM~50MM)",
+        "Unnamed: 2": NaN,
+        "Unnamed: 3": "Frascos",
+        "Unnamed: 4": "Ø10-Ø50",
+        "Unnamed: 5": "-",
+        "Unnamed: 6": "-",
+        "Unnamed: 7": "30-90 frascos/min",
+        "Unnamed: 8": "Manual"
+      },
+      {
+        "ROSQUEADORA SEMIAUTOMÁTICA": "PAACRSMN013",
+        "Unnamed: 1": "EC90 - ROSQUEADEIRA ELETRICA MANUAL P/ TAMPAS (10MM~60MM)",
+        "Unnamed: 2": NaN,
+        "Unnamed: 3": "Frascos",
+        "Unnamed: 4": "Ø10-Ø60",
+        "Unnamed: 5": "-",
+        "Unnamed: 6": "-",
+        "Unnamed: 7": "30-90 frascos/min",
+        "Unnamed: 8": "Manual"
+      },
+      {
+        "ROSQUEADORA SEMIAUTOMÁTICA": "PAMQRSSA006",
+        "Unnamed: 1": "PC90 - ROSQUEADEIRA PNEUMATICA MANUAL P/ TAMPAS (10MM~30MM)",
+        "Unnamed: 2": NaN,
+        "Unnamed: 3": "Frascos",
+        "Unnamed: 4": "Ø10-Ø30",
+        "Unnamed: 5": "-",
+        "Unnamed: 6": "-",
+        "Unnamed: 7": "30-90 frascos/min\n10-40 frascos/min (Fornecedor)",
+        "Unnamed: 8": "Manual"
+      },
+      {
+        "ROSQUEADORA SEMIAUTOMÁTICA": "PAACRSMN017",
+        "Unnamed: 1": "PC90 - ROSQUEADEIRA PNEUMATICA MANUAL P/ TAMPAS (10MM~40MM)",
+        "Unnamed: 2": NaN,
+        "Unnamed: 3": "Frascos",
+        "Unnamed: 4": "Ø10-Ø40",
+        "Unnamed: 5": "-",
+        "Unnamed: 6": "-",
+        "Unnamed: 7": "30-90 frascos/min\n10-40 frascos/min (Fornecedor)",
+        "Unnamed: 8": "Manual"
+      },
+      {
+        "ROSQUEADORA SEMIAUTOMÁTICA": "PAMQRSSA008",
+        "Unnamed: 1": "PC90 - ROSQUEADEIRA PNEUMATICA MANUAL P/ TAMPAS (10MM~50MM)",
+        "Unnamed: 2": NaN,
+        "Unnamed: 3": "Frascos",
+        "Unnamed: 4": "Ø10-Ø50",
+        "Unnamed: 5": "-",
+        "Unnamed: 6": "-",
+        "Unnamed: 7": "30-90 frascos/min\n10-40 frascos/min (Fornecedor)",
+        "Unnamed: 8": "Manual"
+      },
+      {
+        "ROSQUEADORA SEMIAUTOMÁTICA": "PAACRSMN018",
+        "Unnamed: 1": "PC90 - ROSQUEADEIRA PNEUMATICA MANUAL P/ TAMPAS (10MM~60MM)",
+        "Unnamed: 2": NaN,
+        "Unnamed: 3": "Frascos",
+        "Unnamed: 4": "Ø10-Ø60",
+        "Unnamed: 5": "-",
+        "Unnamed: 6": "-",
+        "Unnamed: 7": "30-90 frascos/min\n10-40 frascos/min (Fornecedor)",
+        "Unnamed: 8": "Manual"
+      },
+      {
+        "ROSQUEADORA SEMIAUTOMÁTICA": "PAACSLAU351",
+        "Unnamed: 1": "XCG - ROSQUEADEIRA AUTOMATICA DE ALTA VELOCIDADE C/ ELEVADOR",
+        "Unnamed: 2": NaN,
+        "Unnamed: 3": "Frascos",
+        "Unnamed: 4": "Ø20-Ø65",
+        "Unnamed: 5": "Ø20-Ø120",
+        "Unnamed: 6": "45-150",
+        "Unnamed: 7": "50-120 frascos/min",
+        "Unnamed: 8": "Automática"
+      },
+      {
+        "ROSQUEADORA SEMIAUTOMÁTICA": "PAMQRSSA011",
+        "Unnamed: 1": "XGG - ROSQUEADEIRA AUTOMATICA  C/ ELEVADOR AUTOM. DE TAMPAS",
+        "Unnamed: 2": NaN,
+        "Unnamed: 3": "Frascos",
+        "Unnamed: 4": "Ø80-Ø120",
+        "Unnamed: 5": "Ø120-Ø200",
+        "Unnamed: 6": NaN,
+        "Unnamed: 7": "20-25 frascos/min",
+        "Unnamed: 8": "Automática"
+      },
+      {
+        "ROSQUEADORA SEMIAUTOMÁTICA": "PAMQRSSA013",
+        "Unnamed: 1": "XTB - ROSQUEADEIRA AUT. C/ SIST. INSERCAO SPOOM/SCOOP E APL. BATOQUE",
+        "Unnamed: 2": NaN,
+        "Unnamed: 3": "Frascos",
+        "Unnamed: 4": NaN,
+        "Unnamed: 5": "Ø23-Ø120",
+        "Unnamed: 6": "45-150\n30-130",
+        "Unnamed: 7": "25-80 frascos/min",
+        "Unnamed: 8": "Automática"
+      },
+      {
+        "ROSQUEADORA SEMIAUTOMÁTICA": "PAMQRSSA014",
+        "Unnamed: 1": "XTB/A - ROSQUEADEIRA AUTOMATICA C/ SIST. ALIM. AUTOMATICA",
+        "Unnamed: 2": NaN,
+        "Unnamed: 3": "Frascos",
+        "Unnamed: 4": "Ø30-Ø150",
+        "Unnamed: 5": NaN,
+        "Unnamed: 6": NaN,
+        "Unnamed: 7": "15-20 frascos/min",
+        "Unnamed: 8": "Automática"
+      }
+    ]
+  }
+]

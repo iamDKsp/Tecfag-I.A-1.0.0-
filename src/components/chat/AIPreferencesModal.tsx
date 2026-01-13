@@ -1,12 +1,13 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { Briefcase, Building, GraduationCap, MessageSquare, Loader2 } from "lucide-react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useAuth } from "@/contexts/AuthContext";
-import { Loader2, Briefcase, Building, GraduationCap, MessageSquare } from "lucide-react";
 import { authApi } from "@/lib/api";
+import { useToast } from "@/components/ui/use-toast";
 
 interface AIPreferencesModalProps {
     isOpen: boolean;
@@ -14,7 +15,8 @@ interface AIPreferencesModalProps {
 }
 
 export const AIPreferencesModal = ({ isOpen, onClose }: AIPreferencesModalProps) => {
-    const { user, login } = useAuth(); // We might need to update the user in context/localStorage
+    const { user, login, refreshUser } = useAuth();
+    const { toast } = useToast();
     const [isLoading, setIsLoading] = useState(false);
 
     // Local state for form
@@ -29,25 +31,68 @@ export const AIPreferencesModal = ({ isOpen, onClose }: AIPreferencesModalProps)
         setFormData(prev => ({ ...prev, [field]: value }));
     };
 
+    // Update form data when user context changes or modal opens
+    // This ensures that after a refresh (where user might be null initially then loaded), 
+    // the form reflects the actual user data.
+    useEffect(() => {
+        if (isOpen && user) {
+            setFormData({
+                jobTitle: (user as any)?.jobTitle || "",
+                department: (user as any)?.department || "",
+                technicalLevel: (user as any)?.technicalLevel || "",
+                communicationStyle: (user as any)?.communicationStyle || "",
+            });
+        }
+    }, [isOpen, user]);
+
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setIsLoading(true);
         try {
             const response = await authApi.updateProfile(formData);
 
-            // Hacky way to update local user state if AuthContext doesn't support direct updates
-            // In a better world, useAuth would expose an updateUser function.
-            // For now, we assume the backend update is enough for the next page load/request
-            // But to reflect "instant" changes, we might want to reload or update context manually if possible.
-            // Since we can't easily touch AuthContext provider without reading it, we'll just close for now.
+            // Atualiza o contexto do usuário para refletir as mudanças imediatamente
+            await refreshUser();
 
-            // Force reload to update context if necessary, or just rely on next fetch.
-            // Ideally, we'd update the context. Let's try to see if we can trigger a re-fetch or just close.
             onClose();
-            alert("Preferências atualizadas com sucesso! A IA agora personalizará as respostas para você.");
+            toast({
+                title: "Preferências salvas!",
+                description: "A IA agora personalizará as respostas para você.",
+                className: "bg-green-600 text-white border-none"
+            });
         } catch (error) {
             console.error("Error updating preferences:", error);
-            alert("Erro ao atualizar preferências.");
+            toast({
+                title: "Erro ao salvar",
+                description: "Não foi possível atualizar as preferências.",
+                variant: "destructive"
+            });
+        } finally {
+            setIsLoading(false);
+        }
+    };
+
+    const handleReset = async () => {
+        setIsLoading(true);
+        try {
+            const emptyData = {
+                jobTitle: "",
+                department: "",
+                technicalLevel: "",
+                communicationStyle: ""
+            };
+
+            await authApi.updateProfile(emptyData);
+            await refreshUser();
+
+            setFormData(emptyData);
+
+            toast.success("Preferências resetadas.", {
+                description: "As configurações foram limpas."
+            });
+        } catch (error) {
+            console.error("Error resetting preferences:", error);
+            toast.error("Erro ao resetar preferências.");
         } finally {
             setIsLoading(false);
         }
@@ -134,13 +179,18 @@ export const AIPreferencesModal = ({ isOpen, onClose }: AIPreferencesModalProps)
                         </Select>
                     </div>
 
-                    <DialogFooter className="pt-4">
-                        <Button type="button" variant="ghost" onClick={onClose} className="text-white/60 hover:text-white hover:bg-white/5">
-                            Cancelar
+                    <DialogFooter className="pt-4 flex justify-between sm:justify-between">
+                        <Button type="button" variant="ghost" onClick={handleReset} className="text-red-400 hover:text-red-300 hover:bg-red-900/20" disabled={isLoading}>
+                            Resetar
                         </Button>
-                        <Button type="submit" disabled={isLoading} className="bg-primary hover:bg-primary/90 text-primary-foreground min-w-[100px]">
-                            {isLoading ? <Loader2 className="w-4 h-4 animate-spin" /> : "Salvar"}
-                        </Button>
+                        <div className="flex gap-2">
+                            <Button type="button" variant="ghost" onClick={onClose} className="text-white/60 hover:text-white hover:bg-white/5">
+                                Cancelar
+                            </Button>
+                            <Button type="submit" disabled={isLoading} className="bg-primary hover:bg-primary/90 text-primary-foreground min-w-[100px]">
+                                {isLoading ? <Loader2 className="w-4 h-4 animate-spin" /> : "Salvar"}
+                            </Button>
+                        </div>
                     </DialogFooter>
                 </form>
             </DialogContent>

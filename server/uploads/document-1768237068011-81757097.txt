@@ -1,0 +1,199 @@
+[
+  {
+    "planilha": "EMPACOTADORA  AUTOMÁTICA",
+    "dados": [
+      {
+        "EMPACOTADORA  AUTOMÁTICA": NaN,
+        "Unnamed: 1": NaN,
+        "Unnamed: 2": NaN,
+        "Unnamed: 3": NaN,
+        "Unnamed: 4": NaN,
+        "Unnamed: 5": NaN,
+        "Unnamed: 6": NaN,
+        "Unnamed: 7": NaN,
+        "Unnamed: 8": NaN,
+        "Unnamed: 9": NaN
+      },
+      {
+        "EMPACOTADORA  AUTOMÁTICA": "Código",
+        "Unnamed: 1": "Descrição da Máquina",
+        "Unnamed: 2": "Material da Bobina",
+        "Unnamed: 3": "Dosagem",
+        "Unnamed: 4": "Comprimento da Embalagem\n(mm)",
+        "Unnamed: 5": "Largura da embalagem\n(mm)",
+        "Unnamed: 6": "Largura Máxima da Bobina\n(mm)",
+        "Unnamed: 7": "Formato da Embalagem",
+        "Unnamed: 8": "Produtividade",
+        "Unnamed: 9": "Tipo de Máquina"
+      },
+      {
+        "EMPACOTADORA  AUTOMÁTICA": "PAMQGPAU050",
+        "Unnamed: 1": "AFPP1328 - EMPACOTADORA AUTOMATICA P/ POS ALIM. HORIZONTAL",
+        "Unnamed: 2": "BOPP, PET, PE, OUTROS",
+        "Unnamed: 3": "2-20 g",
+        "Unnamed: 4": "50-130",
+        "Unnamed: 5": "30-140",
+        "Unnamed: 6": 280,
+        "Unnamed: 7": "Selagem 3 Soldas",
+        "Unnamed: 8": "35-50 embalagens/min",
+        "Unnamed: 9": "Automática"
+      },
+      {
+        "EMPACOTADORA  AUTOMÁTICA": "PAMQGPAU129",
+        "Unnamed: 1": "AFPP1328/P - EMPACOTADORA AUTOMATICA P/ POS C/ DOSAGEM PENDULAR",
+        "Unnamed: 2": "BOPP, PET, PE, OUTROS",
+        "Unnamed: 3": "1-10g",
+        "Unnamed: 4": "50-130",
+        "Unnamed: 5": "30-140",
+        "Unnamed: 6": 280,
+        "Unnamed: 7": "Selagem 3 Soldas",
+        "Unnamed: 8": "35-50 embalagens/min",
+        "Unnamed: 9": "Automática"
+      },
+      {
+        "EMPACOTADORA  AUTOMÁTICA": "PAMQGPAU124",
+        "Unnamed: 1": "AFPP1528A - EMPACOTADORA AUTOMATICA 4 SOLDAS P/ POS ALIM. CANECAS",
+        "Unnamed: 2": "BOPP, PET, PE, OUTROS",
+        "Unnamed: 3": "10-100 g",
+        "Unnamed: 4": "50-150",
+        "Unnamed: 5": "30-140",
+        "Unnamed: 6": 280,
+        "Unnamed: 7": "Selagem 4 Soldas",
+        "Unnamed: 8": "35-50 embalagens/min",
+        "Unnamed: 9": "Automática"
+      },
+      {
+        "EMPACOTADORA  AUTOMÁTICA": "PAMQGPAU076",
+        "Unnamed: 1": "AFPP2030B - EMPACOTADORA AUTOMATICA P/ POS ",
+        "Unnamed: 2": "BOPP, PET, PE, OUTROS",
+        "Unnamed: 3": "≤ 60 g",
+        "Unnamed: 4": "50-200",
+        "Unnamed: 5": "30-140",
+        "Unnamed: 6": 300,
+        "Unnamed: 7": "Selagem 3 Soldas",
+        "Unnamed: 8": "35-50 embalagens/min",
+        "Unnamed: 9": "Automática"
+      },
+      {
+        "EMPACOTADORA  AUTOMÁTICA": "PAMQGPAU104",
+        "Unnamed: 1": "AFPP220A - ENVASADORA DE LIQ./PAST. EM AMBALAGENS ESPECIAIS",
+        "Unnamed: 2": "BOPP, PET, PE, OUTROS",
+        "Unnamed: 3": "5-20 ml",
+        "Unnamed: 4": "120- 280",
+        "Unnamed: 5": "64,33 mm (Largura depende do molde, no caso dessa máquina o molde possui 64,33. Pode ser personalizado de acordo com o projeto.)",
+        "Unnamed: 6": 280,
+        "Unnamed: 7": "Selagem contínua (A depender do molde)",
+        "Unnamed: 8": "15-25 embalagens/min",
+        "Unnamed: 9": "Automática"
+      },
+      {
+        "EMPACOTADORA  AUTOMÁTICA": "PAMQGPAU077",
+        "Unnamed: 1": "AFPP2830B - EMPACOTADORA AUTOMATICA P/ SACHE TIPO STICK",
+        "Unnamed: 2": "BOPP, PET, PE, OUTROS",
+        "Unnamed: 3": "10-30 g",
+        "Unnamed: 4": "45-150",
+        "Unnamed: 5": "20-100",
+        "Unnamed: 6": 220,
+        "Unnamed: 7": "Selagem 3 Soldas",
+        "Unnamed: 8": "25-35 embalagens/min",
+        "Unnamed: 9": "Automática"
+      },
+      {
+        "EMPACOTADORA  AUTOMÁTICA": "PAMQGPAU054",
+        "Unnamed: 1": "AFPP320B - EMPACOTADORA AUTOMATICA C/ BALANCA LINEAR 4 CABECAS",
+        "Unnamed: 2": "BOPP, PET, PE, OUTROS",
+        "Unnamed: 3": "10-100 g",
+        "Unnamed: 4": "50-200",
+        "Unnamed: 5": "45-150",
+        "Unnamed: 6": 320,
+        "Unnamed: 7": "Selagem 3 Soldas",
+        "Unnamed: 8": "20-50 embalagens/min",
+        "Unnamed: 9": "Automática"
+      },
+      {
+        "EMPACOTADORA  AUTOMÁTICA": "PAMQGPAU034",
+        "Unnamed: 1": "AFPP320C - EMPACOTADORA AUT. VERTICAL 10 CABECAS C/ BAL. ELETRONICA",
+        "Unnamed: 2": "BOPP, PET, PE, OUTROS",
+        "Unnamed: 3": "500-1000 g",
+        "Unnamed: 4": "50-200",
+        "Unnamed: 5": "45-150",
+        "Unnamed: 6": 320,
+        "Unnamed: 7": "Selagem 3 Soldas",
+        "Unnamed: 8": "15-70 embalagens/min",
+        "Unnamed: 9": "Automática"
+      },
+      {
+        "EMPACOTADORA  AUTOMÁTICA": "PAMQGPAU152",
+        "Unnamed: 1": "AFPP420E - EMPACOTADORA AUTOMATICA DE ALTO DESEMPENHO P/ POS",
+        "Unnamed: 2": "BOPP, PET, PE, OUTROS",
+        "Unnamed: 3": "300-1000 g",
+        "Unnamed: 4": 300,
+        "Unnamed: 5": "80-200",
+        "Unnamed: 6": 420,
+        "Unnamed: 7": "Selagem 3 Soldas",
+        "Unnamed: 8": "20-40 embalagens/min",
+        "Unnamed: 9": "Automática"
+      },
+      {
+        "EMPACOTADORA  AUTOMÁTICA": "PAMQGPAU151",
+        "Unnamed: 1": "AFPP420F - EMPACOTADORA AUTOMATICA DE ALTO DESEMPENHO",
+        "Unnamed: 2": "BOPP, PET, PE, OUTROS",
+        "Unnamed: 3": "300-1000 ml",
+        "Unnamed: 4": 300,
+        "Unnamed: 5": "80 -200",
+        "Unnamed: 6": 420,
+        "Unnamed: 7": "Selagem 3 Soldas",
+        "Unnamed: 8": "25-40 embalagens/min",
+        "Unnamed: 9": "Automática"
+      },
+      {
+        "EMPACOTADORA  AUTOMÁTICA": "PAMQGPAU153",
+        "Unnamed: 1": "SW180A - EMPACOTADORA C/ 4 BALANCAS VIBR. P/ SACOS PRE-FORMADOS/STAND UO POUCH",
+        "Unnamed: 2": "BOPP, PET, PE, OUTROS",
+        "Unnamed: 3": "50-500 g",
+        "Unnamed: 4": "110-300",
+        "Unnamed: 5": "80-200",
+        "Unnamed: 6": "-",
+        "Unnamed: 7": "Stand Up Pouch 1 Solda",
+        "Unnamed: 8": "5-30 embalagens/min",
+        "Unnamed: 9": "Automática"
+      },
+      {
+        "EMPACOTADORA  AUTOMÁTICA": "PAMQGPAU078",
+        "Unnamed: 1": "SW200 - EMPACOTADORA STAND_UP POUCH P/ POS ",
+        "Unnamed: 2": "BOPP, PET, PE, OUTROS",
+        "Unnamed: 3": "200-1500 g",
+        "Unnamed: 4": "100-300",
+        "Unnamed: 5": "80-200",
+        "Unnamed: 6": "-",
+        "Unnamed: 7": "Stand Up Pouch 1 Solda",
+        "Unnamed: 8": "16-50 embalagens/min",
+        "Unnamed: 9": "Automática"
+      },
+      {
+        "EMPACOTADORA  AUTOMÁTICA": "PAMQGPAU081",
+        "Unnamed: 1": "SW250 - EMPACOTADORA STAND_UP POUCH P/ POS ",
+        "Unnamed: 2": "BOPP, PET, PE, OUTROS",
+        "Unnamed: 3": "200-2000 g",
+        "Unnamed: 4": "100-350",
+        "Unnamed: 5": "110-250",
+        "Unnamed: 6": "-",
+        "Unnamed: 7": "Stand Up Pouch 1 Solda",
+        "Unnamed: 8": "16-40 embalagens/min",
+        "Unnamed: 9": "Automática"
+      },
+      {
+        "EMPACOTADORA  AUTOMÁTICA": "PAMQGPAU126",
+        "Unnamed: 1": "SW320 - EMPACOTADORA STAND_UP POUCH P/ POS ",
+        "Unnamed: 2": "BOPP, PET, PE, OUTROS",
+        "Unnamed: 3": "500-2500 g",
+        "Unnamed: 4": "100-480",
+        "Unnamed: 5": "180-320",
+        "Unnamed: 6": "-",
+        "Unnamed: 7": "Stand Up Pouch 1 Solda",
+        "Unnamed: 8": "10-30 embalagens/min",
+        "Unnamed: 9": "Automática"
+      }
+    ]
+  }
+]

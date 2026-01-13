@@ -1,0 +1,34 @@
+[
+  {
+    "planilha": "Montadora Semiauto de Caixas",
+    "dados": [
+      {
+        "MONTADORA SEMIAUTOMÁTICA DE CAIXAS": NaN,
+        "Unnamed: 1": NaN,
+        "Unnamed: 2": NaN,
+        "Unnamed: 3": NaN,
+        "Unnamed: 4": NaN,
+        "Unnamed: 5": NaN,
+        "Unnamed: 6": NaN
+      },
+      {
+        "MONTADORA SEMIAUTOMÁTICA DE CAIXAS": "Código",
+        "Unnamed: 1": "Descrição da Máquina",
+        "Unnamed: 2": "Tamanho Mínimo da Caixa\n(mm)",
+        "Unnamed: 3": "Tamanho Máxima da Caixa\n(mm)",
+        "Unnamed: 4": "Largura da Fita\n(mm)",
+        "Unnamed: 5": "Produtividade",
+        "Unnamed: 6": "Tipo de Máquina"
+      },
+      {
+        "MONTADORA SEMIAUTOMÁTICA DE CAIXAS": "PAMQCCSA011",
+        "Unnamed: 1": "AS923B-FORMADORA DE FUNDO E SEL. PEUMT. CAIXAS DE PAPELAO(220V)",
+        "Unnamed: 2": "L 150 x A 120",
+        "Unnamed: 3": "C 500 x L 450 x A 570",
+        "Unnamed: 4": "36, 48, 50 ou 60",
+        "Unnamed: 5": "16 m/min",
+        "Unnamed: 6": "Semiautomática"
+      }
+    ]
+  }
+]

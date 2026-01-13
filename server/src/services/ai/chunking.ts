@@ -12,8 +12,8 @@ export function chunkText(
     options: ChunkOptions = {}
 ): string[] {
     const {
-        chunkSize = 800,
-        overlap = 150,
+        chunkSize = 1200,
+        overlap = 250,
         strategy = 'semantic'
     } = options;
 
