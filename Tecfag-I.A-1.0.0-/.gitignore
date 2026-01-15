@@ -1,4 +1,9 @@
-# Logs
+# ===========================================
+# Tecfag I.A - .gitignore
+# MANTENDO APENAS node_modules IGNORADO
+# ===========================================
+
+# Logs (pode ignorar logs temporários)
 logs
 *.log
 npm-debug.log*
@@ -7,10 +12,12 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Dependências - ÚNICO item importante ignorado
 node_modules
+
+# Build temporário (dist pode ser reconstruído)
 dist
 dist-ssr
-*.local
 
 # Editor directories and files
 .vscode/*
@@ -23,6 +30,15 @@ dist-ssr
 *.sln
 *.sw?
 
-# Environment Variables
-.env
-server/.env
+# Arquivos locais de desenvolvimento
+*.local
+
+# ===========================================
+# ATENÇÃO: Os seguintes itens NÃO estão mais
+# sendo ignorados para manter tudo no repo:
+# - .env (variáveis de ambiente)
+# - server/.env
+# - server/prisma/*.db (banco de dados)
+# - server/uploads/ (documentos)
+# - server/backups/
+# ===========================================

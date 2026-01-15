@@ -1,0 +1,423 @@
+ABASTECEDOR AUTOMÁTICO																
+																
+Código	Descrição da Máquina	"Potência
+(W)"	"Potência de Resfriamento
+(W)"	"Potência do Bombeamento Interno
+(W)"	BTU/hora	"Volume - Evaporador
+(L)"	"Fluxo de Ar Resfriado
+(m³/h)"	"Fluxo de Fluído Refrigerado
+(m³/h)"	Tipo de Máquina							
+PAMQLQAU035	QE-A - UNIDADE RESFRIADORA/REFRIGERADORA PARA AGUA GELADA	2270	7200	370	18000	27	2000	0.91	Automática
+
+							
+ALIMENTADORES PARAFUSO													
+													
+Código	Descrição da Máquina	Tipo de Produto	"Altura (até a boca)
+(mm)"	"Volume do Funil
+(L)"	"Diâmetro da Boca
+(mm)"	Tipo de Máquina							
+PAMQGPAU080	ALIMENTADOR DE ROSCA PARA POS ALT. 2,5METROS  - FUNIL 110 LITROS	Pós	2000	110	110	Automática							
+PAMQGPAU038	ALIMENTADOR DE ROSCA PARA POS - FUNIL 110 LITROS	Pós	1600	110	110	Automática							
+													
+APLICADOR AUTOMATICO DE STRETCH										
+										
+Código	Descrição da Máquina	Tipo de Produto	"Diâmetro Interno Mínimo da Bobina de Filme
+(mm)"	"Diâmetro Externo Máximo da Bobina de Filme
+(mm)"	"Comprimento da Bobina de Filme
+(mm)"	"Área útil
+(Diâmetro da Plataforma Giratória)
+(mm)"	"Altura do Palete
+(mm)"	"Peso máximo do Palete
+(kg)"	Produtividade	Tipo de Máquina
+PAMQSLAU058	BL2000A - STRECHADEIRA AUTOMATICA DE PALETES	Filme Stretch			500	Ø1500 (personalizada para 1650, 1800 ou 2000)	2100	2000	15-140 paletes/hora	Automática
+PAMQSLAU033	BL2000B - STRECHADEIRA AUTOMATICA DE PALETES	Filme Stretch			500	Ø1500 (personalizada para 1650, 1800 ou 2000)	2100	2000	15-140 paletes/hora	Automática
+PAMQSLAU056	BL2000P - STRECHADEIRA AUTOMATICA DE PALETES	Filme Stretch			500	Ø1500 (personalizada para 1650, 1800 ou 2000)	1800	2000	15-140 paletes/hora	Automática
+										
+ARQUEADORA																						
+																						
+Código	Descrição da Máquina	Tipo de Produto	Tipo de Fita	"Espessura da Fita
+(mm)"	"Largura da Fita
+(mm)"	"Diâmetro Interno da Bobina de Fita
+(mm)"	"Diâmetro Externo da Bobina de Fita
+(mm)"	"Largura da Bobina de Fita
+(mm)"	Comprimento da Caixa (mm)	"Largura da Caixa
+(mm)"	"Altura da Caixa
+(mm)"	"Área Útil da Máquina
+(mm)"	"Altura Útil da Máquina
+(mm)"	Produtividade	Tipo de Máquina							
+PAMQARSA009	XQD-25E - ARQUEADORA PNEUMATICA MANUAL	Fita de Arquear	Poliéster (PET) / PP (Polipropileno)	0,5-1,5	19-25	-	-	-	-	-	-			Depende do tamanho do produto e da velocidade de operação	Manual							
+PAMQARSA008	XQD-19E - ARQUEADORA PNEUMATICA MANUAL	Fita de Arquear	Poliéster (PET) / PP (Polipropileno)	0,5-1,5	13-19	-	-	-	-	-	-			Depende do tamanho do produto e da velocidade de operação	Manual							
+PAMQARAU009	MH301A - MAQUINA ARQUEADORA AUTOMATICA	Fita de Arquear	Recomendado: PP (Polipropileno)	0,55-1	9-15	Ø200-210	Ø400-450	170-190	-	80-800	60-600	625 x 800	600	até 2 segundos/arqueação	Automática							
+PAMQARSA006	SM10H - MAQ. SEMI-AUTOM. DE ARQUEAR 220V	Fita de Arquear	Recomendado: PP (Polipropileno)	0,55-1	5-15	Ø200-210	Ø400-450	170-190	-	150-650	60-800	650 x 520	800	até 0,53 segundos/arqueação	Semiautomática							
+																						
+DATADORAS											
+											
+Código	Descrição da Máquina	Tipo de produto	"Comprimento do produto
+(mm)"	"Largura do produto
+(mm)"	"Distância de impressão
+(mm)"	"Altura de impressão
+(mm)"	Impressão	Produtividade	Tipo de impressão	Resolução de Impressão	Tipo de Máquina
+PAMQIPAU008	MY380/M DATADOR C/ BASE AUMENTADA C/ TINTA SOLIDA E CONTADOR (INOX)	Rótulos/Papéis/Embalagens	50-200	65-230	-	-	5 linhas | 15 caracteres por linha	300 impressões/min	Tinta sólida	-	Automática
+PAMQIPMN069	M6- IMPRESSORA MANUAL JATO DE TINTA COM P/ TOUCH	Aço/Ferro/Madeira/Vidro/Concreto/Plástico/Papel	-	-	2-5	2-12,7	-	70 m/min (dependade da velocidade de operação)	Inkjet	300ppp	Manual
+PAMQIPMN065	HP351-DATADORA HOT STAMP MANUAL (220V) P/ POTES C/ SUPORTE DE PEDAL	Rótulos/Papéis/Embalagens/sacos de papel ou de plástico/ pequenas caixas	-	-	-	-	3 linhas | 15 caracteres por linha	(depende da velocidade de operação)	Fita Ribbon	-	Manual
+PAMQIPMN064	HP351-DATADORA HOT STAMP MANUAL (110V) P/ POTES C/ SUPORTE DE PEDAL	Rótulos/Papéis/Embalagens/sacos de papel ou de plástico/ pequenas caixas	-	-	-	-	3 linhas | 15 caracteres por linha	(depende da velocidade de operação)	Fita Ribbon	-	Manual
+PAMQIPMN063	HP351-DATADORA HOT STAMP MANUAL (220V) - C/ SUP. MESA P/ POTES	Rótulos/Papéis/Embalagens/sacos de papel ou de plástico/ pequenas caixas	-	-	-	-	3 linhas | 15 caracteres por linha	(depende da velocidade de operação)	Fita Ribbon	-	Manual
+PAMQIPMN040	MX2 - IMPRESSORA JATO DE TINTA C/ PAINEL TOUCH	Aço/Ferro/Madeira/Vidro/Concreto/Plástico/Papel	-	-	2-5	1-25,4	1-6 linhas	70 m/min	Inkjet	600ppp	Automática
+PAMQIPMN039	MX1- IMPRESSORA JATO DE TINTA C/ PAINEL TOUCH	Aço/Ferro/Madeira/Vidro/Concreto/Plástico/Papel	-	-	2-5	1-12,7	1-6 linhas	70 m/min	Inkjet	600ppp	Automática
+PAMQIPMN038	M7- IMPRESSORA MANUAL JATO DE TINTA COM P/ TOUCH	Aço/Ferro/Madeira/Vidro/Concreto/Plástico/Papel	-	-	2-5	2-12,7	-	70 m/min (dependade da velocidade de operação)	Inkjet	600ppp	Manual
+PAMQIPAU004	MY380 DATADOR COM TINTA SOLIDA E CONTADOR (ACO PINTADO)	Rótulos/Papéis/Embalagens	50-200	65-175	-	-	5 linhas | 15 caracteres por linha	300 impressões/min	Tinta sólida	-	Automática
+PAMQIPMN015	HP351-DATADORA HOT STAMP MANUAL (110V)	Rótulos/Papéis/Embalagens/sacos de papel ou de plástico/ pequenas caixas	-	-	-	-	3 linhas | 15 caracteres por linha	(depende da velocidade de operação)	Fita Ribbon	-	Manual
+PAMQIPMN002	HP351-DATADORA HOT STAMP MANUAL (220V)	Rótulos/Papéis/Embalagens/sacos de papel ou de plástico/ pequenas caixas	-	-	-	-	3 linhas | 15 caracteres por linha	(depende da velocidade de operação)	Fita Ribbon	-	Manual
+PAMQIPEL002	HP241C-DATADORA HOT STAMP ELETRICA (3 LINHAS)(220V)	Rótulos/Papéis/Embalagens/sacos de papel ou de plástico/ pequenas caixas	-	-	-	-	3 linhas | 15 caracteres por linha	(depende da velocidade de operação)	Fita Ribbon	-	
+PAMQIPAU002	MY380 DATADOR COM TINTA SOLIDA E CONTADOR (INOX)	Rótulos/Papéis/Embalagens	50-200	65-175	-	-	5 linhas | 15 caracteres por linha	300 impressões/min	Tinta sólida	-	Automática
+											
+	DISPENSADOR DE FITA AUTOMÁTICO														
+														
+Código	Descrição da Máquina	Tipo de Produto	"Largura da Fita
+(mm)"	"Comprimento máximo de Fita
+(mm)"	"Diâmetro Máximo da Bobina de Fita
+(mm)"	Produtividade	Tipo de Máquina							
+PAMQSLMN094	FX-800C - DISPENSADOR AUTOMATICO DE FITA GOMADA	Fita Gomada	20-100	210	Ø210	60 m/min	Automática							
+PAMQSLMN058	FX-800P - DISPENSADOR AUTOMATICO DE FITA GOMADA	Fita Gomada	20-100	100 ou mais	Ø200	60 m/min	Automática							
+PAMQSLMN029	FX-800 - APLICADOR/DISPENSADOR SEMI AUTOMATICO P/ FITA GOMADA	Fita Gomada	20-100	100-1000	Ø200	Depende da velocidade de operação	Semiautomática							
+														
+DOSADORA														
+														
+Código	Descrição da Máquina	Tipo de Produto	Fluidez	Observação do Produto	Dosagem	Produtividade	Tipo de Máquina							
+PAMQSLSA124	DM1000F - DOSADORA C/ BALANCA ELETR. P/ POS BX FLUIDEZ 100~1000/GRAMAS	Pós	Baixa Fluidez	IMPORTANTE TESTAR O PRODUTO DO CLIENTE NA MÁQUINA PARA UM RESULTADO MAIS ASSERTIVO	100-1000 g	10-20 embalagens/min	Semiautomática							
+PAMQSLSA122	DM1000S - DOSADORA C/ BALANCA ELETR. P/ GRANULADOS 100~1000/GRAMAS	Granulados	Alta Fluidez	IMPORTANTE TESTAR O PRODUTO DO CLIENTE NA MÁQUINA PARA UM RESULTADO MAIS ASSERTIVO	100-1000 g	10-20 embalagens/min	Semiautomática							
+PAMQSLSA125	DM5000F - DOSADORA C/ BALANCA ELETR. P/ POS BX FLUIDEZ 200~5000/GRAMAS	Pós	Baixa Fluidez	IMPORTANTE TESTAR O PRODUTO DO CLIENTE NA MÁQUINA PARA UM RESULTADO MAIS ASSERTIVO	200-5000 g	10-20 embalagens/min	Semiautomática							
+PAMQSLSA123	DM5000S - DOSADORA C/ BALANCA ELETR. P/ GRANULADOS 200~5000/GRAMAS	Granulados	Alta Fluidez	IMPORTANTE TESTAR O PRODUTO DO CLIENTE NA MÁQUINA PARA UM RESULTADO MAIS ASSERTIVO	200-5000 g	10-20 embalagens/min	Semiautomática							
+PAMQEVSA001	KFG1000-MAQUINA SEMI-AUT. P/ ENCHIM. GRAOS E FARELOS(220V)	Grãos e Farelos	Baixa/Alta Fluidez	IMPORTANTE TESTAR O PRODUTO DO CLIENTE NA MÁQUINA PARA UM RESULTADO MAIS ASSERTIVO	500-1000 ml	5-30 embalagens/min	Semiautomática							
+PAMQCCSA003	KFG250-MAQUINA SEMI-AUT. P/ ENCHIM. GRAOS E FARELOS(220V)	Grãos e Farelos	Baixa/Alta Fluidez	IMPORTANTE TESTAR O PRODUTO DO CLIENTE NA MÁQUINA PARA UM RESULTADO MAIS ASSERTIVO	50-250 ml	5-30 embalagens/min	Semiautomática							
+PAMQGPSA001	KFG500-MAQUINA SEMI-AUT. P/ ENCHIM. GRAOS E FARELOS(220V)	Grãos e Farelos	Baixa/Alta Fluidez	IMPORTANTE TESTAR O PRODUTO DO CLIENTE NA MÁQUINA PARA UM RESULTADO MAIS ASSERTIVO	250-500 ml	5-30 embalagens/min	Semiautomática							
+PAMQSLSA120	TDM100F - DOSADORA C/ BALANCA ELETR. BANCADA P/ POS BX FLUIDEZ 10~100/GRAMAS	Pós	Baixa Fluidez	IMPORTANTE TESTAR O PRODUTO DO CLIENTE NA MÁQUINA PARA UM RESULTADO MAIS ASSERTIVO	10-100 g	10-20 embalagens/min	Semiautomática							
+PAMQSLSA111	TDM100G - DOSADORA C/ BALANCA ELETR. BANCADA P/ GRAOS 10~100/GRAMAS	Grãos	Alta Fluidez	IMPORTANTE TESTAR O PRODUTO DO CLIENTE NA MÁQUINA PARA UM RESULTADO MAIS ASSERTIVO	10-100 g	10-20 embalagens/min	Semiautomática							
+PAMQSLSA114	TDM100P - DOSADORA C/ BALANCA ELETR. BANCADA P/ POS 10~100/GRAMAS	Pós	Alta Fluidez	IMPORTANTE TESTAR O PRODUTO DO CLIENTE NA MÁQUINA PARA UM RESULTADO MAIS ASSERTIVO	10-100 g	10-20 embalagens/min	Semiautomática							
+PAMQSLSA117	TDM100S - DOSADORA C/ BALANCA ELETR. BANCADA P/ GRANULADOS 10~100/GRAMAS	Granulados	Alta Fluidez	IMPORTANTE TESTAR O PRODUTO DO CLIENTE NA MÁQUINA PARA UM RESULTADO MAIS ASSERTIVO	10-100 g	10-20 embalagens/min	Semiautomática							
+PAMQSLSA112	TDM200G - DOSADORA C/ BALANCA ELETR. BANCADA P/ GRAOS 20~200/GRAMAS	Grãos	Alta Fluidez	IMPORTANTE TESTAR O PRODUTO DO CLIENTE NA MÁQUINA PARA UM RESULTADO MAIS ASSERTIVO	20-200 g	10-20 embalagens/min	Semiautomática							
+PAMQSLSA115	TDM200P - DOSADORA C/ BALANCA ELETR. BANCADA P/ POS 20~200/GRAMAS	Dosadora	Alta Fluidez	IMPORTANTE TESTAR O PRODUTO DO CLIENTE NA MÁQUINA PARA UM RESULTADO MAIS ASSERTIVO	20-200 g	10-20 embalagens/min	Semiautomática							
+PAMQSLSA119	TDM25F - DOSADORA C/ BALANCA ELETR. BANCADA P/ POS BX FLUIDEZ 1~25/GRAMAS	Dosadora	Baixa Fluidez	IMPORTANTE TESTAR O PRODUTO DO CLIENTE NA MÁQUINA PARA UM RESULTADO MAIS ASSERTIVO	1-25 g	10-20 embalagens/min	Semiautomática							
+PAMQSLSA110	TDM25G - DOSADORA C/ BALANCA ELETR. BANCADA P/ GRAOS 1~25/GRAMAS	Grãos	Alta Fluidez	IMPORTANTE TESTAR O PRODUTO DO CLIENTE NA MÁQUINA PARA UM RESULTADO MAIS ASSERTIVO	1-25 g	10-20 embalagens/min	Semiautomática							
+PAMQSLSA113	TDM25P - DOSADORA C/ BALANCA ELETR. BANCADA P/ POS 1~25/GRAMAS	Pós	Alta Fluidez	IMPORTANTE TESTAR O PRODUTO DO CLIENTE NA MÁQUINA PARA UM RESULTADO MAIS ASSERTIVO	1-25 g	10-20 embalagens/min	Semiautomática							
+PAMQSLSA116	TDM25S - DOSADORA C/ BALANCA ELETR. BANCADA P/ GRANULADOS 1~25/GRAMAS	Granulados	Alta Fluidez	IMPORTANTE TESTAR O PRODUTO DO CLIENTE NA MÁQUINA PARA UM RESULTADO MAIS ASSERTIVO	1-25 g	10-20 embalagens/min	Semiautomática							
+PAMQSLSA121	TDM500F DOSADORA C/ BALANCA ELETR. BANCADA P/ POS BX FLUIDEZ 50~500/GRAMAS	Pós	Baixa Fluidez	IMPORTANTE TESTAR O PRODUTO DO CLIENTE NA MÁQUINA PARA UM RESULTADO MAIS ASSERTIVO	50-500 g	10-20 embalagens/min	Semiautomática							
+PAMQSLSA118	TDM500S - DOSADORA C/ BALANCA ELETR. BANCADA P/ GRANULADOS 50~500/GRAMAS	Granulados	Alta Fluidez	IMPORTANTE TESTAR O PRODUTO DO CLIENTE NA MÁQUINA PARA UM RESULTADO MAIS ASSERTIVO	50-500 g	10-20 embalagens/min	Semiautomática							
+														
+ENCAPSULADORAS SEMIAUTOMÁTICA				
+				
+Código	Descrição da Máquina	Tipo de Produto	Produtividade	Tipo de Máquina
+PAMQSLSA018	UNION - ENCAPSULADORA SEMI-AUTOM. P/ PO  PAINEL ANALOG. E DESC. SEMI AUT.	Cápsulas #000, 00L#, 00#, 0L#, 0#, 1#, 2#, 3#, 4#, 5#	25000 cápsulas/hora	Automática
+PAMQSLSA033	UNION PLUS - ENCAPSULADORA SEMI-AUTOM. P/ PO C/ CLP E DESC. AUTOMATICA	Cápsulas #000, 00L#, 00#, 0L#, 0#, 1#, 2#, 3#, 4#, 5#	25000 cápsulas/hora	Automática
+PAMQSLSA017	UNION PLUS/II - ENCAPSULADORA SEMI-AUTOM. P/ PO C/ CLP E DESC. AUTOMATICA	Cápsulas #000, 00L#, 00#, 0L#, 0#, 1#, 2#, 3#, 4#, 5#	25000 cápsulas/hora	Automática
+														
+														
+ENCARTUCHADEIRA ROTATIVA AUTOMÁTICA													
+													
+Código	Descrição da Máquina	Produto	"Tamanho Mínimo da Caixa
+(mm)"	"Tamanho Máxima da Caixa
+(mm)"	Produtividade	Tipo de Máquina							
+PAMQCCAU007	ZH-50 - ENCARTUCHADEIRA ROTATIVA VERTICAL	Caixas	C 60 x L 20 x A 20	C 200 x L 80 x A 80	20-50 caixas/min	Automática							
+													
+Item	Descrição	Grupo	Quantidade Vendida
+PAMQLQAU038	HZK160 - ENVASADORA PERISTALTICA P/ LIQUIDOS VOL. 5-3500ML	ENVASADORA SEMI AUTOMATICA	405
+PAMQLQAU007	DGF 1000 - ENVASADORA SEMI-AUTOM. P/ LIQ. E PAST. 100-1000ML	ENVASADORA SEMI AUTOMATICA	268
+PAMQLQAU003	DGF 500 - ENVASADORA SEMI AUTOM. P/ LIQ. E PAST. 50-500ML	ENVASADORA SEMI AUTOMATICA	212
+PAMQLQAU005	DGF 100 - ENVASADORA SEMI-AUTOM. P/ LIQ. E PAST. 10-100ML	ENVASADORA SEMI AUTOMATICA	184
+PAMQLQAU108	A3- ENVASADORA POR PRESSAO MANUAL 50ML	ENVASADORA SEMI AUTOMATICA	141
+PAMQLQAU006	DGF 300 - ENVASADORA SEMI-AUTOM. P/ LIQ. E PAST. 30-300ML	ENVASADORA SEMI AUTOMATICA	119
+PAMQLQAU012	SYF 1000 - ENVASADORA SEMI-AUT. P/  LIQUIDOS 100-1000ML	ENVASADORA SEMI AUTOMATICA	107
+PAMQLQAU125	A3D- ENVASADORA POR PRESSAO MANUAL 100ML	ENVASADORA SEMI AUTOMATICA	106
+PAMQLQAU120	A3D- ENVASADORA POR PRESSAO MANUAL 50ML	ENVASADORA SEMI AUTOMATICA	96
+PAACSLAU226	GENIUS 8 - ENVASADORA E CONTADORA ELETRONICA DE CAPSULAS	ENVASADORA  AUTOMTICA	92
+PAMQLQAU004	SYF 500 - ENVASADORA SEMI-AUT. P/  LIQUIDOS 50-500ML	ENVASADORA SEMI AUTOMATICA	55
+PAMQLQAU107	A2 - ENVASADORA PNEUMATICA SEMI AUTOMATICA 	ENVASADORA SEMI AUTOMATICA	54
+PAMQLQAU008	DGF 2500 - ENVASADORA SEMI-AUTOM. P/ LIQ. E PAST. 300-2500ML	ENVASADORA SEMI AUTOMATICA	53
+PAACSLAU146	GENIUS 2 - ENVASADORA E CONTADORA SEMI AUTOMATICA DE CAPSULAS	ENVASADORA SEMI AUTOMATICA	52
+PAMQLQAU016	DGF2 1000 - ENVASADORA SEMI-AUT. P/ LIQ-PAST. 100-1000ML - 2 BICOS	ENVASADORA SEMI AUTOMATICA	36
+PAMQLQAU009	DGF 5000 - ENVASADORA SEMI-AUTOM. P/ LIQ. E PAST. 500-5000ML 	ENVASADORA SEMI AUTOMATICA	34
+PAMQLQAU010	SYF 100 - ENVASADORA SEMI-AUT. P/  LIQUIDOS 10-100ML	ENVASADORA SEMI AUTOMATICA	32
+PAMQGPAU036	VSF-30S - ENVASADORA SEMIAUTOMATICA C/ ESCALA VOLUMETRICA P/ POS	ENVASADORA SEMI AUTOMATICA	32
+PAMQLQAU022	DGF2 500 ENVASADORA SEMI-AUTO. 2 BICOS 50-500ML	ENVASADORA SEMI AUTOMATICA	28
+PAMQLQAU020	SYF2 1000 - ENVASADORA SEMI-AUT. P/  LIQUIDOS 100-1000ML - 2 BICOS	ENVASADORA SEMI AUTOMATICA	25
+PAMQLQAU017	DGF2 300 - ENVASADORA SEMI-AUT. P/ LIQ-PAST. 30-300ML - 2 BICOS	ENVASADORA SEMI AUTOMATICA	22
+PAMQLQAU015	DGF2 100 - ENVASADORA SEMI-AUT. P/ LIQ/PAST. 10-100ML - 2 BICOS	ENVASADORA SEMI AUTOMATICA	21
+PAMQLQAU011	SYF 300 - ENVASADORA SEMI-AUT. P/  LIQUIDOS 30-300ML	ENVASADORA SEMI AUTOMATICA	20
+PAACSLAU349	GENIUS 2A - ENVASADORA E CONTADORA SEMI AUTOMATICA DE CAPSULAS	ENVASADORA  AUTOMTICA	20
+PAMQLQAU019	APF1000-4B - ENVASADORA AUTOM. 4 BICOS P/ LIQ./PAST. 100/1000ML	ENVASADORA  AUTOMTICA	17
+PAMQLQAU014	SYF 5000 - ENVASADORA SEMI-AUT. P/  LIQUIDOS 500-5000ML	ENVASADORA SEMI AUTOMATICA	17
+PAMQLQAU021	SYF2 500 - ENVASADORA SEMI-AUT. P/  LIQUIDOS 50-500ML - 2 BICOS	ENVASADORA SEMI AUTOMATICA	16
+PAMQLQAU059	ALF1000-4B - ENVASADORA AUTOM. 4 BICOS P/ LIQ. 100/1000ML	ENVASADORA  AUTOMTICA	10
+PAMQGPAU037	VSF-30A - ENVASADORA AUTOM. P/ POS C/ ESCALA VOL. E  ESTEIRA TRANSP.	ENVASADORA SEMI AUTOMATICA	9
+PAMQLQAU041	APF500-4B - ENVASADORA AUTOM. 4 BICOS P/ LIQ./PAST. 50/500ML	ENVASADORA  AUTOMTICA	9
+PAACSLAU223	GENIUS 16 - ENVASADORA E CONTADORA ELETRONICA P/ PROD. IRREGULARES	ENVASADORA  AUTOMTICA	7
+PAMQLQAU117	DGF/H 1000 - ENVASADORA SEMI-AUT. P/ LIQ. E PAST. C/ MIXER HORIZ. 100-1000ML	ENVASADORA SEMI AUTOMATICA	7
+PAMQLQAU111	TLF600 - ENVASADORA DE 4 BICOS AUTOMATICA DE BANCADA	ENVASADORA  AUTOMTICA	6
+PAMQLQAU030	SYF2 2500 - ENVASADORA SEMI-AUT. P/  LIQUIDOS 250-2500ML - 2 BICOS	ENVASADORA SEMI AUTOMATICA	5
+PAMQLQAU053	APF1000-6B - ENVASADORA AUTOM. 6 BICOS P/ LIQ./PAST. 100/1000ML	ENVASADORA  AUTOMTICA	5
+PAMQLQAU058	ALF500-4B - ENVASADORA AUTOM. 4 BICOS P/ LIQ. 50/500ML	ENVASADORA  AUTOMTICA	4
+PAMQLQAU047	APF1000-2B - ENVASADORA AUTOM. 2 BICOS P/ LIQ./PAST. 100/1000ML	ENVASADORA  AUTOMTICA	4
+PAMQGPAU079	VSF - ENVASADORA SEMI AUTOMATICA PARA POS	ENVASADORA SEMI AUTOMATICA	4
+PAMQLQAU064	ALF500-2B - ENVASADORA AUTOM. 2 BICOS P/ LIQ. 50/500ML	ENVASADORA  AUTOMTICA	4
+PAMQLQAU023	FRG2001E/4 - ENVASADORA E SELADORA AUTOMATICA DE COPOS 4 BICOS	ENVASADORA  AUTOMTICA	4
+PAMQLQAU090	DGF2 2500 - ENVASADORA SEMI-AUT. P/ LIQ-PAST. 250-2500ML - 2 BICOS	ENVASADORA SEMI AUTOMATICA	4
+PAMQIPMN089	ZPP40A - MAQUINA ENVASADORA AUTOM. P/ COMP. EM TUBETES	ENVASADORA  AUTOMTICA	4
+PAMQGPAU075	VSFII-30A ENVASADORA AUTOM. 2 BICOS P/ POS C/ ESTEIRA TRANSP.	ENVASADORA SEMI AUTOMATICA	4
+PAMQLQAU018	SYF2 300 - ENVASADORA SEMI-AUT. P/  LIQUIDOS 30-300ML - 2 BICOS	ENVASADORA SEMI AUTOMATICA	4
+PAMQLQAU013	SYF 2500 - ENVASADORA SEMI-AUT. P/  LIQUIDOS 300-2500ML	ENVASADORA SEMI AUTOMATICA	3
+PAMQGPAU032	DXDG-100II - ENVASADORA VOLUMETRICA AUTOMATICA P/ LIQ. E PAST	EMPACOTADORA  AUTOMATICA	3
+PAMQLQAU091	DGF2 5000 - ENVASADORA SEMI-AUT. P/ LIQ-PAST. 500-5000ML - 2 BICOS	ENVASADORA SEMI AUTOMATICA	3
+PAMQLQAU139	ALF1000-4B - ENVASADORA AUTOM. 4 BICOS P/ LIQ. 100/1000ML (ENCLAUSURADO)	ENVASADORA  AUTOMTICA	2
+PAMQGPAU082	VSF-FZ3B - ENVASADORA AUTOMATICA ALTA PERFORMANCE P/ POS	ENVASADORA  AUTOMTICA	2
+PAMQLQAU089	SYF2 100 - ENVASADORA SEMI-AUT. P/  LIQUIDOS 10-100ML - 2 BICOS	ENVASADORA SEMI AUTOMATICA	2
+PAACSLAU350	GENIUS 12 - ENVASADORA E CONTADORA SEMI AUTOMATICA DE CAPSULAS	ENVASADORA  AUTOMTICA	2
+PAMQLQAU109	APF500-2B/B - ENVASADORA DE BANCADA P/ PASTOSOS 2 BICOS	ENVASADORA  AUTOMTICA	2
+PAMQLQAU124	LRDB1A - ENVASADORA PERISTALTICA P/ PASTOSOS/ESMALTE	ENVASADORA SEMI AUTOMATICA	2
+PAMQGPAU104	AFPP220A - ENVASADORA DE LIQ./PAST. EM AMBALAGENS ESPECIAIS	EMPACOTADORA  AUTOMATICA	1
+PAMQLQAU114	DGF 300/M - ENVASADORA SEMI-AUTOM. P/ LIQ. E PAST. 30-300ML C/ BICO MOVEL	ENVASADORA SEMI AUTOMATICA	1
+PAMQLQAU118	DGF/H 300 - ENVASADORA SEMI-AUT. P/ LIQ. E PAST. C/ MIXER HORIZ. 30-300ML	ENVASADORA SEMI AUTOMATICA	1
+PAMQLQAU046	APF500-2B - ENVASADORA AUTOM. 2 BICOS P/ LIQ./PAST. 50/500ML	ENVASADORA  AUTOMTICA	1
+PAMQLQAU065	ALF1000-2B - ENVASADORA AUTOM. 2 BICOS P/ LIQ. 100/1000ML	ENVASADORA  AUTOMTICA	1
+PAMQLQAU121	A3E- ENVASADORA POR PRESSAO MANUAL 100ML	ENVASADORA SEMI AUTOMATICA	1
+PAMQLQAU110	APF10000 - ENVASADORA DE BANCADA C/  BOMBA DE ROTOR -100ML-10 LITROS	ENVASADORA SEMI AUTOMATICA	1
+													
+ENVASADORAS														
+														
+Código	Descrição da Máquina	Tipo de Produto	Subtipo	Viscosidade/Densidade	Tipo de Embalagem	Volume Min	Volume Max	Produtividade	Obs (Produtividade)	Diâmetro Mínimo da boca do Frasco (mm)	Diâmetro Máximo da boca do Frasco (mm)	"Diâmetro do Frasco
+(mm)"	Altura do frasco (mm)	Tipo de Máquina
+PAMQLQAU038	HZK160 - ENVASADORA PERISTALTICA P/ LIQUIDOS VOL. 5-3500ML	Líquido	Espumante ou Não espumante	Baixa	Frasco/Saco	5 ml	3500 ml	2000 ml/min		Ø10	-	-	10-500	Semiautomática
+PAMQLQAU007	DGF 1000 - ENVASADORA SEMI-AUTOM. P/ LIQ. E PAST. 100-1000ML	Líquido/Pastoso	Espumante ou Não Espumante/Pastoso	Média	Frasco/Saco	100 ml	1000 ml	5-30 ciclos/min		Ø5	-	-	-	Semiautomática
+PAMQLQAU003	DGF 500 - ENVASADORA SEMI AUTOM. P/ LIQ. E PAST. 50-500ML	Líquido/Pastoso	Espumante ou Não Espumante/Pastoso	Média	Frasco/Saco	50 ml	500 ml	5-30 ciclos/min		Ø5	-	-	-	Semiautomática
+PAMQLQAU005	DGF 100 - ENVASADORA SEMI-AUTOM. P/ LIQ. E PAST. 10-100ML	Líquido/Pastoso	Espumante ou Não Espumante/Pastoso	Média	Frasco/Saco	10 ml	100 ml	5-30 ciclos/min		Ø5	-	-	-	Semiautomática
+PAMQLQAU108	A3- ENVASADORA POR PRESSAO MANUAL 50ML	Pastoso	Pastoso	Baixa	Frasco/Saco	5 ml	50 ml	1500 ml/min		Ø10	-	-	-	Manual
+PAACSLAU226	GENIUS 8 - ENVASADORA E CONTADORA ELETRONICA DE CAPSULAS	Cápsulas/Softgel/Comprimidos	Tamanho da cápsula: 00-5#	Baixa	Frasco	-	-	10-30 frascos/min		Ø10	Ø500	Ø9,5	40-270	Automática
+PAMQLQAU019	APF1000-4B - ENVASADORA AUTOM. 4 BICOS P/ LIQ./PAST. 100/1000ML	Líquido/Pastoso	Espumante ou Não Espumante/Pastoso	Média	Frasco	100 ml	1000 ml	15-35 ciclos/min (por bico)		Ø5	Ø15			Automática
+PAMQLQAU043	APF5000-4B - ENVASADORA AUTOM. 4 BICOS P/ LIQ./PAST. 1000/5000ML	Líquido/Pastoso	Espumante ou Não Espumante/Pastoso	Média	Frasco	1000 ml	5000 ml	15-35 ciclos/min (por bico)		Ø10	Ø35			Automática
+PAMQGPAU036	VSF-30S - ENVASADORA SEMIAUTOMATICA C/ ESCALA VOLUMETRICA P/ POS	Pó	Baixa Fluidez		Frasco	300 g	-	1600 frascos/hora	300 g/frasco	Ø50	Ø150	Ø14	100-600	Semiautomática
+PAMQLQAU044	APF100-2B - ENVASADORA AUTOM. 2 BICOS P/ LIQ./PAST. 5/100ML	Líquido/Pastoso	Espumante ou Não Espumante/Pastoso	Média	Frasco	5 ml	100 ml	15-35 ciclos/min (por bico)		Ø5	Ø15			Automática
+PAMQLQAU047	APF1000-2B - ENVASADORA AUTOM. 2 BICOS P/ LIQ./PAST. 100/1000ML	Líquido/Pastoso	Espumante ou Não Espumante/Pastoso	Média	Frasco	5 ml	100 ml	15-35 ciclos/min (por bico)		Ø5	Ø16			Automática
+PAMQLQAU053	APF1000-6B - ENVASADORA AUTOM. 6 BICOS P/ LIQ./PAST. 100/1000ML	Líquido/Pastoso	Espumante ou Não Espumante/Pastoso	Média	Frasco	5 ml	100 ml	15-35 ciclos/min (por bico)		Ø5	Ø17			Automática
+PAMQLQAU045	APF300-2B - ENVASADORA AUTOM. 2 BICOS P/ LIQ./PAST. 30/300ML	Líquido/Pastoso	Espumante ou Não Espumante/Pastoso	Média	Frasco	30 ml	300 ml	15-35 ciclos/min (por bico)		Ø5	Ø18			Automática
+PAMQLQAU040	APF300-4B - ENVASADORA AUTOM. 4 BICOS P/ LIQ./PAST. 30/300ML	Líquido/Pastoso	Espumante ou Não Espumante/Pastoso	Média	Frasco	30 ml	300 ml	15-35 ciclos/min (por bico)		Ø5	Ø19			Automática
+PAMQLQAU046	APF500-2B - ENVASADORA AUTOM. 2 BICOS P/ LIQ./PAST. 50/500ML	Líquido/Pastoso	Espumante ou Não Espumante/Pastoso	Média	Frasco	50 ml	500 ml	15-35 ciclos/min (por bico)		Ø5	Ø20			Automática
+PAMQLQAU041	APF500-4B - ENVASADORA AUTOM. 4 BICOS P/ LIQ./PAST. 50/500ML	Líquido/Pastoso	Espumante ou Não Espumante/Pastoso	Média	Frasco	50 ml	500 ml	15-35 ciclos/min (por bico)		Ø5	Ø21			Automática
+PAMQLQAU048	APF2500-2B - ENVASADORA AUTOM. 2 BICOS P/ LIQ./PAST. 300/2500ML	Líquido/Pastoso	Espumante ou Não Espumante/Pastoso	Média	Frasco	300 ml	2500 ml	15-35 ciclos/min (por bico)		Ø10	Ø35			Automática
+PAMQLQAU042	APF2500-4B - ENVASADORA AUTOM. 4 BICOS P/ LIQ./PAST. 300/2500ML	Líquido/Pastoso	Espumante ou Não Espumante/Pastoso	Média	Frasco	300 ml	2500 ml	15-35 ciclos/min (por bico)		Ø10	Ø36			Automática
+PAMQLQAU049	APF5000-2B - ENVASADORA AUTOM. 2 BICOS P/ LIQ./PAST. 1000/5000ML	Líquido/Pastoso	Espumante ou Não Espumante/Pastoso	Média	Frasco	1000 ml	5000 ml	15-35 ciclos/min (por bico)		Ø10	Ø37			Automática
+PAMQLQAU043	APF5000-4B - ENVASADORA AUTOM. 4 BICOS P/ LIQ./PAST. 1000/5000ML	Líquido/Pastoso	Espumante ou Não Espumante/Pastoso	Média	Frasco	1000 ml	5000 ml	15-35 ciclos/min (por bico)		Ø10	Ø38			Automática
+PAMQLQAU006	DGF 300 - ENVASADORA SEMI-AUTOM. P/ LIQ. E PAST. 30-300ML	Líquido/Pastoso	Espumante ou Não Espumante/Pastoso	Média	Frasco/Saco	30 ml	300 ml	5-30 ciclos/min		Ø5	-	-	-	Semiautomática
+PAMQLQAU008	DGF 2500 - ENVASADORA SEMI-AUTOM. P/ LIQ. E PAST. 300-2500ML	Líquido/Pastoso	Espumante ou Não Espumante/Pastoso	Média	Frasco/Saco	300 ml	2500 ml	5-30 ciclos/min		Ø10	-	-	-	Semiautomática
+PAMQLQAU009	DGF 5000 - ENVASADORA SEMI-AUTOM. P/ LIQ. E PAST. 500-5000ML 	Líquido/Pastoso	Espumante ou Não Espumante/Pastoso	Média	Frasco/Saco	500 ml	5000 ml	5-30 ciclos/min		Ø10	-	-	-	Semiautomática
+PAACSLAU146	GENIUS 2 - ENVASADORA E CONTADORA SEMI AUTOMATICA DE CAPSULAS	Cápsulas/Softgel/Comprimidos	Tamanho da cápsula: 00-5#	Baixa	Frasco	-	-	600-1500 cápsulas/min		Ø25	Ø75	Ø9,5	≤ 180	Semiautomática
+PAACSLAU223	GENIUS 16 - ENVASADORA E CONTADORA ELETRONICA P/ PROD. IRREGULARES	Cápsulas/Softgel/Comprimidos	Tamanho da cápsula: 00-5#	Baixa	Frasco	-	-	50-60 frascos/min		Ø10	Ø500		40-270	Automática
+PAMQGPAU037	VSF-30A - ENVASADORA AUTOM. P/ POS C/ ESCALA VOL. E  ESTEIRA TRANSP.	Pó	Baixa Fluidez		Frasco	10	5000 g	1-30 frascos/min		Ø24		Ø24-150	60-300	Automática
+PAMQGPAU079	VSF - ENVASADORA SEMI AUTOMATICA PARA POS	Pó	Baixa Fluidez		Frasco	1 g	20 g	2 - 20 frascos/min		Ø24	-	-	≤ 200	Semiautomática
+PAMQGPAU060	VSF-30AGII - ENVAS. AUTOM. P/ POS C/ ESCALA VOL. EST. TRANSP. C/ CONT. ALT.	Pó	Baixa Fluidez		Frasco	10 g	5000 g	2-20 frascos/min		Ø24		Ø24-150	60-300	Automática
+PAMQLQAU015	DGF2 100 - ENVASADORA SEMI-AUT. P/ LIQ/PAST. 10-100ML - 2 BICOS	Líquido/Pastoso	Espumante ou Não Espumante/Pastoso	Média	Frasco/Saco	10 ml (por bico)	100 ml (por bico)	5-30 ciclos/min (por bico)		Ø5	-	-	-	Semiautomática
+PAMQLQAU017	DGF2 300 - ENVASADORA SEMI-AUT. P/ LIQ-PAST. 30-300ML - 2 BICOS	Líquido/Pastoso	Espumante ou Não Espumante/Pastoso	Média	Frasco/Saco	30 ml (por bico)	300 ml (por bico)	5-30 ciclos/min (por bico)		Ø5	-	-	-	Semiautomática
+PAMQLQAU022	DGF2 500 ENVASADORA SEMI-AUTO. 2 BICOS 50-500ML	Líquido/Pastoso	Espumante ou Não Espumante/Pastoso	Média	Frasco/Saco	50 ml (por bico)	500 ml (por bico)	5-30 ciclos/min (por bico)		Ø5	-	-	-	Semiautomática
+PAMQLQAU016	DGF2 1000 - ENVASADORA SEMI-AUT. P/ LIQ-PAST. 100-1000ML - 2 BICOS	Líquido/Pastoso	Espumante ou Não Espumante/Pastoso	Média	Frasco/Saco	100 ml (por bico)	1000 ml (por bico)	5-30 ciclos/min (por bico)		Ø5	-	-	-	Semiautomática
+PAMQLQAU090	DGF2 2500 - ENVASADORA SEMI-AUT. P/ LIQ-PAST. 250-2500ML - 2 BICOS	Líquido/Pastoso	Espumante ou Não Espumante/Pastoso	Média	Frasco/Saco	300 ml (por bico)	2500 ml (por bico)	5-30 ciclos/min (por bico)		Ø10	-	-	-	Semiautomática
+PAMQLQAU091	DGF2 5000 - ENVASADORA SEMI-AUT. P/ LIQ-PAST. 500-5000ML - 2 BICOS	Líquido/Pastoso	Espumante ou Não Espumante/Pastoso	Média	Frasco/Saco	500 ml (por bico)	5000 ml (por bico)	5-30 ciclos/min (por bico)		Ø10	-	-	-	Semiautomática
+PAMQLQAU010	SYF 100 - ENVASADORA SEMI-AUT. P/  LIQUIDOS 10-100ML	Líquido	Espumante ou Não espumante	Média	Frasco/Saco	10 ml 	100 ml	5-30 ciclos/min 		Ø5	-	-	-	Semiautomática
+PAMQLQAU011	SYF 300 - ENVASADORA SEMI-AUT. P/  LIQUIDOS 30-300ML	Líquido	Espumante ou Não espumante	Média	Frasco/Saco	30 ml 	300 ml	5-30 ciclos/min 		Ø5	-	-	-	Semiautomática
+PAMQLQAU004	SYF 500 - ENVASADORA SEMI-AUT. P/  LIQUIDOS 50-500ML	Líquido	Espumante ou Não espumante	Média	Frasco/Saco	50 ml 	500 ml	5-30 ciclos/min 		Ø5	-	-	-	Semiautomática
+PAMQLQAU012	SYF 1000 - ENVASADORA SEMI-AUT. P/  LIQUIDOS 100-1000ML	Líquido	Espumante ou Não espumante	Média	Frasco/Saco	100 ml 	1000 ml	5-30 ciclos/min 		Ø5	-	-	-	Semiautomática
+PAMQLQAU013	SYF 2500 - ENVASADORA SEMI-AUT. P/  LIQUIDOS 300-2500ML	Líquido	Espumante ou Não espumante	Média	Frasco/Saco	300 ml 	2500 ml	5-30 ciclos/min 		Ø10	-	-	-	Semiautomática
+PAMQLQAU014	SYF 5000 - ENVASADORA SEMI-AUT. P/  LIQUIDOS 500-5000ML	Líquido	Espumante ou Não espumante	Média	Frasco/Saco	500 ml 	5000 ml	5-30 ciclos/min 		Ø10	-	-	-	Semiautomática
+PAMQLQAU089	SYF2 100 - ENVASADORA SEMI-AUT. P/  LIQUIDOS 10-100ML - 2 BICOS	Líquido	Espumante ou Não espumante	Média	Frasco/Saco	10 ml (por bico)	100 ml (por bico)	5-30 ciclos/min (por bico)		Ø5	-	-	-	Semiautomática
+PAMQLQAU018	SYF2 300 - ENVASADORA SEMI-AUT. P/  LIQUIDOS 30-300ML - 2 BICOS	Líquido	Espumante ou Não espumante	Média	Frasco/Saco	30 ml (por bico)	300 ml (por bico)	5-30 ciclos/min (por bico)		Ø5	-	-	-	Semiautomática
+PAMQLQAU021	SYF2 500 - ENVASADORA SEMI-AUT. P/  LIQUIDOS 50-500ML - 2 BICOS	Líquido	Espumante ou Não espumante	Média	Frasco/Saco	50 ml (por bico)	500 ml (por bico)	5-30 ciclos/min (por bico)		Ø5	-	-	-	Semiautomática
+PAMQLQAU020	SYF2 1000 - ENVASADORA SEMI-AUT. P/  LIQUIDOS 100-1000ML - 2 BICOS	Líquido	Espumante ou Não espumante	Média	Frasco/Saco	100 ml (por bico)	1000 ml (por bico)	5-30 ciclos/min (por bico)		Ø5	-	-	-	Semiautomática
+PAMQLQAU030	SYF2 2500 - ENVASADORA SEMI-AUT. P/  LIQUIDOS 250-2500ML - 2 BICOS	Líquido	Espumante ou Não espumante	Média	Frasco/Saco	300 ml (por bico)	2500 ml (por bico)	5-30 ciclos/min (por bico)		Ø10	-	-	-	Semiautomática
+PAMQLQAU107	A2 - ENVASADORA PNEUMATICA SEMI AUTOMATICA 	Pastoso	Pastoso	Baixa	Frasco/Saco	5 ml	50 ml	1500 ml/min		Ø10	-	-	-	Semiautomática
+PAMQLQAU059	ALF1000-4B - ENVASADORA AUTOM. 4 BICOS P/ LIQ. 100/1000ML	Líquido	Espumante ou Não espumante	Média	Frasco	100 ml (por bico)	1000 ml (por bico)	16-20 ciclos/min (por bico)		Ø5	Ø15			Automática
+PAMQLQAU065	ALF1000-2B - ENVASADORA AUTOM. 2 BICOS P/ LIQ. 100/1000ML	Líquido	Espumante ou Não espumante	Média	Frasco	100 ml (por bico)	1000 ml (por bico)	16-20 ciclos/min (por bico)		Ø5	Ø16			Automática
+PAMQLQAU058	ALF500-4B - ENVASADORA AUTOM. 4 BICOS P/ LIQ. 50/500ML	Líquido	Espumante ou Não espumante	Média	Frasco	50 ml (por bico)	500 ml (por bico)	16-20 ciclos/min (por bico)		Ø5	Ø17			Automática
+PAMQLQAU064	ALF500-2B - ENVASADORA AUTOM. 2 BICOS P/ LIQ. 50/500ML	Líquido	Espumante ou Não espumante	Média	Frasco	50 ml (por bico)	500 ml (por bico)	16-20 ciclos/min (por bico)		Ø5	Ø18			Automática
+PAMQLQAU118	DGF/H 300 - ENVASADORA SEMI-AUT. P/ LIQ. E PAST. C/ MIXER HORIZ. 30-300ML	Líquido/Pastoso	Espumante ou Não Espumante/Pastoso	Média	Frasco/Saco	30 ml	300 ml	5-30 ciclos/min		Ø5	-	-	-	Semiautomática
+PAMQLQAU110	APF10000 - ENVASADORA DE BANCADA C/  BOMBA DE ROTOR -100ML-10 LITROS	Líquido/Pastoso	Espumante ou Não Espumante/Pastoso	Alta	Frasco/Saco	100 ml	10000 ml	250 ml/s		Ø5	-	-	-	Semiautomática
+PAMQLQAU111	TLF600 - ENVASADORA DE 4 BICOS AUTOMATICA DE BANCADA	Líquido	Espumante ou Não espumante	Baixa	Frasco	50 ml (por bico)	500 ml (por bico)	15-25 frascos/min		Ø10	Ø100	≤ Ø100 mm	≤ 260 mm	Automática
+PAMQLQAU167	TLF600II - ENVASADORA DE 4 BICOS AUTOMATICA DE BANCADA	Líquido	Espumante ou Não espumante	Baixa	Frasco	5 ml (por bico)	4500 ml (por bico)	20-40 frascos/min		Ø8		≤ Ø80	50-300 mm	Automática
+														
+ESTEIRAS TRANSPORTADORAS						
+						
+Código	Descrição da Máquina	Tipo de Produto	"Largura do produto
+(mm)"	Produtividade	Área de Corte	Tipo de Máquina
+PAMQIPAU007	PAGINADORA ROTATIVA EM ACO INOX	Rótulos/Papéis/Embalagens	50-300	0—50 m/min	430 mm	Automática
+PAMQGPAU055	ALIMENTADOR ELEVADOR DE CANECAS P/ EMPACOTADORAS					
+PAMQESAU004	BC1.5M/200S ESTEIRA FIXA LONA ACO INOX C/ CONTR. VEL. - 150CMX25CMX75CM					
+PAMQESMN012	BC1M/W300P ESTEIRA TRASP. EM LONA 1M X 30CM LARG. C/ CONTROL. VELOC.					
+PAMQESMN016	BC2.5M/300S ESTEIRA TRASP. INOX EM LONA 2,5M X 30CM LARG. C/ CONTROL. VELOC.					
+PAMQESMN020	BC2.5M/W300P - ESTEIRA TRASP. EM LONA C2,5M X L30CM C/ CONTROL. VELOC.					
+PAMQESMN022	BC2.5M/W500P - ESTEIRA TRASP. EM LONA C2,5M X L50CM C/ CONTROL. VELOC.					
+PAMQESMN013	BC2.5M/W500S -  ESTEIRA TRASP. INOX  LONA C2,5M X L50CM/ACO INOX/CONTROL. VELOC.					
+PAMQESAU005	BTT1000 - MESA ACUMULADORA GIRATORIA 1000MM					
+PAMQESAU017	BTT900 - MESA ACUMULADORA GIRATORIA 900MM 					
+PAMQESMN011	ERC11M/D - ESTEIRA FLEXIVEL C/ ROLETES MOTORIZADOS					
+PAMQESMN004	ESTEIRA ARTICULADA RETA MODULAR					
+PAMQESMN021	ESTEIRA MOTORIZADA CURVA 90 GRAUS P/ TRANSP. DE FRASCOS					
+PAMQESMA006	ESTEIRA TRANSPORTADORA 1M C/ CONTROLE DE VELOC. P/ AUTOM.					
+PAMQESMA004	RC1M/D ESTEIRA TRANSPORTADORA COM ROLETES MOTORIZADA					
+PAMQESMA007	RC1M/DP ESTEIRA TRANSPORTADORA DE ROLETES 					
+PAMQESMA001	RC1M/V90-ESTEIRA TRANSP. DE CAIXAS C/ AJUSTE 90 GRAUS(220V)					
+PAMQESMA002	RC1M-ESTEIRA DE ROLETES LIVRES 1 M					
+PAMQESAU001	RC2M/D-ESTEIRA TRANSPORTE DE CAIXA COM MOTOR(220V)					
+PAMQESMA003	RC2M-ESTEIRA TRANSPORTE DE CAIXA					
+PAMQSLSA077	ZC7200- ALIMENTADOR ELEVADOR DE PRODUTOS TIPO "Z" 					
+													
+													
+														
+ESTEIRAS TRANSPORTADORAS						
+						
+Código	Descrição da Máquina	Tipo de Produto	"Largura do produto
+(mm)"	Produtividade	Área de Corte	Tipo de Máquina
+PAMQIPAU007	PAGINADORA ROTATIVA EM ACO INOX	Rótulos/Papéis/Embalagens	50-300	0—50 m/min	430 mm	Automática
+PAMQGPAU055	ALIMENTADOR ELEVADOR DE CANECAS P/ EMPACOTADORAS					
+PAMQESAU004	BC1.5M/200S ESTEIRA FIXA LONA ACO INOX C/ CONTR. VEL. - 150CMX25CMX75CM					
+PAMQESMN012	BC1M/W300P ESTEIRA TRASP. EM LONA 1M X 30CM LARG. C/ CONTROL. VELOC.					
+PAMQESMN016	BC2.5M/300S ESTEIRA TRASP. INOX EM LONA 2,5M X 30CM LARG. C/ CONTROL. VELOC.					
+PAMQESMN020	BC2.5M/W300P - ESTEIRA TRASP. EM LONA C2,5M X L30CM C/ CONTROL. VELOC.					
+PAMQESMN022	BC2.5M/W500P - ESTEIRA TRASP. EM LONA C2,5M X L50CM C/ CONTROL. VELOC.					
+PAMQESMN013	BC2.5M/W500S -  ESTEIRA TRASP. INOX  LONA C2,5M X L50CM/ACO INOX/CONTROL. VELOC.					
+PAMQESAU005	BTT1000 - MESA ACUMULADORA GIRATORIA 1000MM					
+PAMQESAU017	BTT900 - MESA ACUMULADORA GIRATORIA 900MM 					
+PAMQESMN011	ERC11M/D - ESTEIRA FLEXIVEL C/ ROLETES MOTORIZADOS					
+PAMQESMN004	ESTEIRA ARTICULADA RETA MODULAR					
+PAMQESMN021	ESTEIRA MOTORIZADA CURVA 90 GRAUS P/ TRANSP. DE FRASCOS					
+PAMQESMA006	ESTEIRA TRANSPORTADORA 1M C/ CONTROLE DE VELOC. P/ AUTOM.					
+PAMQESMA004	RC1M/D ESTEIRA TRANSPORTADORA COM ROLETES MOTORIZADA					
+PAMQESMA007	RC1M/DP ESTEIRA TRANSPORTADORA DE ROLETES 					
+PAMQESMA001	RC1M/V90-ESTEIRA TRANSP. DE CAIXAS C/ AJUSTE 90 GRAUS(220V)					
+PAMQESMA002	RC1M-ESTEIRA DE ROLETES LIVRES 1 M					
+PAMQESAU001	RC2M/D-ESTEIRA TRANSPORTE DE CAIXA COM MOTOR(220V)					
+PAMQESMA003	RC2M-ESTEIRA TRANSPORTE DE CAIXA					
+PAMQSLSA077	ZC7200- ALIMENTADOR ELEVADOR DE PRODUTOS TIPO "Z" 					
+														
+														
+MIXER ROTATIVO												
+												
+Código	Descrição da Máquina	Tipo de Produto	Volume (L)	Produtividade	Tipo de Máquina							
+PAMQSLSA027	MOTION V-100 - MIXER MODELO "V" PARA 100 LITROS	Pós secos e Grânulos secos	100	A depender da receita	Automática							
+PAMQSLSA130	MOTION V-1000 - MIXER “V” 1000 LITROS (INOX 316L PARTES DE CONTATO)	Pós secos e Grânulos secos	1000	A depender da receita	Automática							
+PAMQSLSA036	MOTION V-15 - MIXER MODELO "V" PARA 15 LITROS	Pós secos e Grânulos secos	15	A depender da receita	Automática							
+PAMQSLSA196	MOTION V-300 - MIXER MODELO "V" PARA 300 LITROS 	Pós secos e Grânulos secos	300	A depender da receita	Automática							
+PAMQSLSA086	MOTION V-500 - MIXER MODELO "V" PARA 500 LITROS	Pós secos e Grânulos secos	500	A depender da receita	Automática							
+PAMQSLSA126	TANQUE 500 LITROS C/ MIXER E SIST. DE VACUO P/ MISTURA HOMOGENIA	Pastosos	500	A depender da receita	Automática							
+PAMQSLSA099	TANQUE REATOR ABERTO ENCAMISADO 50L C/ MIXER E  CONTROLE DE INCLINACAO	Pastosos	50	A depender da receita	Automática							
+												
+												
+MOINHO TRITURADOR													
+													
+Código	Descrição da Máquina	Tipo de Produto	"Espessura do Produto
+(μm - mícron)"	Volume do Funil (L)	Produtividade	Tipo de Máquina							
+PAMQGPAU065	MC50 - MOINHO COLOIDAL	Pós e grãos	2-50 μm	3 L	10-15 kg/h	Semiautomática							
+PAMQGPAU066	MC80 - MOINHO COLOIDAL	Pós e grãos	2-50 μm	8 L	50-70 kg/h	Semiautomática							
+													
+													
+MONTADORA AUTOMÁTICAS DE CAIXAS														
+														
+Código	Descrição da Máquina	Produto	"Tamanho Mínimo da Caixa
+(mm)"	"Tamanho Máxima da Caixa
+(mm)"	"Largura da Fita
+(mm)"	Produtividade	Tipo de Máquina							
+PAMQCCAU007	CE16 - MONTADORA AUTOMATICA DE CAIXAS	Caixa de Papelão Desmontada	C 200 x L 200 x A 140	"C 500 x L 400 x A 350
+Caixa montada: C + L < 900
+Caixa desmontada: Metade de L + A < 500"	-	6-15 caixas/min	Automática							
+PAMQCCAU008	CES4035N/A MONTADORA DE CAIXAS C/ ALIM. PNEUMATICA	Caixa de Papelão Desmontada	C 200 x L 150 x A 100	C 500 x L 390 x A 350	48, 60 ou 75	10-14 caixas/min	Automática							
+PAMQCCAU004	CES4530N - MONTADORA AUTOMATICA DE CAIXAS DE PAPELAO	Caixa de Papelão Desmontada	C 200 x L 150 x A 100	C 500 x L 390 x A 350	50, 60 ou 75	10-14 caixas/min	Automática							
+PAMQCCAU023	CES5040V/A - MONTADORA AUTOMATICA DE CAIXAS DER PAPELAO	Caixa de Papelão Desmontada					Automática							
+PAMQCCAU011	MONTADORA DE CAIXAS - CONJ. CE16+AS323 - AUTOMATICO	Caixa de Papelão Desmontada	"CE16: C 200 x L 200 x A 140
+AS323: C 200 x L 150 x A 100
+
+Considerar medida para o conjunto: C 200 x L 200 A 140"	"CE16: C 500 x L 400 x A 350
+AS323: C 600 x L 500 x A 600
+
+Considerar medida para o conjunto: C 500 x L 400 x A 350"	36, 48, 50 ou 60	6-15 caixas/min	Automática							
+													
+													
+MONTADORA SEMIAUTOMÁTICA DE CAIXAS													
+													
+Código	Descrição da Máquina	"Tamanho Mínimo da Caixa
+(mm)"	"Tamanho Máxima da Caixa
+(mm)"	"Largura da Fita
+(mm)"	Produtividade	Tipo de Máquina							
+PAMQCCSA011	AS923B-FORMADORA DE FUNDO E SEL. PEUMT. CAIXAS DE PAPELAO(220V)	L 150 x A 120	C 500 x L 450 x A 570	36, 48, 50 ou 60	16 m/min	Semiautomática							
+													
+Prensa Rotativa para Comprimidos														
+														
+Código	Descrição da Máquina	Tipo de Produto	"Tamanho Máximo do Comprimido
+(mm)"	"Espessura Máxima do Comprimido
+(mm)"	Profundidade Máxima de Enchimento	Produtividade	Tipo de Máquina							
+PAMQSLSA131	FS 10 P - PRENSA AUTOMATICA ROTATIVA PARA COMPRIMIDOS	Pós secos					Automática							
+PAMQSLSA022	FS 15 M - PRENSA AUTOMATICA ROTATIVA PARA COMPRIMIDOS	Pós secos	Ø25	6	15	27.000 comprimidos/hora	Automática							
+PAMQSLSA051	FS 17M(F) - PRENSA ROTATIVA DE COMPRIMIDOS C/ SIST. ALIM. FORCADA	Pós secos	Ø20	6	15	40.000 comprimidos/hora	Automática							
+PAMQSLSA050	FS 23 GE PRO - COMPRESSORA PARA COMPRIMIDOS EFERVESCENTES	Pós secos (Comprimidos Efervescentes)	Ø27	7	17	85.000 comprimidos/hora	Automática							
+PAMQSLSA029	FS 5 P- PRENSA AUTOMATICA ROTATIVA PARA COMPRIMIDOS	Pós secos	Ø13	6	5	9.600 comprimidos/hora	Automática							
+PAMQSLSA037	FS 9 P- PRENSA AUTOMATICA ROTATIVA PARA COMPRIMIDOS	Pós secos	Ø13	6	15	17.280 comprimidos/hora	Automática							
+PAMQSLSA031	FS T420-31D PRENSA ROTATIVA AUT. P/ COMPRIMIDOS DUPLA COR	Pós secos (Comprimidos uma cor ou dupla cor)	Ø25	6	15	"130.000 comprimidos/hora
+65.000 comprimidos/hora (dupla cor)"	Automática							
+PAMQSLSA030	FS T420-31D PRENSA ROTATIVA AUTOMATICA PARA COMPRIMIDOS	Pós secos	Ø25	6	15	130.000 comprimidos/hora	Automática							
+PAMQSLSA127	FS420-29G PRENSA ROTATIVA AUTOMATICA P/ COMPRIMIDOS P/ ALTA COMPACTACAO	Pós secos	Ø20	12		60.900 comprimidos/hora	Automática							
+PAMQSLSA172	FS550-39G  PRENSA ROTATIVA AUTOMATICA P/ COMPRIMIDOS P/ ALTA COMPACTACAO	Pós secos	Ø24,8	8	18	150.000 comprimidos/hora	Automática							
+PAMQSLSA085	UHTF230 - POLIDORA E DESEMPOEIRADORA VERTICAL	Comprimidos	Ø3-Ø25	-	-	800.000 comprimidos/hora	Automática							
+PAMQSLSA097	UHTF30 - POLIDORA E DESEMPOEIRADORA DE COMPRIMIDOS	Comprimidos	Ø3-Ø10	-	-	55.000 comprimidos/hora	Automática							
+														
+														
+ROTULADORAS SEMIAUTOMÁTICA																	
+																	
+Código	Descrição da Máquina	Tipo de Produto	Embalagem	"Diâmetro Interno Mínimo da Bobina de Rótulo
+(mm)"	"Diâmetro Externo Máximo da Bobina de Rótulo
+(mm)"	"Comprimento do Rótulo
+(mm)"	"Largura do Rótulo
+(mm)"	Dimensão da Embalagem	Produtividade	Tipo de Máquina							
+PAMQIPMN095	MT150 - ROTULADORA SEMI AUTOMATICA PARA FRASCOS PLANOS	Rótulos	Frascos Planos	Ø75	"	Ø260"	30-150	30-150	C ilimitado x L 30-240	até 30 frascos/min	Semiautomática							
+PAMQIPMN034	MT50 - ROTULADORA ELETRICA MANUAL	Rótulos	Frascos Cilíndricos	Ø70	"	Ø250"	50-290	50-150	Ø18-Ø150	até 30 frascos/min	Manual							
+PAMQIPMN035	MT50/P - ROTULADORA ELETRICA MANUAL COM DATADOR	Rótulos	Frascos Cilíndricos	Ø70	"	Ø250"	50-290	50-150	Ø18-Ø150	até 30 frascos/min	Manual							
+PAMQIPMN079	RL30 ROTULADORA MANUAL P/ FRASCOS CILINDRICOS	Rótulos	Frascos Cilíndricos	Ø75	"	Ø180"	10-300	10-110	Ø15-Ø120	até 30 frascos/min	Manual							
+PAMQIPMN107	ALB512 - ROTULADORA SEMI AUTOMATICAS PARA LACRES	Rótulos Lacres	Caixas de Papelão	Ø75	"	Ø200"	45	22	C 45 x L 30	até 90 frascos/min	Semiautomática							
+																	
+SELADORA POR INDUCAO AUTOMÁTICA						
+						
+Código	Descrição da Máquina	Tipo de Produto	Produtividade (m/min)	Diâmetro de selagem (mm)	Altura do produto (mm)	Tipo de Máquina
+PAMQSLSA019	FL1500A - SELADORA CONTINUA POR INDUCAO-ACO PINTADO - 220V	Frascos Plásticos	0-10	Ø20-50	40-200	AUTOMÁTICA
+PAMQSLSA001	FL1500S - SELADORA POR INDUCAO ACO INOX(220V)	Frascos Plásticos	0-10	Ø20-50	40-200	AUTOMÁTICA
+PAMQSLSA068	FL2000A - SELADORA POR INDUCAO(220V) PINTADA	Frascos Plásticos	2-12	Ø20-130	40-300	AUTOMÁTICA
+PAMQSLSA069	FL2000B - SELADORA POR INDUCAO MODELO DE PISO(220V)	Frascos Plásticos	2-12	Ø40-390	40-200	AUTOMÁTICA
+PAMQSLSA052	FL2000S - SELADORA POR INDUCAO ACO INOX(220V)	Frascos Plásticos	2-12	Ø20-130	40-200	AUTOMÁTICA
+PAMQSLAU081	FL3000A - SELADORA DE INDUCAO REFRIGERADA A AGUA	Frascos Plásticos	0-300 frascos/min	Ø15-120		AUTOMÁTICA
+																	
+																	
+TÚNEL DE ENCOLHIMENTO																
+																
+Código	Descrição da Máquina	Tipo de Plástico	Material da Embalagem	"Comprimento Máximo do Produto
+(mm)"	"Largura Máxima do Produto
+(mm)"	"Altura Máxima do Produto
+(mm)"	Peso máximo de carga	Produtividade	Tipo de Máquina							
+PAMQSLSA032	HWS650 - TANQUE DE ENCOLHIMENTO POR IMERSAO 	Plásticos termoencolhíveis	PVC/PP/POF/OUTROS	570	420	200	50 Kg	Depende do tempo de operação	Automática/Manual							
+																
+TÚNEL DE ENCOLHIMENTO															
+															
+Código	Descrição da Máquina	Tipo de Plástico	Material da Embalagem	"Largura Máxima do Produto
+(mm)"	"Altura Máxima do Produto
+(mm)"	Peso máximo de carga	Produtividade	Tipo de Máquina							
+PAMQSLTU087	BS-20 - TUNEL DE ENCOLHIMENTO 220V/60HZ,1 FASE	Plásticos termoencolhíveis	PVC/PP/POF/OUTROS	150	100	5 kg	9 m/min	Automática							
+PAMQSLTU073	BS-8030L TUNEL DE ENCOLHIMENTO P/ EMBALAR 220V/60HZ/3F	Plásticos termoencolhíveis	PVC/PP/POF/OUTROS	650	230	80 kg	10 m/min	Automática							
+PAMQSLTU072	BS-8030L TUNEL DE ENCOLHIMENTO P/ EMBALAR 380V/60HZ/3F	Plásticos termoencolhíveis	PVC/PP/POF/OUTROS	650	230	80 kg	10 m/min	Automática							
+PAMQSLTU070	BS-4535LA TUNEL DE ENCOLH. C/ ESTEIRA EM ROLOS - 380V/60HZ,3F	Plásticos termoencolhíveis	PVC/PP/POF/OUTROS	400	300	10 kg	0- 10 m/min	Automática							
+PAMQSLTU069	BS-6535LA TUNEL DE ENCOLH. C/ ESTEIRA EM ROLOS - 380V/60HZ,3F	Plásticos termoencolhíveis	PVC/PP/POF/OUTROS	600	300	30 kg	0-10 m/min	Automática							
+PAMQSLTU057	BS2450S- PLUS - TUNEL PARA SLEEVE A VAPOR EM ACO INOX	Sleeve termoencolhíveis	PVC/PET/OPS	240	450	10 kg	3000 frascos/hora	Automática							
+PAMQSLTU035	BS-6535LA TUNEL DE ENCOLH. C/ ESTEIRA EM ROLOS - 220V/60HZ,3F	Plásticos termoencolhíveis	PVC/PP/POF/OUTROS	600	300	30 kg	0-10 m/min	Automática							
+PAMQSLTU034	BS-4535LA TUNEL DE ENCOLH. C/ ESTEIRA EM ROLOS - 220V/60HZ,3F	Plásticos termoencolhíveis	PVC/PP/POF/OUTROS	400	300	10 kg	0- 10 m/min	Automática							
+PAMQSLTU033	BS-4525A TUNEL DE ENCOLH. C/ ESTEIRA EM ROLOS - 220V/60HZ,1F	Plásticos termoencolhíveis	PVC/PP/POF/OUTROS	400	200	10 kg	0- 10 m/min	Automática							
+PAMQSLTU032	BS-3020A TUNEL DE ENCOLH. C/ ESTEIRA EM ROLOS - 220V/60HZ,1F	Plásticos termoencolhíveis	PVC/PP/POF/OUTROS	250	150	10 kg	0-10 m/min	Automática							
+PAMQSLTU031	BSD450B - TUNEL DE ENCOLHIMENTO P/ EMBALAR - 380V	Plásticos termoencolhíveis	PVC/PP/POF/OUTROS	400	200	10 kg	0-10 m/min	Automática							
+PAMQSLTU028	BSD1535P - TUNEL DE ENCOLHIMENTO P/ ROTULOS(220V) (PINTADO)	Sleeve termoencolhíveis	PVC/PET/OPS	150	300	5 kg	0-4 m/min	Automática							
+PAMQSLTU027	BSD1535ST- TUNEL DE ENCOLHIMENTO A VAPOR P/ ROTULOS SLEEV	Sleeve termoencolhíveis	PVC/PET/OPS	100	300	5 kg	30 m/min	Automática							
+PAMQSLTU018	BSD450B - TUNEL DE ENCOLHIMENTO P/ EMBALAR(220V)	Plásticos termoencolhíveis	PVC/PP/POF/OUTROS	400	200	10 kg	0-10 m/min	Automática							
+PAMQSLTU017	BSD400B - TUNEL DE ENCOLHIMENTO P/ EMBALAR(220V)	Plásticos termoencolhíveis	PVC/PP/POF/OUTROS	350	150	5 kg	0-10 m/min	Automática							
+PAMQSLTU016	BSD350B- TUNEL DE ENCOLHIMENTO P/ EMBALAR(220V)	Plásticos termoencolhíveis	PVC/PP/POF/OUTROS	300	100	5 kg	0-10 m/min	Automática							
+PAMQSLTU012	BSD4525A-TUNEL DE ENCOLHIMENTO P/ EMBALAR(220/380V)	Plásticos termoencolhíveis	PVC/PP/POF/OUTROS	400	200	25 kg	0-15 m/min	Automática							
+PAMQSLTU011	BSD4020A-TUNEL DE ENCOLHIMENTO P/ EMBALAR(380/220V)	Plásticos termoencolhíveis	PVC/PP/POF/OUTROS	350	160	25 kg	0-15 m/min	Automática							
+PAMQSLTU010	BSD1535S-TUNEL DE ENCOLHIMENTO P/ROTULOS(220V) (INOX)	Sleeve termoencolhíveis	PVC/PET/OPS	150	300	5 kg	0-4 m/min	Automática							
+																

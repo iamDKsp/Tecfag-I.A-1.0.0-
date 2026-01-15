@@ -1,0 +1,7 @@
+A técnica SPICED é um framework de vendas que ajuda os vendedores a entenderem a fundo as necessidades do cliente por meio de cinco etapas: Situação, Problemas, Impacto, Crítico (Eventos Críticos) e Decisão. O objetivo é focar em uma abordagem consultiva, acelerar o ciclo de vendas e qualificar melhor os leads em ambientes de vendas complexos, como o B2B. 
+As etapas do framework SPICED
+Situação (Situation): Entender o contexto atual do cliente, sua realidade e o que já está sendo feito.
+Problemas (Pain): Identificar as dores, desafios ou problemas que o cliente enfrenta e que a solução pode resolver.
+Impacto (Impact): Avaliar qual será o impacto e o benefício da sua solução para resolver esses problemas, mostrando o valor e o retorno sobre o investimento (ROI).
+Crítico (Critical Event): Identificar eventos críticos que podem acelerar ou adiar a decisão de compra, como prazos, mudanças no mercado ou uma nova legislação.
+Decisão (Decision): Compreender o processo de decisão do cliente, quem está envolvido na compra e quais são os critérios que o levarão a decidir. 

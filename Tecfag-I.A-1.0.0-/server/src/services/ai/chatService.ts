@@ -5,10 +5,13 @@ import { analyzeQuery, generateAggregationPrompt, QueryAnalysis } from './queryA
 import { multiQuerySearch, groupChunksByDocument, formatGroupedContext } from './multiQueryRAG';
 import Groq from 'groq-sdk';
 
+// Gemini 2.5 Flash como provider principal, Groq como fallback
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || '');
 const groq = new Groq({ apiKey: process.env.GROQ_API_KEY || 'dummy' });
 
-const AI_PROVIDER = process.env.AI_PROVIDER || 'gemini';
+// Modelo principal: Gemini 2.5 Flash
+const GEMINI_MODEL = 'gemini-2.5-flash';
+const GROQ_MODEL = 'llama-3.3-70b-versatile';
 
 export interface ChatMessage {
     role: 'user' | 'assistant';
@@ -82,7 +85,7 @@ export async function answerQuestion(
     userProfile?: UserProfile
 ): Promise<ChatResponse> {
     try {
-        console.log(`[ChatService] Processing question: ${question.substring(0, 50)}... (Mode: ${mode}, Provider: ${AI_PROVIDER})`);
+        console.log(`[ChatService] Processing question: ${question.substring(0, 50)}... (Mode: ${mode}, Provider: Gemini 2.5 Flash)`);
 
         // ═══════════════════════════════════════════════════════════════
         // ADVANCED RAG: Step 1 - Analyze the query to determine strategy
@@ -366,33 +369,76 @@ ${tableInstruction}`;
 
 Elabore uma resposta completa baseada nos documentos acima.`;
 
-        // 5. Generate response based on provider
+        // 5. Generate response - Gemini 2.5 Flash primary, Groq fallback
         let response: string = "";
         let tokenUsage: ChatResponse['tokenUsage'] = undefined;
+        let usedFallback = false;
 
-        if (AI_PROVIDER === 'groq') {
+        // Build messages for Gemini
+        const geminiMessages = [
+            { role: 'user', parts: [{ text: systemPrompt }] },
+            { role: 'model', parts: [{ text: `Entendido. Modo ${mode} ativado.` }] },
+            ...chatHistory.slice(-6).map(msg => ({
+                role: msg.role === 'user' ? 'user' : 'model',
+                parts: [{ text: msg.content }]
+            })),
+            { role: 'user', parts: [{ text: userPrompt }] }
+        ];
+
+        try {
+            // PRIMARY: Gemini 2.5 Flash
+            const model = genAI.getGenerativeModel({ model: GEMINI_MODEL });
+
+            console.log(`[ChatService] Requesting completion from Gemini 2.5 Flash...`);
+            const result = await model.generateContent({
+                contents: geminiMessages as any,
+                generationConfig: {
+                    temperature: 0.3,
+                    maxOutputTokens: 12000
+                }
+            });
+
+            response = result.response.text();
+
+            // Capture token usage from Gemini
+            const usageMetadata = result.response.usageMetadata;
+            if (usageMetadata) {
+                tokenUsage = {
+                    inputTokens: usageMetadata.promptTokenCount || 0,
+                    outputTokens: usageMetadata.candidatesTokenCount || 0,
+                    totalTokens: usageMetadata.totalTokenCount || 0,
+                    model: GEMINI_MODEL,
+                };
+                console.log(`[ChatService] ✅ Gemini 2.5 Flash - Token usage: ${tokenUsage.totalTokens} total (${tokenUsage.inputTokens} in, ${tokenUsage.outputTokens} out)`);
+            }
+
+        } catch (geminiError: any) {
+            // FALLBACK: Groq (Llama 3.3 70B)
+            console.warn(`[ChatService] ⚠️ Gemini error: ${geminiError.message}. Switching to Groq fallback...`);
+            usedFallback = true;
+
             try {
-                // Construct messages for Groq (OpenAI compatible format)
                 const groqMessages: any[] = [
                     { role: 'system', content: systemPrompt },
-                    ...chatHistory.slice(-4).map(msg => ({ // Limit history for speed/context
-                        role: msg.role === 'assistant' ? 'assistant' : 'user', // Map 'model' to 'assistant' if needed, but our interface uses 'assistant'
+                    ...chatHistory.slice(-4).map(msg => ({
+                        role: msg.role === 'assistant' ? 'assistant' : 'user',
                         content: msg.content
                     })),
                     { role: 'user', content: userPrompt }
                 ];
 
-                console.log('[ChatService] Requesting completion from Groq (Llama 3.3 70B)...');
+                console.log('[ChatService] Requesting completion from Groq (Llama 3.3 70B) as fallback...');
 
                 const completion = await groq.chat.completions.create({
                     messages: groqMessages,
-                    model: "llama-3.3-70b-versatile", // Or llama-3.1-70b-versatile
+                    model: GROQ_MODEL,
                     temperature: 0.3,
                     max_tokens: 4096,
                     top_p: 0.9,
                 });
 
                 response = completion.choices[0]?.message?.content || "";
+                response += '\n\n*(Backup: Groq Llama 3.3)*';
 
                 // Capture token usage from Groq
                 if (completion.usage) {
@@ -400,82 +446,14 @@ Elabore uma resposta completa baseada nos documentos acima.`;
                         inputTokens: completion.usage.prompt_tokens || 0,
                         outputTokens: completion.usage.completion_tokens || 0,
                         totalTokens: completion.usage.total_tokens || 0,
-                        model: 'llama-3.3-70b-versatile',
+                        model: GROQ_MODEL + ' (fallback)',
                     };
-                    console.log(`[ChatService] Token usage: ${tokenUsage.totalTokens} total (${tokenUsage.inputTokens} in, ${tokenUsage.outputTokens} out)`);
+                    console.log(`[ChatService] ✅ Groq Fallback - Token usage: ${tokenUsage.totalTokens} total`);
                 }
 
-            } catch (error: any) {
-                console.error('[ChatService] Groq Error:', error);
-                throw new Error(`Groq API Error: ${error.message}`);
-            }
-
-        } else {
-            // GEMINI IMPLEMENTATION (Fallback or Primary if configured)
-            // Include chat history for context
-            const messages = [
-                { role: 'user', parts: [{ text: systemPrompt }] },
-                { role: 'model', parts: [{ text: `Entendido. Modo ${mode} ativado.` }] },
-                ...chatHistory.slice(-6).map(msg => ({
-                    role: msg.role === 'user' ? 'user' : 'model',
-                    parts: [{ text: msg.content }]
-                })),
-                { role: 'user', parts: [{ text: userPrompt }] }
-            ];
-
-            try {
-                // Corrected model names
-                const modelPro = genAI.getGenerativeModel({
-                    model: 'gemini-1.5-pro', // Fixed name
-                });
-
-                console.log('[ChatService] Requesting completion from Gemini 1.5 Pro...');
-                const resultPro = await modelPro.generateContent({
-                    contents: messages as any, // Simple generation often works better than chat session for RAG one-shots
-                    generationConfig: {
-                        temperature: 0.3,
-                        maxOutputTokens: 12000
-                    }
-                });
-
-                response = resultPro.response.text();
-
-                // Capture token usage from Gemini
-                const usageMetadata = resultPro.response.usageMetadata;
-                if (usageMetadata) {
-                    tokenUsage = {
-                        inputTokens: usageMetadata.promptTokenCount || 0,
-                        outputTokens: usageMetadata.candidatesTokenCount || 0,
-                        totalTokens: usageMetadata.totalTokenCount || 0,
-                        model: 'gemini-1.5-pro',
-                    };
-                    console.log(`[ChatService] Token usage: ${tokenUsage.totalTokens} total (${tokenUsage.inputTokens} in, ${tokenUsage.outputTokens} out)`);
-                }
-
-            } catch (error: any) {
-                if (error.message.includes('429') || error.message.includes('Quota')) {
-                    console.warn('[ChatService] ⚠️ Pro quota exceeded. Trying Flash.');
-                    const modelFlash = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
-                    const resultFlash = await modelFlash.generateContent({
-                        contents: messages as any
-                    });
-                    response = resultFlash.response.text();
-                    response += '\n\n*(Backup: Gemini Flash)*';
-
-                    // Capture token usage from Gemini Flash
-                    const usageMetadataFlash = resultFlash.response.usageMetadata;
-                    if (usageMetadataFlash) {
-                        tokenUsage = {
-                            inputTokens: usageMetadataFlash.promptTokenCount || 0,
-                            outputTokens: usageMetadataFlash.candidatesTokenCount || 0,
-                            totalTokens: usageMetadataFlash.totalTokenCount || 0,
-                            model: 'gemini-1.5-flash',
-                        };
-                        console.log(`[ChatService] Token usage (Flash): ${tokenUsage.totalTokens} total`);
-                    }
-                } else {
-                    throw error;
-                }
+            } catch (groqError: any) {
+                console.error('[ChatService] ❌ Both Gemini and Groq failed:', groqError);
+                throw new Error(`AI providers unavailable: Gemini (${geminiError.message}), Groq (${groqError.message})`);
             }
         }
 
@@ -534,17 +512,20 @@ Apenas as perguntas, uma por linha.`;
 
         let questionsText = "";
 
-        if (AI_PROVIDER === 'groq') {
+        // Use Gemini 2.5 Flash for suggestions (faster, simpler query)
+        try {
+            const model = genAI.getGenerativeModel({ model: GEMINI_MODEL });
+            const result = await model.generateContent(prompt);
+            questionsText = result.response.text();
+        } catch (geminiError: any) {
+            // Fallback to Groq
+            console.warn('[ChatService] Gemini failed for suggestions, using Groq fallback');
             const completion = await groq.chat.completions.create({
                 messages: [{ role: 'user', content: prompt }],
-                model: "llama-3.3-70b-versatile",
+                model: GROQ_MODEL,
                 temperature: 0.5,
             });
             questionsText = completion.choices[0]?.message?.content || "";
-        } else {
-            const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
-            const result = await model.generateContent(prompt);
-            questionsText = result.response.text();
         }
 
         const questions = questionsText

@@ -12,7 +12,7 @@ import {
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
 import { cn } from "@/lib/utils";
-import { chatApi } from "@/lib/api";
+import { chatApi, ArchivedChatSummary } from "@/lib/api";
 import { useAuth } from "@/contexts/AuthContext";
 import { useChatSound } from "@/hooks/useSound";
 import ArchivedChatsList from "./ArchivedChatsList";
@@ -89,8 +89,24 @@ const ChatTab = () => {
   const [currentArchivedChatTitle, setCurrentArchivedChatTitle] = useState("");
   const [shouldLoadHistory, setShouldLoadHistory] = useState(true);
   const [isPreferencesOpen, setIsPreferencesOpen] = useState(false);
+  const [recentArchives, setRecentArchives] = useState<ArchivedChatSummary[]>([]);
+  const [isLoadingRecent, setIsLoadingRecent] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const abortControllerRef = useRef<AbortController | null>(null);
+
+  // Fetch recent archived chats for hover preview
+  const fetchRecentArchives = async () => {
+    if (recentArchives.length > 0) return; // Already loaded
+    setIsLoadingRecent(true);
+    try {
+      const response = await chatApi.getArchivedChats();
+      setRecentArchives(response.archives.slice(0, 5));
+    } catch (error) {
+      console.error("Error fetching recent archives:", error);
+    } finally {
+      setIsLoadingRecent(false);
+    }
+  };
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -335,7 +351,26 @@ const ChatTab = () => {
     }
   };
 
-  const handleViewArchives = () => {
+  const handleViewArchives = async () => {
+    // Auto-save current chat before viewing archives
+    const messagesToArchive = messages.filter(m => m.id !== "welcome");
+    if (messagesToArchive.length > 0) {
+      try {
+        await chatApi.archiveChat();
+        // Reset to welcome message after archiving
+        setShouldLoadHistory(false);
+        setMessages([{
+          id: "welcome",
+          role: "assistant",
+          content: getWelcomeMessage(chatMode),
+          timestamp: formatTime(new Date()),
+        }]);
+        // Reset recent archives to force reload
+        setRecentArchives([]);
+      } catch (err) {
+        console.error("Auto-archive error:", err);
+      }
+    }
     setViewMode("archived-list");
   };
 
@@ -520,15 +555,44 @@ const ChatTab = () => {
             </div>
             {viewMode === "active" && (
               <div className="flex items-center gap-2">
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  onClick={handleViewArchives}
-                  className="text-white/60 hover:text-white hover:bg-white/10"
-                  title="Ver chats arquivados"
-                >
-                  <History className="w-5 h-5" />
-                </Button>
+                <HoverCard onOpenChange={(open) => open && fetchRecentArchives()}>
+                  <HoverCardTrigger asChild>
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      onClick={handleViewArchives}
+                      className="text-white/60 hover:text-white hover:bg-white/10"
+                      title="Ver chats arquivados"
+                    >
+                      <History className="w-5 h-5" />
+                    </Button>
+                  </HoverCardTrigger>
+                  <HoverCardContent className="w-64 bg-[#1a1a1a] border-white/10 text-white p-3 z-50">
+                    <h4 className="text-xs font-semibold mb-2 text-white/90 uppercase tracking-wider">
+                      Chats Recentes
+                    </h4>
+                    {isLoadingRecent ? (
+                      <div className="flex justify-center py-2">
+                        <Loader2 className="w-4 h-4 animate-spin text-white/50" />
+                      </div>
+                    ) : recentArchives.length === 0 ? (
+                      <p className="text-xs text-white/50">Nenhum chat arquivado</p>
+                    ) : (
+                      <ul className="space-y-1">
+                        {recentArchives.map((archive) => (
+                          <li key={archive.id}>
+                            <button
+                              onClick={() => handleSelectArchive(archive.id)}
+                              className="w-full text-left text-xs text-white/70 hover:text-white hover:bg-white/10 px-2 py-1.5 rounded transition-colors truncate"
+                            >
+                              {archive.title}
+                            </button>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </HoverCardContent>
+                </HoverCard>
                 <Button
                   variant="ghost"
                   size="icon"

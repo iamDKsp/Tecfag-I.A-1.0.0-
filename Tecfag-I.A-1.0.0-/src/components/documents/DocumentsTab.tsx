@@ -1,11 +1,12 @@
-import { useState, useEffect, useMemo } from "react";
-import { FileStack, Info, FolderInput } from "lucide-react";
+import { useState, useEffect, useMemo, useRef } from "react";
+import { FileStack, Info, FolderInput, Search, CheckSquare, X, Trash2, Download, FolderInput as MoveIcon } from "lucide-react";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { DocumentUpload } from "@/components/ai/DocumentUpload";
 import { DocumentList } from "@/components/ai/DocumentList";
 import { Skeleton } from "@/components/ui/skeleton";
 import { DocumentFolderSidebar } from "./DocumentFolderSidebar";
 import { documentsApi, type DocumentFolder } from "@/lib/api";
+import { Input } from "@/components/ui/input";
 import {
     DropdownMenu,
     DropdownMenuContent,
@@ -40,6 +41,16 @@ const DocumentsTab = () => {
     const [folders, setFolders] = useState<DocumentFolder[]>([]);
     const [selectedFolderId, setSelectedFolderId] = useState<string | null>(null);
     const [loading, setLoading] = useState(true);
+
+    // Search state
+    const [searchQuery, setSearchQuery] = useState("");
+
+    // Multi-select state
+    const [selectionMode, setSelectionMode] = useState(false);
+    const [selectedIds, setSelectedIds] = useState<string[]>([]);
+
+    // Ref for auto-scroll
+    const documentsListRef = useRef<HTMLDivElement>(null);
 
     const loadDocuments = async () => {
         try {
@@ -79,13 +90,42 @@ const DocumentsTab = () => {
         loadAll();
     }, []);
 
-    // Filter documents based on selected folder
+    // Filter documents based on selected folder AND search query
     const filteredDocuments = useMemo(() => {
-        if (selectedFolderId === null) {
-            return documents; // Show all documents
+        let result = documents;
+
+        // Filter by folder
+        if (selectedFolderId !== null) {
+            result = result.filter(doc => doc.folderId === selectedFolderId);
         }
-        return documents.filter(doc => doc.folderId === selectedFolderId);
-    }, [documents, selectedFolderId]);
+
+        // Filter by search query
+        if (searchQuery.trim()) {
+            const query = searchQuery.toLowerCase();
+            result = result.filter(doc =>
+                doc.fileName.toLowerCase().includes(query)
+            );
+        }
+
+        return result;
+    }, [documents, selectedFolderId, searchQuery]);
+
+    // Handle folder selection with auto-scroll
+    const handleSelectFolder = (folderId: string | null) => {
+        setSelectedFolderId(folderId);
+        setSearchQuery(""); // Clear search when changing folders
+        setSelectedIds([]); // Clear selection when changing folders
+
+        // Auto-scroll to documents list when a folder is selected
+        if (folderId !== null && documentsListRef.current) {
+            setTimeout(() => {
+                documentsListRef.current?.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }, 100);
+        }
+    };
 
     const handleDelete = async (id: string) => {
         if (!confirm('Tem certeza que deseja deletar este documento?')) {
@@ -169,6 +209,69 @@ const DocumentsTab = () => {
         }
     };
 
+    // === BULK ACTIONS ===
+
+    const handleBulkDelete = async () => {
+        if (selectedIds.length === 0) return;
+
+        if (!confirm(`Tem certeza que deseja deletar ${selectedIds.length} documento(s)?`)) {
+            return;
+        }
+
+        try {
+            for (const id of selectedIds) {
+                await fetch(`/api/documents/${id}`, {
+                    method: 'DELETE',
+                    headers: {
+                        'Authorization': `Bearer ${localStorage.getItem('auth_token')}`
+                    }
+                });
+            }
+            setSelectedIds([]);
+            setSelectionMode(false);
+            loadAll();
+        } catch (error) {
+            console.error('Error bulk deleting:', error);
+            alert('Erro ao deletar documentos');
+        }
+    };
+
+    const handleBulkDownload = async () => {
+        if (selectedIds.length === 0) return;
+
+        for (const id of selectedIds) {
+            const doc = documents.find(d => d.id === id);
+            if (doc) {
+                await handleDownload(id, doc.fileName);
+                // Small delay between downloads
+                await new Promise(resolve => setTimeout(resolve, 500));
+            }
+        }
+    };
+
+    const handleBulkMove = async (folderId: string | null) => {
+        if (selectedIds.length === 0) return;
+
+        try {
+            for (const id of selectedIds) {
+                await documentsApi.moveDocument(id, folderId);
+            }
+            setSelectedIds([]);
+            setSelectionMode(false);
+            loadAll();
+        } catch (error) {
+            console.error('Error bulk moving:', error);
+            alert('Erro ao mover documentos');
+        }
+    };
+
+    const toggleSelectionMode = () => {
+        setSelectionMode(!selectionMode);
+        if (selectionMode) {
+            setSelectedIds([]);
+        }
+    };
+
     // Create a custom action renderer for move to folder
     const renderMoveAction = (doc: Document) => {
         return (
@@ -214,7 +317,7 @@ const DocumentsTab = () => {
             {/* Folder Sidebar */}
             <DocumentFolderSidebar
                 selectedFolderId={selectedFolderId}
-                onSelectFolder={setSelectedFolderId}
+                onSelectFolder={handleSelectFolder}
                 onFolderChange={loadAll}
                 folders={folders}
             />
@@ -260,20 +363,117 @@ const DocumentsTab = () => {
                     </Card>
 
                     {/* Documents List */}
-                    <Card>
+                    <Card ref={documentsListRef}>
                         <CardHeader>
-                            <CardTitle>
-                                {selectedFolderName === "Todos"
-                                    ? `Todos os Documentos (${documents.length})`
-                                    : `📂 ${selectedFolderName} (${filteredDocuments.length})`
-                                }
-                            </CardTitle>
-                            <CardDescription>
-                                {selectedFolderId
-                                    ? "Documentos nesta pasta. Use o botão 'Mover' para reorganizar."
-                                    : "Visualize e gerencie todos os documentos disponíveis para a I.A"
-                                }
-                            </CardDescription>
+                            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                                <div>
+                                    <CardTitle>
+                                        {selectedFolderName === "Todos"
+                                            ? `Todos os Documentos (${filteredDocuments.length})`
+                                            : `📂 ${selectedFolderName} (${filteredDocuments.length})`
+                                        }
+                                    </CardTitle>
+                                    <CardDescription>
+                                        {selectedFolderId
+                                            ? "Documentos nesta pasta. Use o botão 'Mover' para reorganizar."
+                                            : "Visualize e gerencie todos os documentos disponíveis para a I.A"
+                                        }
+                                    </CardDescription>
+                                </div>
+
+                                {/* Search and Selection Toggle */}
+                                <div className="flex items-center gap-2">
+                                    {/* Search Input */}
+                                    <div className="relative">
+                                        <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+                                        <Input
+                                            placeholder="Buscar documento..."
+                                            value={searchQuery}
+                                            onChange={(e) => setSearchQuery(e.target.value)}
+                                            className="pl-9 w-64"
+                                        />
+                                        {searchQuery && (
+                                            <button
+                                                onClick={() => setSearchQuery("")}
+                                                className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
+                                            >
+                                                <X className="w-4 h-4" />
+                                            </button>
+                                        )}
+                                    </div>
+
+                                    {/* Selection Mode Toggle */}
+                                    <Button
+                                        variant={selectionMode ? "default" : "outline"}
+                                        size="sm"
+                                        onClick={toggleSelectionMode}
+                                        className="gap-2"
+                                    >
+                                        <CheckSquare className="w-4 h-4" />
+                                        {selectionMode ? "Cancelar" : "Selecionar"}
+                                    </Button>
+                                </div>
+                            </div>
+
+                            {/* Bulk Actions Bar (when items selected) */}
+                            {selectionMode && selectedIds.length > 0 && (
+                                <div className="mt-4 flex items-center gap-3 p-3 bg-primary/10 rounded-lg border border-primary/20">
+                                    <span className="text-sm font-medium">
+                                        {selectedIds.length} selecionado(s)
+                                    </span>
+                                    <div className="flex-1" />
+
+                                    {/* Bulk Move */}
+                                    <DropdownMenu>
+                                        <DropdownMenuTrigger asChild>
+                                            <Button variant="outline" size="sm" className="gap-2">
+                                                <MoveIcon className="w-4 h-4" />
+                                                Mover
+                                            </Button>
+                                        </DropdownMenuTrigger>
+                                        <DropdownMenuContent align="end" className="bg-[#1a1a1a] border-white/10">
+                                            <DropdownMenuItem
+                                                onClick={() => handleBulkMove(null)}
+                                                className="text-white hover:bg-white/10 cursor-pointer"
+                                            >
+                                                📁 Sem pasta (Raiz)
+                                            </DropdownMenuItem>
+                                            {folders.length > 0 && <DropdownMenuSeparator className="bg-white/10" />}
+                                            {folders.map(folder => (
+                                                <DropdownMenuItem
+                                                    key={folder.id}
+                                                    onClick={() => handleBulkMove(folder.id)}
+                                                    className="text-white hover:bg-white/10 cursor-pointer"
+                                                >
+                                                    📂 {folder.name}
+                                                </DropdownMenuItem>
+                                            ))}
+                                        </DropdownMenuContent>
+                                    </DropdownMenu>
+
+                                    {/* Bulk Download */}
+                                    <Button
+                                        variant="outline"
+                                        size="sm"
+                                        className="gap-2"
+                                        onClick={handleBulkDownload}
+                                    >
+                                        <Download className="w-4 h-4" />
+                                        Baixar
+                                    </Button>
+
+                                    {/* Bulk Delete */}
+                                    <Button
+                                        variant="destructive"
+                                        size="sm"
+                                        className="gap-2"
+                                        onClick={handleBulkDelete}
+                                    >
+                                        <Trash2 className="w-4 h-4" />
+                                        Excluir
+                                    </Button>
+                                </div>
+                            )}
                         </CardHeader>
                         <CardContent>
                             {loading ? (
@@ -289,6 +489,9 @@ const DocumentsTab = () => {
                                     onReindex={handleReindex}
                                     onDownload={handleDownload}
                                     renderExtraActions={renderMoveAction}
+                                    selectionMode={selectionMode}
+                                    selectedIds={selectedIds}
+                                    onSelectionChange={setSelectedIds}
                                 />
                             )}
                         </CardContent>

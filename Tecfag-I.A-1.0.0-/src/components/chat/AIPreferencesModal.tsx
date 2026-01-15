@@ -119,23 +119,35 @@ export const AIPreferencesModal = ({ isOpen, onClose }: AIPreferencesModalProps)
                             <Label className="text-white/80 flex items-center gap-2">
                                 <Briefcase className="w-4 h-4 text-primary" /> Cargo
                             </Label>
-                            <Input
-                                placeholder="Ex: Vendedor, Técnico"
+                            <Select
                                 value={formData.jobTitle}
-                                onChange={(e) => handleChange("jobTitle", e.target.value)}
-                                className="bg-white/5 border-white/10 text-white focus:border-primary"
-                            />
+                                onValueChange={(val) => handleChange("jobTitle", val)}
+                            >
+                                <SelectTrigger className="bg-white/5 border-white/10 text-white">
+                                    <SelectValue placeholder="Selecione seu cargo..." />
+                                </SelectTrigger>
+                                <SelectContent className="bg-[#1a1a1a] border-white/10 text-white">
+                                    <SelectItem value="Vendedor">Vendedor</SelectItem>
+                                    <SelectItem value="Técnico">Técnico</SelectItem>
+                                </SelectContent>
+                            </Select>
                         </div>
                         <div className="space-y-2">
                             <Label className="text-white/80 flex items-center gap-2">
-                                <Building className="w-4 h-4 text-primary" /> Departamento
+                                <Building className="w-4 h-4 text-primary" /> Setor
                             </Label>
-                            <Input
-                                placeholder="Ex: Vendas, Manutenção"
+                            <Select
                                 value={formData.department}
-                                onChange={(e) => handleChange("department", e.target.value)}
-                                className="bg-white/5 border-white/10 text-white focus:border-primary"
-                            />
+                                onValueChange={(val) => handleChange("department", val)}
+                            >
+                                <SelectTrigger className="bg-white/5 border-white/10 text-white">
+                                    <SelectValue placeholder="Selecione seu setor..." />
+                                </SelectTrigger>
+                                <SelectContent className="bg-[#1a1a1a] border-white/10 text-white">
+                                    <SelectItem value="Comercial">Comercial</SelectItem>
+                                    <SelectItem value="Assistência">Assistência</SelectItem>
+                                </SelectContent>
+                            </Select>
                         </div>
                     </div>
 

@@ -9,6 +9,7 @@ import { chatRouter } from './routes/chat.js';
 import { monitoringRouter } from './routes/monitoring.js';
 import documentsRouter from './routes/documents.js';
 import catalogRouter from './routes/catalog.js';
+import { createBackup, startScheduledBackup } from './services/backupService.js';
 
 dotenv.config();
 
@@ -49,6 +50,13 @@ app.listen(PORT, () => {
     console.log(`🚀 Server running on http://localhost:${PORT}`);
     console.log(`[VERSION CHECK] Server started at ${new Date().toISOString()} - Includes Admin Chat Fix & User Delete Fix`);
     console.log(`📚 API docs available at http://localhost:${PORT}/api/health`);
+
+    // 🔒 BACKUP AUTOMÁTICO
+    // Cria backup no startup do servidor
+    createBackup('startup');
+
+    // Agenda backups a cada 6 horas
+    startScheduledBackup(6);
 });
 
 export default app;
