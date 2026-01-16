@@ -9,6 +9,7 @@ import { chatRouter } from './routes/chat.js';
 import { monitoringRouter } from './routes/monitoring.js';
 import documentsRouter from './routes/documents.js';
 import catalogRouter from './routes/catalog.js';
+import { accessGroupsRouter } from './routes/accessGroups.js';
 import { createBackup, startScheduledBackup } from './services/backupService.js';
 
 dotenv.config();
@@ -34,6 +35,7 @@ app.use('/api/chat', chatRouter);
 app.use('/api/monitoring', monitoringRouter);
 app.use('/api/documents', documentsRouter);
 app.use('/api/catalog', catalogRouter);
+app.use('/api/access-groups', accessGroupsRouter);
 
 // Health check
 app.get('/api/health', (req, res) => {

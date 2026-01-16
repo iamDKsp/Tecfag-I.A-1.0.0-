@@ -121,8 +121,8 @@ export function analyzeQuery(question: string): QueryAnalysis {
     // Gerar queries adicionais para multi-query RAG
     const suggestedQueries = generateSubQueries(question, type, categories);
 
-    // Determinar se precisa de full scan
-    const requiresFullScan = isCountQuery && categories.length === 0;
+    // Determinar se precisa de full scan - SEMPRE para queries de contagem
+    const requiresFullScan = isCountQuery;
 
     return {
         type,
@@ -189,7 +189,7 @@ function determineContextSize(type: QueryType, isCountQuery: boolean, categoryCo
         'comparative': 25,
         'procedural': 20,
         'exploratory': 40,
-        'aggregation': 100,  // Muito mais contexto para agregação
+        'aggregation': 200,  // Aumentado para suportar full document retrieval
         'general': 20,
     };
 

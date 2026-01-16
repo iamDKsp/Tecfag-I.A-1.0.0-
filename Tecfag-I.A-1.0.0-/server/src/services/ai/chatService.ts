@@ -151,6 +151,14 @@ export async function answerQuestion(
 
         console.log(`[ChatService] Found ${relevantChunks.length} relevant chunks`);
 
+        // Log chunk distribution for debugging
+        const chunksByDoc = new Map<string, number>();
+        for (const chunk of relevantChunks) {
+            const fileName = chunk.metadata?.fileName || 'Unknown';
+            chunksByDoc.set(fileName, (chunksByDoc.get(fileName) || 0) + 1);
+        }
+        console.log(`[ChatService] Chunk distribution:`, Object.fromEntries(chunksByDoc));
+
         if (relevantChunks.length === 0) {
             return {
                 response: 'Não encontrei informações suficientes nos documentos para responder sua pergunta com a profundidade necessária. Tente adicionar mais documentos relacionados ou reformule a pergunta.',

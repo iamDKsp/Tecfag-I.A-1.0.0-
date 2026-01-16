@@ -9,7 +9,7 @@
  */
 
 import { generateEmbedding } from './embeddings';
-import { searchSimilarChunks, VectorSearchResult, searchByDocument } from './vectorDB';
+import { searchSimilarChunks, VectorSearchResult, searchByDocument, getFullDocumentChunks } from './vectorDB';
 import { QueryAnalysis } from './queryAnalyzer';
 
 export interface MultiQueryResult {
@@ -70,11 +70,40 @@ export async function multiQuerySearch(
         }
     }
 
-    // Se for uma query de agregação e precisar de full scan, buscar mais
-    if (analysis.requiresFullScan) {
-        console.log('[MultiQueryRAG] Full scan required, fetching document-level data...');
-        const docChunks = await fetchDocumentLevelData(catalogId);
+    // ═══════════════════════════════════════════════════════════════
+    // FULL DOCUMENT RETRIEVAL - Key improvement to match NotebookLM
+    // For count/aggregation queries, we need ALL data from key documents
+    // ═══════════════════════════════════════════════════════════════
+    if (analysis.isCountQuery || analysis.requiresFullScan) {
+        console.log('[MultiQueryRAG] 🎯 Count/Aggregation query detected - using FULL DOCUMENT RETRIEVAL');
 
+        // Patterns for documents that contain catalog/inventory data
+        const catalogPatterns = [
+            'planilha',
+            'catalogo',
+            'catálogo',
+            'mapeamento',
+            'lista',
+            'inventario',
+            'inventário',
+            'todas',
+            'completo'
+        ];
+
+        // Retrieve ALL chunks from matching documents
+        const fullDocChunks = await getFullDocumentChunks(catalogPatterns, catalogId);
+
+        console.log(`[MultiQueryRAG] Retrieved ${fullDocChunks.length} chunks via full document retrieval`);
+
+        for (const chunk of fullDocChunks) {
+            if (!seenChunkIds.has(chunk.id)) {
+                seenChunkIds.add(chunk.id);
+                allChunks.push(chunk);
+            }
+        }
+
+        // Also fetch document-level summaries for other documents
+        const docChunks = await fetchDocumentLevelData(catalogId);
         for (const chunk of docChunks) {
             if (!seenChunkIds.has(chunk.id)) {
                 seenChunkIds.add(chunk.id);
@@ -83,10 +112,26 @@ export async function multiQuerySearch(
         }
     }
 
-    // Ordenar por similaridade descendente e limitar
-    const sortedChunks = allChunks
-        .sort((a, b) => b.similarity - a.similarity)
-        .slice(0, analysis.contextSize);
+    // For count queries, don't limit chunks - we need ALL data for accurate counting
+    // This is key to matching NotebookLM's behavior
+    let sortedChunks: VectorSearchResult[];
+
+    if (analysis.isCountQuery) {
+        // For count queries, use all chunks sorted by chunkIndex to maintain document order
+        sortedChunks = allChunks.sort((a, b) => {
+            // First sort by documentId, then by chunkIndex
+            if (a.documentId !== b.documentId) {
+                return a.documentId.localeCompare(b.documentId);
+            }
+            return a.chunkIndex - b.chunkIndex;
+        });
+        console.log(`[MultiQueryRAG] Count query: keeping ALL ${sortedChunks.length} chunks (no limit)`);
+    } else {
+        // For other queries, limit by contextSize and sort by similarity
+        sortedChunks = allChunks
+            .sort((a, b) => b.similarity - a.similarity)
+            .slice(0, analysis.contextSize);
+    }
 
     // Identificar documentos únicos
     const uniqueDocuments = [...new Set(sortedChunks.map(c => c.documentId))];

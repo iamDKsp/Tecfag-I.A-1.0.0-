@@ -27,10 +27,35 @@ model User {
   technicalLevel     String?
   communicationStyle String?
 
+  // Access Group relation
+  accessGroupId String?
+  accessGroup   AccessGroup? @relation(fields: [accessGroupId], references: [id], onDelete: SetNull)
+
   chatMessages  ChatMessage[]
   archivedChats ArchivedChat[]
   chatFolders   ChatFolder[]
   tokenUsages   TokenUsage[]
+}
+
+// Grupos de acesso com permissões por módulo
+model AccessGroup {
+  id          String   @id @default(uuid())
+  name        String   @unique
+  description String?
+  
+  // Permissões de visualização por módulo
+  canViewChat        Boolean @default(true)
+  canViewMindMap     Boolean @default(true)
+  canViewCatalog     Boolean @default(true)
+  canViewUsers       Boolean @default(false)
+  canViewMonitoring  Boolean @default(false)
+  canViewDocuments   Boolean @default(false)
+  canViewSettings    Boolean @default(false)
+  
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  users       User[]
 }
 
 // Registro de uso de tokens por solicitação

@@ -185,3 +185,64 @@ export async function getDocumentStats(catalogId?: string): Promise<{
         documentNames: documents.map((d: { fileName: string }) => d.fileName)
     };
 }
+
+/**
+ * Get ALL chunks from documents matching specific patterns
+ * Used for aggregation/count queries where we need complete document context
+ * This is the key difference vs NotebookLM - we now retrieve FULL documents
+ */
+export async function getFullDocumentChunks(
+    documentPatterns: string[],
+    catalogId?: string
+): Promise<VectorSearchResult[]> {
+    // Build OR conditions for document name patterns
+    const patternConditions = documentPatterns.map(pattern => ({
+        fileName: { contains: pattern }
+    }));
+
+    const whereClause: any = {
+        OR: patternConditions
+    };
+
+    if (catalogId) {
+        whereClause.catalogId = catalogId;
+    }
+
+    // Find all matching documents
+    const documents = await prisma.document.findMany({
+        where: whereClause,
+        select: {
+            id: true,
+            fileName: true,
+        }
+    });
+
+    console.log(`[VectorDB] Full document retrieval: Found ${documents.length} matching documents for patterns: ${documentPatterns.join(', ')}`);
+
+    const results: VectorSearchResult[] = [];
+
+    // Get ALL chunks from each matching document (no limit!)
+    for (const doc of documents) {
+        const chunks = await prisma.documentChunk.findMany({
+            where: { documentId: doc.id },
+            orderBy: { chunkIndex: 'asc' },
+            // ⚠️ NO LIMIT - retrieve ALL chunks for complete context
+        });
+
+        console.log(`[VectorDB] Retrieved ${chunks.length} chunks from "${doc.fileName}"`);
+
+        for (const chunk of chunks) {
+            results.push({
+                id: chunk.id,
+                content: chunk.content,
+                similarity: 0.8, // High similarity for full document retrieval
+                metadata: chunk.metadata ? JSON.parse(chunk.metadata) : { fileName: doc.fileName },
+                documentId: chunk.documentId,
+                chunkIndex: chunk.chunkIndex
+            });
+        }
+    }
+
+    console.log(`[VectorDB] Total chunks retrieved for aggregation: ${results.length}`);
+    return results;
+}
